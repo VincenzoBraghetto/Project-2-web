@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<style>
+body {
+background: rgb(67,127,254);
+background: linear-gradient(90deg, rgba(67,127,254,1) 0%, rgba(167,203,246,1) 29%, rgba(222,237,255,1) 46%, rgba(222,237,255,1) 63%, rgba(222,237,255,1) 75%);
+}
+</style>
+  <head>
+    <title>Issue Tracker</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
+  </head>
+
+  <body>
+    <%= yield %>
+  </body>
+</html>

@@ -1,0 +1,248 @@
+  [1m[35m (347.7ms)[0m  [1m[35mCREATE DATABASE "web_app_development" ENCODING = 'unicode'[0m
+  [1m[35m (302.7ms)[0m  [1m[35mCREATE DATABASE "web_app_test" ENCODING = 'unicode'[0m
+  [1m[35m (8.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (6.6ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2351731187816918775)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateTickets (20230519173047)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (6.0ms)[0m  [1m[35mCREATE TABLE "tickets" ("id" bigserial primary key, "title" character varying, "description" character varying, "state" character varying, "tags" character varying, "priority" character varying, "executive" character varying, "response" character varying, "attached_documents" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20230519173047"]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateComments (20230519173310)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (5.5ms)[0m  [1m[35mCREATE TABLE "comments" ("id" bigserial primary key, "description" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20230519173310"]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateRequestingUsers (20230519173449)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (5.7ms)[0m  [1m[35mCREATE TABLE "requesting_users" ("id" bigserial primary key, "name" character varying, "last_name" character varying, "email" character varying, "telephone" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20230519173449"]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateFeedbacks (20230519173837)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (3.2ms)[0m  [1m[35mCREATE TABLE "feedbacks" ("id" bigserial primary key, "evaluation" integer, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20230519173837"]]
+  [1m[36mTRANSACTION (2.5ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateResolutions (20230519173917)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (5.5ms)[0m  [1m[35mCREATE TABLE "resolutions" ("id" bigserial primary key, "description" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20230519173917"]]
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateExecutives (20230519173939)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(2351731187816918775)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2351731187816918775)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateExecutives (20230519173939)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (6.7ms)[0m  [1m[35mCREATE TABLE "executives" ("id" bigserial primary key, "name" character varying, "last_name" character varying, "email" character varying, "telephone" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20230519173939"]]
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateAdministrators (20230519174006)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(2351731187816918775)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2351731187816918775)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateAdministrators (20230519174006)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (5.9ms)[0m  [1m[35mCREATE TABLE "administrators" ("id" bigserial primary key, "name" character varying, "last_name" character varying, "email" character varying, "telephone" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20230519174006"]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateSupervisors (20230519174021)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (7.3ms)[0m  [1m[35mCREATE TABLE "supervisors" ("id" bigserial primary key, "name" character varying, "last_name" character varying, "email" character varying, "telephone" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20230519174021"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddExecutiveRefToTicket (20230519174656)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "tickets" ADD "executive_id" bigint NOT NULL[0m
+  [1m[35m (2.3ms)[0m  [1m[35mCREATE INDEX "index_tickets_on_executive_id" ON "tickets" ("executive_id")[0m
+  [1m[35m (1.5ms)[0m  [1m[35mALTER TABLE "tickets" ADD CONSTRAINT "fk_rails_70136ea084"
+FOREIGN KEY ("executive_id")
+  REFERENCES "executives" ("id")
+[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20230519174656"]]
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2023-05-19 17:48:31.496047"], ["updated_at", "2023-05-19 17:48:31.496047"]]
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(2351731187816918775)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2351731187816918775)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddCommentRefToFeedback (20230519175042)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "feedbacks" ADD "comment_id" bigint NOT NULL[0m
+  [1m[35m (2.4ms)[0m  [1m[35mCREATE INDEX "index_feedbacks_on_comment_id" ON "feedbacks" ("comment_id")[0m
+  [1m[35m (3.2ms)[0m  [1m[35mALTER TABLE "feedbacks" ADD CONSTRAINT "fk_rails_9b3d178e66"
+FOREIGN KEY ("comment_id")
+  REFERENCES "comments" ("id")
+[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20230519175042"]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(2351731187816918775)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2351731187816918775)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddTicketRefToFeedback (20230519180850)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "feedbacks" ADD "ticket_id" bigint NOT NULL[0m
+  [1m[35m (14.9ms)[0m  [1m[35mCREATE INDEX "index_feedbacks_on_ticket_id" ON "feedbacks" ("ticket_id")[0m
+  [1m[35m (2.0ms)[0m  [1m[35mALTER TABLE "feedbacks" ADD CONSTRAINT "fk_rails_9cd5602907"
+FOREIGN KEY ("ticket_id")
+  REFERENCES "tickets" ("id")
+[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20230519180850"]]
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(2351731187816918775)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2351731187816918775)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(2351731187816918775)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRequestingUser Create (0.6ms)[0m  [1m[32mINSERT INTO "requesting_users" ("name", "last_name", "email", "telephone", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Samus"], ["last_name", "Paulicelli"], ["email", "66samus@gmail.com"], ["telephone", "+56975170547"], ["created_at", "2023-05-19 18:43:37.795212"], ["updated_at", "2023-05-19 18:43:37.795212"]]
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRequestingUser Create (0.2ms)[0m  [1m[32mINSERT INTO "requesting_users" ("name", "last_name", "email", "telephone", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Zbigniew"], ["last_name", "Prominski"], ["email", "zprom@gmail.com"], ["telephone", "+56918573987"], ["created_at", "2023-05-19 18:43:37.803238"], ["updated_at", "2023-05-19 18:43:37.803238"]]
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRequestingUser Create (0.2ms)[0m  [1m[32mINSERT INTO "requesting_users" ("name", "last_name", "email", "telephone", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Thomas"], ["last_name", "Lang"], ["email", "tlang@gmail.com"], ["telephone", "+56996830684"], ["created_at", "2023-05-19 18:43:37.819039"], ["updated_at", "2023-05-19 18:43:37.819039"]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRequestingUser Create (0.2ms)[0m  [1m[32mINSERT INTO "requesting_users" ("name", "last_name", "email", "telephone", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Zack"], ["last_name", "Grooves"], ["email", "zgrooves@gmail.com"], ["telephone", "+56992516472"], ["created_at", "2023-05-19 18:43:37.829809"], ["updated_at", "2023-05-19 18:43:37.829809"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRequestingUser Create (0.2ms)[0m  [1m[32mINSERT INTO "requesting_users" ("name", "last_name", "email", "telephone", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Ryan"], ["last_name", "Berty"], ["email", "rberty@gmail.com"], ["telephone", "+56956476826"], ["created_at", "2023-05-19 18:43:37.835372"], ["updated_at", "2023-05-19 18:43:37.835372"]]
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mRequestingUser Load (0.4ms)[0m  [1m[34mSELECT "requesting_users".* FROM "requesting_users"[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRequestingUser Create (0.4ms)[0m  [1m[32mINSERT INTO "requesting_users" ("name", "last_name", "email", "telephone", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Samus"], ["last_name", "Paulicelli"], ["email", "66samus@gmail.com"], ["telephone", "+56975170547"], ["created_at", "2023-05-19 18:59:15.039277"], ["updated_at", "2023-05-19 18:59:15.039277"]]
+  [1m[36mTRANSACTION (10.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRequestingUser Create (0.2ms)[0m  [1m[32mINSERT INTO "requesting_users" ("name", "last_name", "email", "telephone", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Zbigniew"], ["last_name", "Prominski"], ["email", "zprom@gmail.com"], ["telephone", "+56918573987"], ["created_at", "2023-05-19 18:59:15.055174"], ["updated_at", "2023-05-19 18:59:15.055174"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRequestingUser Create (0.2ms)[0m  [1m[32mINSERT INTO "requesting_users" ("name", "last_name", "email", "telephone", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Thomas"], ["last_name", "Lang"], ["email", "tlang@gmail.com"], ["telephone", "+56996830684"], ["created_at", "2023-05-19 18:59:15.060554"], ["updated_at", "2023-05-19 18:59:15.060554"]]
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRequestingUser Create (0.2ms)[0m  [1m[32mINSERT INTO "requesting_users" ("name", "last_name", "email", "telephone", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Zack"], ["last_name", "Grooves"], ["email", "zgrooves@gmail.com"], ["telephone", "+56992516472"], ["created_at", "2023-05-19 18:59:15.066551"], ["updated_at", "2023-05-19 18:59:15.066551"]]
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRequestingUser Create (0.2ms)[0m  [1m[32mINSERT INTO "requesting_users" ("name", "last_name", "email", "telephone", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Ryan"], ["last_name", "Berty"], ["email", "rberty@gmail.com"], ["telephone", "+56956476826"], ["created_at", "2023-05-19 18:59:15.073058"], ["updated_at", "2023-05-19 18:59:15.073058"]]
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRequestingUser Create (0.2ms)[0m  [1m[32mINSERT INTO "requesting_users" ("name", "last_name", "email", "telephone", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Adam"], ["last_name", "Darski"], ["email", "adarski@gmail.com"], ["telephone", "+56987656432"], ["created_at", "2023-05-19 18:59:15.079553"], ["updated_at", "2023-05-19 18:59:15.079553"]]
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRequestingUser Create (0.3ms)[0m  [1m[32mINSERT INTO "requesting_users" ("name", "last_name", "email", "telephone", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "David"], ["last_name", "Diepold"], ["email", "daviddiepold@gmail.com"], ["telephone", "+56965423454"], ["created_at", "2023-05-19 18:59:15.085470"], ["updated_at", "2023-05-19 18:59:15.085470"]]
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRequestingUser Create (0.2ms)[0m  [1m[32mINSERT INTO "requesting_users" ("name", "last_name", "email", "telephone", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Anthony"], ["last_name", "Barone"], ["email", "abarone@gmail.com"], ["telephone", "+56976545678"], ["created_at", "2023-05-19 18:59:15.091625"], ["updated_at", "2023-05-19 18:59:15.091625"]]
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRequestingUser Create (0.3ms)[0m  [1m[32mINSERT INTO "requesting_users" ("name", "last_name", "email", "telephone", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Jari"], ["last_name", "Maempa"], ["email", "wintersunjari@gmail.com"], ["telephone", "+56987612543"], ["created_at", "2023-05-19 18:59:15.097046"], ["updated_at", "2023-05-19 18:59:15.097046"]]
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRequestingUser Create (0.3ms)[0m  [1m[32mINSERT INTO "requesting_users" ("name", "last_name", "email", "telephone", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Kai"], ["last_name", "Hahto"], ["email", "kaihahto@gmail.com"], ["telephone", "+56998154762"], ["created_at", "2023-05-19 18:59:15.103149"], ["updated_at", "2023-05-19 18:59:15.103149"]]
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mExecutive Create (0.6ms)[0m  [1m[32mINSERT INTO "executives" ("name", "last_name", "email", "telephone", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Corey"], ["last_name", "Taylor"], ["email", "ctaylor@gmail.com"], ["telephone", "+56919864536"], ["created_at", "2023-05-19 18:59:15.121203"], ["updated_at", "2023-05-19 18:59:15.121203"]]
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mExecutive Create (0.2ms)[0m  [1m[32mINSERT INTO "executives" ("name", "last_name", "email", "telephone", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Jay"], ["last_name", "Weinberg"], ["email", "jayweinberg@gmail.com"], ["telephone", "+56976514253"], ["created_at", "2023-05-19 18:59:15.127963"], ["updated_at", "2023-05-19 18:59:15.127963"]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mExecutive Create (0.3ms)[0m  [1m[32mINSERT INTO "executives" ("name", "last_name", "email", "telephone", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Joey"], ["last_name", "Jordison"], ["email", "joeyjordison@gmail.com"], ["telephone", "+56965417893"], ["created_at", "2023-05-19 18:59:15.133397"], ["updated_at", "2023-05-19 18:59:15.133397"]]
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mExecutive Create (0.2ms)[0m  [1m[32mINSERT INTO "executives" ("name", "last_name", "email", "telephone", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Shawn"], ["last_name", "Crahan"], ["email", "scrahan@gmail.com"], ["telephone", "+56916537865"], ["created_at", "2023-05-19 18:59:15.139847"], ["updated_at", "2023-05-19 18:59:15.139847"]]
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mExecutive Create (0.2ms)[0m  [1m[32mINSERT INTO "executives" ("name", "last_name", "email", "telephone", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Sebastian"], ["last_name", "Lanser"], ["email", "seblanser@gmail.com"], ["telephone", "+56976514253"], ["created_at", "2023-05-19 18:59:15.151141"], ["updated_at", "2023-05-19 18:59:15.151141"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSupervisor Create (0.6ms)[0m  [1m[32mINSERT INTO "supervisors" ("name", "last_name", "email", "telephone", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Marthyn"], ["last_name", "Jovanovic"], ["email", "mjovanovic@gmail.com"], ["telephone", "+56987143251"], ["created_at", "2023-05-19 18:59:15.166288"], ["updated_at", "2023-05-19 18:59:15.166288"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSupervisor Create (0.2ms)[0m  [1m[32mINSERT INTO "supervisors" ("name", "last_name", "email", "telephone", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Susuka"], ["last_name", "Nakamoto"], ["email", "sunakamoto@gmail.com"], ["telephone", "+56998154637"], ["created_at", "2023-05-19 18:59:15.172725"], ["updated_at", "2023-05-19 18:59:15.172725"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSupervisor Create (0.2ms)[0m  [1m[32mINSERT INTO "supervisors" ("name", "last_name", "email", "telephone", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Moa"], ["last_name", "Kikuchi"], ["email", "moakikuchi@gmail.com"], ["telephone", "+56991653746"], ["created_at", "2023-05-19 18:59:15.178440"], ["updated_at", "2023-05-19 18:59:15.178440"]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAdministrator Create (0.4ms)[0m  [1m[32mINSERT INTO "administrators" ("name", "last_name", "email", "telephone", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Tak"], ["last_name", "Matsumoto"], ["email", "takmatsumoto@gmail.com"], ["telephone", "+56971845362"], ["created_at", "2023-05-19 18:59:15.192952"], ["updated_at", "2023-05-19 18:59:15.192952"]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mRequestingUser Load (0.5ms)[0m  [1m[34mSELECT "requesting_users".* FROM "requesting_users"[0m
+  [1m[36mExecutive Load (0.7ms)[0m  [1m[34mSELECT "executives".* FROM "executives"[0m
+  [1m[36mSupervisor Load (0.4ms)[0m  [1m[34mSELECT "supervisors".* FROM "supervisors"[0m
+  [1m[36mAdministrator Load (0.5ms)[0m  [1m[34mSELECT "administrators".* FROM "administrators"[0m
+Started GET "/" for 127.0.0.1 at 2023-05-19 15:17:04 -0400
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 3.6ms | Allocations: 435)
+  Rendered layout layouts/application.html.erb (Duration: 1045.2ms | Allocations: 87503)
+Completed 200 OK in 1088ms (Views: 1062.7ms | ActiveRecord: 0.0ms | Allocations: 92363)
+
+
+Started GET "/" for 127.0.0.1 at 2023-05-19 15:47:15 -0400
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.5ms | Allocations: 106)
+  Rendered layout layouts/application.html.erb (Duration: 21.3ms | Allocations: 2885)
+Completed 200 OK in 39ms (Views: 38.7ms | Allocations: 3609)
+
+
+Started GET "/" for 127.0.0.1 at 2023-05-19 15:48:43 -0400
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.4ms | Allocations: 101)
+  Rendered layout layouts/application.html.erb (Duration: 15.8ms | Allocations: 2846)
+Completed 200 OK in 30ms (Views: 29.2ms | Allocations: 3569)
+
+
+Started GET "/" for 127.0.0.1 at 2023-05-19 15:51:27 -0400
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.7ms | Allocations: 104)
+  Rendered layout layouts/application.html.erb (Duration: 14.7ms | Allocations: 2889)
+Completed 200 OK in 17ms (Views: 16.4ms | Allocations: 3616)
+
+
+Started GET "/" for 127.0.0.1 at 2023-05-19 15:53:08 -0400
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.5ms | Allocations: 101)
+  Rendered layout layouts/application.html.erb (Duration: 23.7ms | Allocations: 2885)
+Completed 200 OK in 45ms (Views: 44.4ms | Allocations: 3605)
+
+
+Started GET "/" for 127.0.0.1 at 2023-05-19 15:53:40 -0400
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.3ms | Allocations: 101)
+  Rendered layout layouts/application.html.erb (Duration: 6.1ms | Allocations: 2850)
+Completed 200 OK in 12ms (Views: 11.7ms | Allocations: 3573)
+
+
+Started GET "/" for 127.0.0.1 at 2023-05-19 15:54:28 -0400
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 2.1ms | Allocations: 102)
+  Rendered layout layouts/application.html.erb (Duration: 13.6ms | Allocations: 2836)
+Completed 200 OK in 22ms (Views: 21.3ms | Allocations: 3556)
+
+
