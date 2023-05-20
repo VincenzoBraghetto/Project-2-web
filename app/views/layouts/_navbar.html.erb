@@ -1,0 +1,34 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark" style= "background: rgb(212,233,255);
+background: linear-gradient(90deg, rgba(212,233,255,1) 0%, rgba(43,76,144,1) 0%);">
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+        <%= link_to 'Home', root_path, class: 'nav-link active' %>
+        </li>
+        <li class="nav-item">
+            <%= link_to 'Tickets', tickets_path, class: 'nav-link active' %>
+        </li>
+        <li class="nav-item">
+            <%= link_to 'Usuarios', requesting_users_path, class: 'nav-link active' %>
+        </li>
+        <li class="nav-item">
+            <%= link_to 'Executives', executives_path, class: 'nav-link active' %>
+        </li>
+        <li class="nav-item">
+            <%= link_to 'Supervisors', supervisors_path, class: 'nav-link active' %>
+        </li>
+        <li class="nav-item">
+            <%= link_to 'Administrators', administrators_path, class: 'nav-link active' %>
+        </li>
+        <li class="nav-item">
+            <%= link_to 'Comments', comments_path, class: 'nav-link active' %>
+        </li>
+        <li class="nav-item">
+            <%= link_to 'Resolutions', resolutions_path, class: 'nav-link active' %>
+        </li>
+        <li class="nav-item">
+            <%= link_to 'Feedbacks', feedbacks_path, class: 'nav-link active' %>
+        </li>
+    </ul>
+  </div>
+</nav>

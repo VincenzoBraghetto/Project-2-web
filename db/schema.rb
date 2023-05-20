@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_05_19_180850) do
+ActiveRecord::Schema[7.0].define(version: 2023_05_20_182820) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -27,6 +27,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_05_19_180850) do
     t.string "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "ticket_id", null: false
+    t.index ["ticket_id"], name: "index_comments_on_ticket_id"
   end
 
   create_table "executives", force: :cascade do |t|
@@ -40,11 +42,10 @@ ActiveRecord::Schema[7.0].define(version: 2023_05_19_180850) do
 
   create_table "feedbacks", force: :cascade do |t|
     t.integer "evaluation"
+    t.string "comment"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.bigint "comment_id", null: false
     t.bigint "ticket_id", null: false
-    t.index ["comment_id"], name: "index_feedbacks_on_comment_id"
     t.index ["ticket_id"], name: "index_feedbacks_on_ticket_id"
   end
 
@@ -61,6 +62,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_05_19_180850) do
     t.string "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "ticket_id", null: false
+    t.index ["ticket_id"], name: "index_resolutions_on_ticket_id"
   end
 
   create_table "supervisors", force: :cascade do |t|
@@ -78,7 +81,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_05_19_180850) do
     t.string "state"
     t.string "tags"
     t.string "priority"
-    t.string "executive"
     t.string "response"
     t.string "attached_documents"
     t.datetime "created_at", null: false
@@ -87,7 +89,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_05_19_180850) do
     t.index ["executive_id"], name: "index_tickets_on_executive_id"
   end
 
-  add_foreign_key "feedbacks", "comments"
+  add_foreign_key "comments", "tickets"
   add_foreign_key "feedbacks", "tickets"
+  add_foreign_key "resolutions", "tickets"
   add_foreign_key "tickets", "executives"
 end

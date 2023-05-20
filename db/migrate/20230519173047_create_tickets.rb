@@ -6,7 +6,6 @@ class CreateTickets < ActiveRecord::Migration[7.0]
       t.string :state
       t.string :tags
       t.string :priority
-      t.string :executive
       t.string :response
       t.string :attached_documents
 
