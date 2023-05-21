@@ -1,14 +1,21 @@
 <p style="color: green"><%= notice %></p>
 
-<h1>Tickets</h1>
+<h2>Tickets</h2>
 
 <div id="tickets">
-  <% @tickets.each do |ticket| %>
-    <%= render ticket %>
-    <p>
-      <%= link_to "Show this ticket", ticket %>
-    </p>
+  <% @tickets.each do |ticket| %>    
+    <h5>
+      <%= link_to ticket.title, ticket %> | <%=ticket.state%>
+    </h5>
   <% end %>
 </div>
 
-<%= link_to "New ticket", new_ticket_path %>
+<div>
+  <%if @requesting_user%>
+    <%=link_to "back", @requesting_user, class: 'btn btn-primary'%>
+  <%else%>
+    <%=link_to "back", @executive, class: 'btn btn-primary'%>
+  <%end%>
+</div>
+
+

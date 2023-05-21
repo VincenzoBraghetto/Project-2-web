@@ -3,8 +3,8 @@
 <%= render @requesting_user %>
 
 <div>
-  <%= link_to "Edit this requesting user", edit_requesting_user_path(@requesting_user) %> |
-  <%= link_to "Back to requesting users", requesting_users_path %>
 
-  <%= button_to "Destroy this requesting user", @requesting_user, method: :delete %>
+  <%= link_to "See tickets", requesting_user_tickets_path(@requesting_user), class: 'btn btn-primary' %><br>
+  <%= link_to "Back", requesting_users_path, class: 'btn btn-primary' %>
+
 </div>

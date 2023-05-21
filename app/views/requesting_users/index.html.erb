@@ -3,11 +3,13 @@
 <h1>Requesting users</h1>
 
 <div id="requesting_users">
+
   <% @requesting_users.each do |requesting_user| %>
-    <%= render requesting_user %>
-    <p>
-      <%= link_to "Show this requesting user", requesting_user %>
-    </p>
+    <ul>
+      <li>
+        <h5><%= link_to requesting_user.name+" "+requesting_user.last_name, requesting_user%></h5>
+      </li>
+    </ul>
   <% end %>
 </div>
 

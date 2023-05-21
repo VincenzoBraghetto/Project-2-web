@@ -20,6 +20,8 @@ Rails.application.routes.draw do
   end
   
 
+  #diferenciar en tickets controller los casos en que se accede desde executive o user
+
 
   root "pages#home"
 end
