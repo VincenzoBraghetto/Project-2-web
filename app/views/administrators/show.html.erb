@@ -1,10 +1,10 @@
+<div style= "margin-left: 30px;">
 <p style="color: green"><%= notice %></p>
 
 <%= render @administrator %>
 
-<div>
-  <%= link_to "Edit this administrator", edit_administrator_path(@administrator) %> |
-  <%= link_to "Back to administrators", administrators_path %>
+<div> 
+  <%= link_to "Back", administrators_path, class: 'btn btn-primary', style: "margin-top: 10px;"%>
 
-  <%= button_to "Destroy this administrator", @administrator, method: :delete %>
+</div>
 </div>

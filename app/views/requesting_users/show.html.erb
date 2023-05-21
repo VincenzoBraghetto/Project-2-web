@@ -1,10 +1,12 @@
+<div style= "margin-left: 30px;">
 <p style="color: green"><%= notice %></p>
 
 <%= render @requesting_user %>
 
-<div>
+<div> 
 
   <%= link_to "See tickets", requesting_user_tickets_path(@requesting_user), class: 'btn btn-primary' %><br>
-  <%= link_to "Back", requesting_users_path, class: 'btn btn-primary' %>
+  <%= link_to "Back", requesting_users_path, class: 'btn btn-primary', style: "margin-top: 10px;"%>
 
+</div>
 </div>

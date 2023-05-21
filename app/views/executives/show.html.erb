@@ -1,10 +1,12 @@
+<div style= "margin-left: 30px;">
 <p style="color: green"><%= notice %></p>
 
 <%= render @executive %>
 
-<div>
-  <%= link_to "Edit this executive", edit_executive_path(@executive) %> |
-  <%= link_to "Back to executives", executives_path %>
+<div> 
 
-  <%= button_to "Destroy this executive", @executive, method: :delete %>
+  <%= link_to "See tickets", executive_tickets_path(@executive), class: 'btn btn-primary' %><br>
+  <%= link_to "Back", executives_path, class: 'btn btn-primary', style: "margin-top: 10px;"%>
+
+</div>
 </div>

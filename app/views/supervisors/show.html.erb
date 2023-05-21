@@ -1,10 +1,10 @@
+<div style= "margin-left: 30px;">
 <p style="color: green"><%= notice %></p>
 
 <%= render @supervisor %>
 
-<div>
-  <%= link_to "Edit this supervisor", edit_supervisor_path(@supervisor) %> |
-  <%= link_to "Back to supervisors", supervisors_path %>
+<div> 
+  <%= link_to "Back", supervisors_path, class: 'btn btn-primary', style: "margin-top: 10px;"%>
 
-  <%= button_to "Destroy this supervisor", @supervisor, method: :delete %>
+</div>
 </div>

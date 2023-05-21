@@ -6,4 +6,5 @@ class Executive < ApplicationRecord
     has_many :resolutions
     has_many :comments
     has_many :feedbacks
+    has_many :tickets
 end
