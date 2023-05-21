@@ -4,4 +4,6 @@ class Ticket < ApplicationRecord
     has_many :resolutions
     has_many :comments
     has_one :feedback
+    belongs_to :requesting_user
+    belongs_to :executive
 end

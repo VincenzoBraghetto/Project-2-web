@@ -1,15 +1,25 @@
 Rails.application.routes.draw do
   resources :administrators
   resources :supervisors
-  resources :resolutions
-  resources :feedbacks
-  resources :executives
-  resources :comments
-  resources :requesting_users
-  resources :tickets
-  resources :pages
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
-  # Defines the root path route ("/")
+  resources :pages 
+
+  resources :requesting_users, shallow: true do
+    resources :tickets do
+      resources :comments
+      resources :resolutions
+    end
+  end
+  
+  resources :executives, shallow: true do
+    resources :feedbacks
+    resources :tickets do
+      resources :comments
+      resources :resolutions
+    end
+  end
+  
+
+
   root "pages#home"
 end

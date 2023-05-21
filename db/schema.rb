@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_05_20_182820) do
+ActiveRecord::Schema[7.0].define(version: 2023_05_21_060928) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -28,6 +28,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_05_20_182820) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "ticket_id", null: false
+    t.bigint "executive_id", null: false
+    t.index ["executive_id"], name: "index_comments_on_executive_id"
     t.index ["ticket_id"], name: "index_comments_on_ticket_id"
   end
 
@@ -46,6 +48,10 @@ ActiveRecord::Schema[7.0].define(version: 2023_05_20_182820) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "ticket_id", null: false
+    t.bigint "executive_id", null: false
+    t.bigint "requesting_user_id", null: false
+    t.index ["executive_id"], name: "index_feedbacks_on_executive_id"
+    t.index ["requesting_user_id"], name: "index_feedbacks_on_requesting_user_id"
     t.index ["ticket_id"], name: "index_feedbacks_on_ticket_id"
   end
 
@@ -63,6 +69,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_05_20_182820) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "ticket_id", null: false
+    t.bigint "executive_id", null: false
+    t.index ["executive_id"], name: "index_resolutions_on_executive_id"
     t.index ["ticket_id"], name: "index_resolutions_on_ticket_id"
   end
 
@@ -86,11 +94,18 @@ ActiveRecord::Schema[7.0].define(version: 2023_05_20_182820) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "executive_id", null: false
+    t.bigint "requesting_user_id", null: false
     t.index ["executive_id"], name: "index_tickets_on_executive_id"
+    t.index ["requesting_user_id"], name: "index_tickets_on_requesting_user_id"
   end
 
+  add_foreign_key "comments", "executives"
   add_foreign_key "comments", "tickets"
+  add_foreign_key "feedbacks", "executives"
+  add_foreign_key "feedbacks", "requesting_users"
   add_foreign_key "feedbacks", "tickets"
+  add_foreign_key "resolutions", "executives"
   add_foreign_key "resolutions", "tickets"
   add_foreign_key "tickets", "executives"
+  add_foreign_key "tickets", "requesting_users"
 end
