@@ -5,6 +5,7 @@
 
 <div>
   <%= link_to "See comments", ticket_comments_path(@ticket), class: 'btn btn-info' %>
+  <%= link_to "See resolutions", ticket_resolutions_path(@ticket), class: 'btn btn-info' %>
   <%= link_to "Back to tickets", requesting_user_tickets_path(@ticket.requesting_user), class: 'btn btn-info' %>
 </div>
 </div>

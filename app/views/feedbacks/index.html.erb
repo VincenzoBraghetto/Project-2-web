@@ -1,14 +1,22 @@
+<div style= "margin-left: 30px;">
 <p style="color: green"><%= notice %></p>
 
 <h1>Feedbacks</h1>
 
 <div id="feedbacks">
   <% @feedbacks.each do |feedback| %>
-    <%= render feedback %>
+  <h5>
+    <li>
+    <%= feedback.comment %> | Evaluation: <%= feedback.evaluation %> 
+    </li>
+</div>
+<div>
+  </h5>
     <p>
-      <%= link_to "Show this feedback", feedback %>
+      <%= link_to "Show this feedback", feedback, class: "btn btn-primary" %>
+      <%= link_to "Back", feedback.executive, class: "btn btn-primary" %>
     </p>
   <% end %>
 </div>
+</div>
 
-<%= link_to "New feedback", new_feedback_path %>

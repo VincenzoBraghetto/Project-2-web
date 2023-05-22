@@ -3,7 +3,8 @@ class FeedbacksController < ApplicationController
 
   # GET /feedbacks or /feedbacks.json
   def index
-    @feedbacks = Feedback.all
+    @executive = Executive.find(params[:executive_id])
+    @feedbacks = @executive.feedbacks
   end
 
   # GET /feedbacks/1 or /feedbacks/1.json
