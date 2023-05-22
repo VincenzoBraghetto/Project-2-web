@@ -1,14 +1,21 @@
-<p style="color: green"><%= notice %></p>
+  <p style="color: green"><%= notice %></p>
 
-<h1>Comments</h1>
-
-<div id="comments">
-  <% @comments.each do |comment| %>
-    <%= render comment %>
-    <p>
-      <%= link_to "Show this comment", comment %>
-    </p>
-  <% end %>
+<div class="container">
+  <%= link_to "back", @ticket, class: 'btn btn-primary'%>
+  <h1>Comments</h1>
+  <br>
+  <div class="card" style="width: 50rem;">
+    <div class="card-header">
+      <%= @ticket.title %>
+    </div>
+    <ul class="list-group list-group-flush">   
+      <% @comments.each do |comment| %>
+        <li class="list-group-item">
+          <p> <%= comment.created_at %> </p>
+          <p> <%= comment.executive.name+" "+comment.executive.last_name+":"%> </p>
+          <p> <%= comment.description %></p>
+        </li>
+      <% end %>
+    </ul>
+  </div>
 </div>
-
-<%= link_to "New comment", new_comment_path %>

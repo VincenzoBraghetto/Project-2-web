@@ -1,18 +1,25 @@
 <div style= "margin-left: 30px;">
 <p style="color: green"><%= notice %></p>
 
-<h1>Supervisors</h1>
-
-<div id="supervisors">
-
-  <% @supervisors.each do |supervisor| %>
-    <ul>
-      <li>
-        <h5><%= link_to supervisor.name+" "+supervisor.last_name, supervisor, style: "color: inherit; text-decoration: none;" %></h5>
-      </li>
-    </ul>
-  <% end %>
+<div class="container">
+  <h1>Supervisors</h1>
 </div>
-
-<%= link_to "New supervisor", new_supervisor_path %>
+<br>
+<div class="container">
+  <div class="row">
+    <% @supervisors.each do |supervisor| %>
+      <div class="col-md-4">
+        <div class="card bg-light border-secondary mb-3">      
+          <div class="card-body">
+            <h5 class="card-title"><%=supervisor.name + " " + supervisor.last_name%></h5>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item"><%=supervisor.email%></li>
+              <li class="list-group-item"><%=supervisor.telephone%></li>
+            </ul>             
+            <%=link_to "Profile", supervisor, class: 'btn btn-info'%>
+          </div>        
+        </div>
+      </div>
+    <% end %>
+  </div>
 </div>
