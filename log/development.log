@@ -7652,3 +7652,856 @@ Processing by ResolutionsController#index as HTML
 Completed 200 OK in 33ms (Views: 20.6ms | ActiveRecord: 6.1ms | Allocations: 4191)
 
 
+Started GET "/" for 127.0.0.1 at 2023-05-23 13:55:45 -0400
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 5.3ms | Allocations: 291)
+  Rendered layouts/_navbar.html.erb (Duration: 1.4ms | Allocations: 529)
+  Rendered layout layouts/application.html.erb (Duration: 154.3ms | Allocations: 21620)
+Completed 200 OK in 185ms (Views: 160.0ms | ActiveRecord: 0.0ms | Allocations: 24868)
+
+
+Started GET "/requesting_users" for 127.0.0.1 at 2023-05-23 13:55:48 -0400
+Processing by RequestingUsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering requesting_users/index.html.erb within layouts/application
+  [1m[36mRequestingUser Load (4.0ms)[0m  [1m[34mSELECT "requesting_users".* FROM "requesting_users"[0m
+  ↳ app/views/requesting_users/index.html.erb:10
+  Rendered requesting_users/index.html.erb within layouts/application (Duration: 58.5ms | Allocations: 8139)
+  Rendered layouts/_navbar.html.erb (Duration: 0.7ms | Allocations: 215)
+  Rendered layout layouts/application.html.erb (Duration: 75.2ms | Allocations: 10803)
+Completed 200 OK in 96ms (Views: 68.4ms | ActiveRecord: 15.7ms | Allocations: 13842)
+
+
+Started GET "/" for 127.0.0.1 at 2023-05-23 15:29:26 -0400
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layouts/_navbar.html.erb (Duration: 0.4ms | Allocations: 207)
+  Rendered layout layouts/application.html.erb (Duration: 16.3ms | Allocations: 2746)
+Completed 200 OK in 17ms (Views: 17.0ms | Allocations: 2988)
+
+
+Started GET "/executives" for 127.0.0.1 at 2023-05-23 15:32:09 -0400
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ExecutivesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering executives/index.html.erb within layouts/application
+  [1m[36mExecutive Load (7.8ms)[0m  [1m[34mSELECT "executives".* FROM "executives"[0m
+  ↳ app/views/executives/index.html.erb:10
+  Rendered executives/index.html.erb within layouts/application (Duration: 40.0ms | Allocations: 7460)
+  Rendered layouts/_navbar.html.erb (Duration: 1.0ms | Allocations: 446)
+  Rendered layout layouts/application.html.erb (Duration: 93.6ms | Allocations: 28425)
+Completed 200 OK in 123ms (Views: 91.6ms | ActiveRecord: 11.9ms | Allocations: 34692)
+
+
+Started GET "/" for 127.0.0.1 at 2023-05-23 15:32:14 -0400
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 4.0ms | Allocations: 1713)
+  Rendered layout layouts/application.html.erb (Duration: 4.5ms | Allocations: 1803)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms | Allocations: 2471)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+     7: <br>
+     8: <div class="container">
+     9:   <div class="row">
+    10:     <% @requesting_users.each do |requesting_user| %>
+    11:       <div class="col-md-4">
+    12:         <div class="card bg-light border-secondary mb-3">      
+    13:           <div class="card-body">
+  
+app/views/pages/home.html.erb:10
+Started GET "/" for 127.0.0.1 at 2023-05-23 15:34:33 -0400
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 2.8ms | Allocations: 1305)
+  Rendered layout layouts/application.html.erb (Duration: 8.0ms | Allocations: 1394)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.0ms | Allocations: 2223)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+     7: <br>
+     8: <div class="container">
+     9:   <div class="row">
+    10:     <% @requesting_users.each do |requesting_user| %>
+    11:       <div class="col-md-4">
+    12:         <div class="card bg-light border-secondary mb-3">      
+    13:           <div class="card-body">
+  
+app/views/pages/home.html.erb:10
+Started GET "/executives" for 127.0.0.1 at 2023-05-23 15:37:28 -0400
+Processing by ExecutivesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering executives/index.html.erb within layouts/application
+  [1m[36mExecutive Load (0.4ms)[0m  [1m[34mSELECT "executives".* FROM "executives"[0m
+  ↳ app/views/executives/index.html.erb:10
+  Rendered executives/index.html.erb within layouts/application (Duration: 14.4ms | Allocations: 4115)
+  Rendered layouts/_navbar.html.erb (Duration: 0.9ms | Allocations: 430)
+  Rendered layout layouts/application.html.erb (Duration: 20.5ms | Allocations: 7322)
+Completed 200 OK in 47ms (Views: 16.3ms | ActiveRecord: 5.7ms | Allocations: 10185)
+
+
+Started GET "/requesting_users" for 127.0.0.1 at 2023-05-23 15:37:30 -0400
+Processing by RequestingUsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering requesting_users/index.html.erb within layouts/application
+  [1m[36mRequestingUser Load (0.4ms)[0m  [1m[34mSELECT "requesting_users".* FROM "requesting_users"[0m
+  ↳ app/views/requesting_users/index.html.erb:10
+  Rendered requesting_users/index.html.erb within layouts/application (Duration: 23.9ms | Allocations: 5118)
+  Rendered layouts/_navbar.html.erb (Duration: 0.4ms | Allocations: 215)
+  Rendered layout layouts/application.html.erb (Duration: 32.5ms | Allocations: 7830)
+Completed 200 OK in 42ms (Views: 24.1ms | ActiveRecord: 10.2ms | Allocations: 9831)
+
+
+Started GET "/" for 127.0.0.1 at 2023-05-23 15:38:51 -0400
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.9ms | Allocations: 1672)
+  Rendered layout layouts/application.html.erb (Duration: 2.2ms | Allocations: 1760)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 2582)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+     9:     <div class="row">
+    10:       <div class="col-md-4">
+    11:         <h2>Requesting Users</h2>
+    12:         <% @requesting_users.each do |requesting_user| %>
+    13:           <div class="card bg-light border-secondary mb-3">      
+    14:             <div class="card-body">
+    15:               <h5 class="card-title"><%= requesting_user.name + " " + requesting_user.last_name %></h5>
+  
+app/views/pages/home.html.erb:12
+Started GET "/" for 127.0.0.1 at 2023-05-23 15:39:32 -0400
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mRequestingUser Load (0.3ms)[0m  [1m[34mSELECT "requesting_users".* FROM "requesting_users"[0m
+  ↳ app/views/pages/home.html.erb:12
+  [1m[36mExecutive Load (0.8ms)[0m  [1m[34mSELECT "executives".* FROM "executives"[0m
+  ↳ app/views/pages/home.html.erb:28
+  [1m[36mSupervisor Load (2.0ms)[0m  [1m[34mSELECT "supervisors".* FROM "supervisors"[0m
+  ↳ app/views/pages/home.html.erb:44
+  [1m[36mAdministrator Load (1.6ms)[0m  [1m[34mSELECT "administrators".* FROM "administrators"[0m
+  ↳ app/views/pages/home.html.erb:60
+  Rendered pages/home.html.erb within layouts/application (Duration: 63.7ms | Allocations: 14320)
+  Rendered layouts/_navbar.html.erb (Duration: 1.0ms | Allocations: 430)
+  Rendered layout layouts/application.html.erb (Duration: 79.9ms | Allocations: 17533)
+Completed 200 OK in 102ms (Views: 63.6ms | ActiveRecord: 17.8ms | Allocations: 22626)
+
+
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (1.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (26.9ms)[0m  [1m[35mDROP DATABASE IF EXISTS "web_app_development"[0m
+  [1m[35m (17.0ms)[0m  [1m[35mDROP DATABASE IF EXISTS "web_app_test"[0m
+  [1m[35m (295.6ms)[0m  [1m[35mCREATE DATABASE "web_app_development" ENCODING = 'unicode'[0m
+  [1m[35m (301.5ms)[0m  [1m[35mCREATE DATABASE "web_app_test" ENCODING = 'unicode'[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "administrators" CASCADE[0m
+  [1m[35m (12.5ms)[0m  [1m[35mCREATE TABLE "administrators" ("id" bigserial primary key, "name" character varying, "last_name" character varying, "email" character varying, "telephone" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "comments" CASCADE[0m
+  [1m[35m (9.6ms)[0m  [1m[35mCREATE TABLE "comments" ("id" bigserial primary key, "description" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, "ticket_id" bigint NOT NULL, "executive_id" bigint NOT NULL)[0m
+  [1m[35m (4.7ms)[0m  [1m[35mCREATE INDEX "index_comments_on_executive_id" ON "comments" ("executive_id")[0m
+  [1m[35m (5.0ms)[0m  [1m[35mCREATE INDEX "index_comments_on_ticket_id" ON "comments" ("ticket_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "executives" CASCADE[0m
+  [1m[35m (8.5ms)[0m  [1m[35mCREATE TABLE "executives" ("id" bigserial primary key, "name" character varying, "last_name" character varying, "email" character varying, "telephone" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "feedbacks" CASCADE[0m
+  [1m[35m (8.5ms)[0m  [1m[35mCREATE TABLE "feedbacks" ("id" bigserial primary key, "evaluation" integer, "comment" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, "ticket_id" bigint NOT NULL, "executive_id" bigint NOT NULL, "requesting_user_id" bigint NOT NULL)[0m
+  [1m[35m (4.5ms)[0m  [1m[35mCREATE INDEX "index_feedbacks_on_executive_id" ON "feedbacks" ("executive_id")[0m
+  [1m[35m (3.7ms)[0m  [1m[35mCREATE INDEX "index_feedbacks_on_requesting_user_id" ON "feedbacks" ("requesting_user_id")[0m
+  [1m[35m (4.5ms)[0m  [1m[35mCREATE INDEX "index_feedbacks_on_ticket_id" ON "feedbacks" ("ticket_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "requesting_users" CASCADE[0m
+  [1m[35m (9.5ms)[0m  [1m[35mCREATE TABLE "requesting_users" ("id" bigserial primary key, "name" character varying, "last_name" character varying, "email" character varying, "telephone" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "resolutions" CASCADE[0m
+  [1m[35m (12.0ms)[0m  [1m[35mCREATE TABLE "resolutions" ("id" bigserial primary key, "description" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, "ticket_id" bigint NOT NULL, "executive_id" bigint NOT NULL, "accepted" boolean)[0m
+  [1m[35m (4.4ms)[0m  [1m[35mCREATE INDEX "index_resolutions_on_executive_id" ON "resolutions" ("executive_id")[0m
+  [1m[35m (3.4ms)[0m  [1m[35mCREATE INDEX "index_resolutions_on_ticket_id" ON "resolutions" ("ticket_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "supervisors" CASCADE[0m
+  [1m[35m (8.8ms)[0m  [1m[35mCREATE TABLE "supervisors" ("id" bigserial primary key, "name" character varying, "last_name" character varying, "email" character varying, "telephone" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "tickets" CASCADE[0m
+  [1m[35m (8.5ms)[0m  [1m[35mCREATE TABLE "tickets" ("id" bigserial primary key, "title" character varying, "description" character varying, "state" character varying, "tags" character varying, "priority" character varying, "response" character varying, "attached_documents" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, "executive_id" bigint NOT NULL, "requesting_user_id" bigint NOT NULL)[0m
+  [1m[35m (4.6ms)[0m  [1m[35mCREATE INDEX "index_tickets_on_executive_id" ON "tickets" ("executive_id")[0m
+  [1m[35m (4.6ms)[0m  [1m[35mCREATE INDEX "index_tickets_on_requesting_user_id" ON "tickets" ("requesting_user_id")[0m
+  [1m[35m (2.4ms)[0m  [1m[35mALTER TABLE "comments" ADD CONSTRAINT "fk_rails_2dbc85689b"
+FOREIGN KEY ("executive_id")
+  REFERENCES "executives" ("id")
+[0m
+  [1m[35m (2.2ms)[0m  [1m[35mALTER TABLE "comments" ADD CONSTRAINT "fk_rails_e013b60ecb"
+FOREIGN KEY ("ticket_id")
+  REFERENCES "tickets" ("id")
+[0m
+  [1m[35m (2.5ms)[0m  [1m[35mALTER TABLE "feedbacks" ADD CONSTRAINT "fk_rails_5412bc5c1f"
+FOREIGN KEY ("executive_id")
+  REFERENCES "executives" ("id")
+[0m
+  [1m[35m (2.3ms)[0m  [1m[35mALTER TABLE "feedbacks" ADD CONSTRAINT "fk_rails_c0478b38b8"
+FOREIGN KEY ("requesting_user_id")
+  REFERENCES "requesting_users" ("id")
+[0m
+  [1m[35m (2.0ms)[0m  [1m[35mALTER TABLE "feedbacks" ADD CONSTRAINT "fk_rails_9cd5602907"
+FOREIGN KEY ("ticket_id")
+  REFERENCES "tickets" ("id")
+[0m
+  [1m[35m (2.3ms)[0m  [1m[35mALTER TABLE "resolutions" ADD CONSTRAINT "fk_rails_1c9054da2a"
+FOREIGN KEY ("executive_id")
+  REFERENCES "executives" ("id")
+[0m
+  [1m[35m (1.9ms)[0m  [1m[35mALTER TABLE "resolutions" ADD CONSTRAINT "fk_rails_caa75a2881"
+FOREIGN KEY ("ticket_id")
+  REFERENCES "tickets" ("id")
+[0m
+  [1m[35m (2.0ms)[0m  [1m[35mALTER TABLE "tickets" ADD CONSTRAINT "fk_rails_70136ea084"
+FOREIGN KEY ("executive_id")
+  REFERENCES "executives" ("id")
+[0m
+  [1m[35m (1.7ms)[0m  [1m[35mALTER TABLE "tickets" ADD CONSTRAINT "fk_rails_743c4a6bb0"
+FOREIGN KEY ("requesting_user_id")
+  REFERENCES "requesting_users" ("id")
+[0m
+  [1m[35m (7.5ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20230522193847)[0m
+  [1m[35m (1.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20230519173047),
+(20230519173310),
+(20230519173449),
+(20230519173837),
+(20230519173917),
+(20230519173939),
+(20230519174006),
+(20230519174021),
+(20230519174656),
+(20230520175214),
+(20230520180755),
+(20230520182820),
+(20230521050346),
+(20230521054748),
+(20230521055825),
+(20230521060858),
+(20230521060928);
+
+[0m
+  [1m[35m (5.4ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2023-05-23 19:40:05.718837"], ["updated_at", "2023-05-23 19:40:05.718837"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "a52af67802afd74b4d2b0ec4115f90215a66c721"], ["created_at", "2023-05-23 19:40:05.730547"], ["updated_at", "2023-05-23 19:40:05.730547"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "administrators" CASCADE[0m
+  [1m[35m (8.0ms)[0m  [1m[35mCREATE TABLE "administrators" ("id" bigserial primary key, "name" character varying, "last_name" character varying, "email" character varying, "telephone" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "comments" CASCADE[0m
+  [1m[35m (6.2ms)[0m  [1m[35mCREATE TABLE "comments" ("id" bigserial primary key, "description" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, "ticket_id" bigint NOT NULL, "executive_id" bigint NOT NULL)[0m
+  [1m[35m (2.8ms)[0m  [1m[35mCREATE INDEX "index_comments_on_executive_id" ON "comments" ("executive_id")[0m
+  [1m[35m (2.8ms)[0m  [1m[35mCREATE INDEX "index_comments_on_ticket_id" ON "comments" ("ticket_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "executives" CASCADE[0m
+  [1m[35m (6.1ms)[0m  [1m[35mCREATE TABLE "executives" ("id" bigserial primary key, "name" character varying, "last_name" character varying, "email" character varying, "telephone" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "feedbacks" CASCADE[0m
+  [1m[35m (5.8ms)[0m  [1m[35mCREATE TABLE "feedbacks" ("id" bigserial primary key, "evaluation" integer, "comment" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, "ticket_id" bigint NOT NULL, "executive_id" bigint NOT NULL, "requesting_user_id" bigint NOT NULL)[0m
+  [1m[35m (2.7ms)[0m  [1m[35mCREATE INDEX "index_feedbacks_on_executive_id" ON "feedbacks" ("executive_id")[0m
+  [1m[35m (2.7ms)[0m  [1m[35mCREATE INDEX "index_feedbacks_on_requesting_user_id" ON "feedbacks" ("requesting_user_id")[0m
+  [1m[35m (3.5ms)[0m  [1m[35mCREATE INDEX "index_feedbacks_on_ticket_id" ON "feedbacks" ("ticket_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "requesting_users" CASCADE[0m
+  [1m[35m (5.7ms)[0m  [1m[35mCREATE TABLE "requesting_users" ("id" bigserial primary key, "name" character varying, "last_name" character varying, "email" character varying, "telephone" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "resolutions" CASCADE[0m
+  [1m[35m (5.9ms)[0m  [1m[35mCREATE TABLE "resolutions" ("id" bigserial primary key, "description" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, "ticket_id" bigint NOT NULL, "executive_id" bigint NOT NULL, "accepted" boolean)[0m
+  [1m[35m (2.8ms)[0m  [1m[35mCREATE INDEX "index_resolutions_on_executive_id" ON "resolutions" ("executive_id")[0m
+  [1m[35m (2.8ms)[0m  [1m[35mCREATE INDEX "index_resolutions_on_ticket_id" ON "resolutions" ("ticket_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "supervisors" CASCADE[0m
+  [1m[35m (6.0ms)[0m  [1m[35mCREATE TABLE "supervisors" ("id" bigserial primary key, "name" character varying, "last_name" character varying, "email" character varying, "telephone" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "tickets" CASCADE[0m
+  [1m[35m (6.6ms)[0m  [1m[35mCREATE TABLE "tickets" ("id" bigserial primary key, "title" character varying, "description" character varying, "state" character varying, "tags" character varying, "priority" character varying, "response" character varying, "attached_documents" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, "executive_id" bigint NOT NULL, "requesting_user_id" bigint NOT NULL)[0m
+  [1m[35m (2.8ms)[0m  [1m[35mCREATE INDEX "index_tickets_on_executive_id" ON "tickets" ("executive_id")[0m
+  [1m[35m (3.1ms)[0m  [1m[35mCREATE INDEX "index_tickets_on_requesting_user_id" ON "tickets" ("requesting_user_id")[0m
+  [1m[35m (2.2ms)[0m  [1m[35mALTER TABLE "comments" ADD CONSTRAINT "fk_rails_2dbc85689b"
+FOREIGN KEY ("executive_id")
+  REFERENCES "executives" ("id")
+[0m
+  [1m[35m (1.8ms)[0m  [1m[35mALTER TABLE "comments" ADD CONSTRAINT "fk_rails_e013b60ecb"
+FOREIGN KEY ("ticket_id")
+  REFERENCES "tickets" ("id")
+[0m
+  [1m[35m (1.8ms)[0m  [1m[35mALTER TABLE "feedbacks" ADD CONSTRAINT "fk_rails_5412bc5c1f"
+FOREIGN KEY ("executive_id")
+  REFERENCES "executives" ("id")
+[0m
+  [1m[35m (1.6ms)[0m  [1m[35mALTER TABLE "feedbacks" ADD CONSTRAINT "fk_rails_c0478b38b8"
+FOREIGN KEY ("requesting_user_id")
+  REFERENCES "requesting_users" ("id")
+[0m
+  [1m[35m (1.6ms)[0m  [1m[35mALTER TABLE "feedbacks" ADD CONSTRAINT "fk_rails_9cd5602907"
+FOREIGN KEY ("ticket_id")
+  REFERENCES "tickets" ("id")
+[0m
+  [1m[35m (1.8ms)[0m  [1m[35mALTER TABLE "resolutions" ADD CONSTRAINT "fk_rails_1c9054da2a"
+FOREIGN KEY ("executive_id")
+  REFERENCES "executives" ("id")
+[0m
+  [1m[35m (1.5ms)[0m  [1m[35mALTER TABLE "resolutions" ADD CONSTRAINT "fk_rails_caa75a2881"
+FOREIGN KEY ("ticket_id")
+  REFERENCES "tickets" ("id")
+[0m
+  [1m[35m (1.6ms)[0m  [1m[35mALTER TABLE "tickets" ADD CONSTRAINT "fk_rails_70136ea084"
+FOREIGN KEY ("executive_id")
+  REFERENCES "executives" ("id")
+[0m
+  [1m[35m (1.5ms)[0m  [1m[35mALTER TABLE "tickets" ADD CONSTRAINT "fk_rails_743c4a6bb0"
+FOREIGN KEY ("requesting_user_id")
+  REFERENCES "requesting_users" ("id")
+[0m
+  [1m[35m (5.3ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20230522193847)[0m
+  [1m[35m (0.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20230519173047),
+(20230519173310),
+(20230519173449),
+(20230519173837),
+(20230519173917),
+(20230519173939),
+(20230519174006),
+(20230519174021),
+(20230519174656),
+(20230520175214),
+(20230520180755),
+(20230520182820),
+(20230521050346),
+(20230521054748),
+(20230521055825),
+(20230521060858),
+(20230521060928);
+
+[0m
+  [1m[35m (5.4ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2023-05-23 19:40:05.915811"], ["updated_at", "2023-05-23 19:40:05.915811"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Update (0.2ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2023-05-23 19:40:05.924567"], ["key", "environment"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "a52af67802afd74b4d2b0ec4115f90215a66c721"], ["created_at", "2023-05-23 19:40:05.934213"], ["updated_at", "2023-05-23 19:40:05.934213"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRequestingUser Create (0.5ms)[0m  [1m[32mINSERT INTO "requesting_users" ("name", "last_name", "email", "telephone", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Samus"], ["last_name", "Paulicelli"], ["email", "66samus@gmail.com"], ["telephone", "+56975170547"], ["created_at", "2023-05-23 19:40:05.995492"], ["updated_at", "2023-05-23 19:40:05.995492"]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRequestingUser Create (0.2ms)[0m  [1m[32mINSERT INTO "requesting_users" ("name", "last_name", "email", "telephone", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Zbigniew"], ["last_name", "Prominski"], ["email", "zprom@gmail.com"], ["telephone", "+56918573987"], ["created_at", "2023-05-23 19:40:06.001958"], ["updated_at", "2023-05-23 19:40:06.001958"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRequestingUser Create (0.2ms)[0m  [1m[32mINSERT INTO "requesting_users" ("name", "last_name", "email", "telephone", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Thomas"], ["last_name", "Lang"], ["email", "tlang@gmail.com"], ["telephone", "+56996830684"], ["created_at", "2023-05-23 19:40:06.008043"], ["updated_at", "2023-05-23 19:40:06.008043"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRequestingUser Create (0.2ms)[0m  [1m[32mINSERT INTO "requesting_users" ("name", "last_name", "email", "telephone", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Zack"], ["last_name", "Grooves"], ["email", "zgrooves@gmail.com"], ["telephone", "+56992516472"], ["created_at", "2023-05-23 19:40:06.014249"], ["updated_at", "2023-05-23 19:40:06.014249"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRequestingUser Create (0.3ms)[0m  [1m[32mINSERT INTO "requesting_users" ("name", "last_name", "email", "telephone", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Ryan"], ["last_name", "Berty"], ["email", "rberty@gmail.com"], ["telephone", "+56956476826"], ["created_at", "2023-05-23 19:40:06.020140"], ["updated_at", "2023-05-23 19:40:06.020140"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRequestingUser Create (0.2ms)[0m  [1m[32mINSERT INTO "requesting_users" ("name", "last_name", "email", "telephone", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Adam"], ["last_name", "Darski"], ["email", "adarski@gmail.com"], ["telephone", "+56987656432"], ["created_at", "2023-05-23 19:40:06.026431"], ["updated_at", "2023-05-23 19:40:06.026431"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRequestingUser Create (0.2ms)[0m  [1m[32mINSERT INTO "requesting_users" ("name", "last_name", "email", "telephone", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "David"], ["last_name", "Diepold"], ["email", "daviddiepold@gmail.com"], ["telephone", "+56965423454"], ["created_at", "2023-05-23 19:40:06.032497"], ["updated_at", "2023-05-23 19:40:06.032497"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRequestingUser Create (0.2ms)[0m  [1m[32mINSERT INTO "requesting_users" ("name", "last_name", "email", "telephone", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Anthony"], ["last_name", "Barone"], ["email", "abarone@gmail.com"], ["telephone", "+56976545678"], ["created_at", "2023-05-23 19:40:06.038353"], ["updated_at", "2023-05-23 19:40:06.038353"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRequestingUser Create (0.3ms)[0m  [1m[32mINSERT INTO "requesting_users" ("name", "last_name", "email", "telephone", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Jari"], ["last_name", "Maempa"], ["email", "wintersunjari@gmail.com"], ["telephone", "+56987612543"], ["created_at", "2023-05-23 19:40:06.043631"], ["updated_at", "2023-05-23 19:40:06.043631"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRequestingUser Create (0.2ms)[0m  [1m[32mINSERT INTO "requesting_users" ("name", "last_name", "email", "telephone", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Kai"], ["last_name", "Hahto"], ["email", "kaihahto@gmail.com"], ["telephone", "+56998154762"], ["created_at", "2023-05-23 19:40:06.049241"], ["updated_at", "2023-05-23 19:40:06.049241"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mExecutive Create (0.4ms)[0m  [1m[32mINSERT INTO "executives" ("name", "last_name", "email", "telephone", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Corey"], ["last_name", "Taylor"], ["email", "ctaylor@gmail.com"], ["telephone", "+56919864536"], ["created_at", "2023-05-23 19:40:06.066324"], ["updated_at", "2023-05-23 19:40:06.066324"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mExecutive Create (0.2ms)[0m  [1m[32mINSERT INTO "executives" ("name", "last_name", "email", "telephone", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Jay"], ["last_name", "Weinberg"], ["email", "jayweinberg@gmail.com"], ["telephone", "+56976514253"], ["created_at", "2023-05-23 19:40:06.072246"], ["updated_at", "2023-05-23 19:40:06.072246"]]
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mExecutive Create (0.3ms)[0m  [1m[32mINSERT INTO "executives" ("name", "last_name", "email", "telephone", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Joey"], ["last_name", "Jordison"], ["email", "joeyjordison@gmail.com"], ["telephone", "+56965417893"], ["created_at", "2023-05-23 19:40:06.084397"], ["updated_at", "2023-05-23 19:40:06.084397"]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mExecutive Create (0.3ms)[0m  [1m[32mINSERT INTO "executives" ("name", "last_name", "email", "telephone", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Shawn"], ["last_name", "Crahan"], ["email", "scrahan@gmail.com"], ["telephone", "+56916537865"], ["created_at", "2023-05-23 19:40:06.092082"], ["updated_at", "2023-05-23 19:40:06.092082"]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mExecutive Create (0.4ms)[0m  [1m[32mINSERT INTO "executives" ("name", "last_name", "email", "telephone", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Sebastian"], ["last_name", "Lanser"], ["email", "seblanser@gmail.com"], ["telephone", "+56976514253"], ["created_at", "2023-05-23 19:40:06.098561"], ["updated_at", "2023-05-23 19:40:06.098561"]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSupervisor Create (0.5ms)[0m  [1m[32mINSERT INTO "supervisors" ("name", "last_name", "email", "telephone", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Marthyn"], ["last_name", "Jovanovic"], ["email", "mjovanovic@gmail.com"], ["telephone", "+56987143251"], ["created_at", "2023-05-23 19:40:06.113306"], ["updated_at", "2023-05-23 19:40:06.113306"]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSupervisor Create (0.2ms)[0m  [1m[32mINSERT INTO "supervisors" ("name", "last_name", "email", "telephone", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Susuka"], ["last_name", "Nakamoto"], ["email", "sunakamoto@gmail.com"], ["telephone", "+56998154637"], ["created_at", "2023-05-23 19:40:06.120313"], ["updated_at", "2023-05-23 19:40:06.120313"]]
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSupervisor Create (0.2ms)[0m  [1m[32mINSERT INTO "supervisors" ("name", "last_name", "email", "telephone", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Moa"], ["last_name", "Kikuchi"], ["email", "moakikuchi@gmail.com"], ["telephone", "+56991653746"], ["created_at", "2023-05-23 19:40:06.126870"], ["updated_at", "2023-05-23 19:40:06.126870"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAdministrator Create (0.4ms)[0m  [1m[32mINSERT INTO "administrators" ("name", "last_name", "email", "telephone", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Tak"], ["last_name", "Matsumoto"], ["email", "takmatsumoto@gmail.com"], ["telephone", "+56971845362"], ["created_at", "2023-05-23 19:40:06.141712"], ["updated_at", "2023-05-23 19:40:06.141712"]]
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRequestingUser Load (0.3ms)[0m  [1m[34mSELECT "requesting_users".* FROM "requesting_users" WHERE "requesting_users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mExecutive Load (0.2ms)[0m  [1m[34mSELECT "executives".* FROM "executives" WHERE "executives"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mTicket Create (0.8ms)[0m  [1m[32mINSERT INTO "tickets" ("title", "description", "state", "tags", "priority", "response", "attached_documents", "created_at", "updated_at", "executive_id", "requesting_user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["title", "Forgot password not working properly"], ["description", "The forgot password functionality does not work when I click on it"], ["state", "Open"], ["tags", "Forgot password"], ["priority", "High"], ["response", ""], ["attached_documents", ""], ["created_at", "2023-05-23 19:40:06.189024"], ["updated_at", "2023-05-23 19:40:06.189024"], ["executive_id", 3], ["requesting_user_id", 1]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRequestingUser Load (0.2ms)[0m  [1m[34mSELECT "requesting_users".* FROM "requesting_users" WHERE "requesting_users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mExecutive Load (0.2ms)[0m  [1m[34mSELECT "executives".* FROM "executives" WHERE "executives"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTicket Create (0.4ms)[0m  [1m[32mINSERT INTO "tickets" ("title", "description", "state", "tags", "priority", "response", "attached_documents", "created_at", "updated_at", "executive_id", "requesting_user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["title", "User registration failure"], ["description", "Users can't register for an account on the web application"], ["state", "Open"], ["tags", "Register, Users"], ["priority", "Urgent"], ["response", ""], ["attached_documents", ""], ["created_at", "2023-05-23 19:40:06.201078"], ["updated_at", "2023-05-23 19:40:06.201078"], ["executive_id", 2], ["requesting_user_id", 2]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRequestingUser Load (0.2ms)[0m  [1m[34mSELECT "requesting_users".* FROM "requesting_users" WHERE "requesting_users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mExecutive Load (0.2ms)[0m  [1m[34mSELECT "executives".* FROM "executives" WHERE "executives"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTicket Create (0.4ms)[0m  [1m[32mINSERT INTO "tickets" ("title", "description", "state", "tags", "priority", "response", "attached_documents", "created_at", "updated_at", "executive_id", "requesting_user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["title", "Create ticket button does not work"], ["description", "Whenever i try to add a new ticket, the button for creating it does nothing"], ["state", "Closed"], ["tags", "Buttons, Tickets"], ["priority", "Urgent"], ["response", "Fixed, it was due to not updating the associated links when the respective resource was moved"], ["attached_documents", ""], ["created_at", "2023-05-23 19:40:06.213279"], ["updated_at", "2023-05-23 19:40:06.213279"], ["executive_id", 1], ["requesting_user_id", 3]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRequestingUser Load (0.2ms)[0m  [1m[34mSELECT "requesting_users".* FROM "requesting_users" WHERE "requesting_users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mExecutive Load (0.2ms)[0m  [1m[34mSELECT "executives".* FROM "executives" WHERE "executives"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mTicket Create (0.4ms)[0m  [1m[32mINSERT INTO "tickets" ("title", "description", "state", "tags", "priority", "response", "attached_documents", "created_at", "updated_at", "executive_id", "requesting_user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["title", "Overall performance issues"], ["description", "The web application functions slowly, when navigating on the application links take time to load"], ["state", "Open"], ["tags", "Performance"], ["priority", "Normal"], ["response", ""], ["attached_documents", ""], ["created_at", "2023-05-23 19:40:06.229121"], ["updated_at", "2023-05-23 19:40:06.229121"], ["executive_id", 4], ["requesting_user_id", 4]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRequestingUser Load (0.2ms)[0m  [1m[34mSELECT "requesting_users".* FROM "requesting_users" WHERE "requesting_users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mExecutive Load (0.2ms)[0m  [1m[34mSELECT "executives".* FROM "executives" WHERE "executives"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mTicket Create (0.4ms)[0m  [1m[32mINSERT INTO "tickets" ("title", "description", "state", "tags", "priority", "response", "attached_documents", "created_at", "updated_at", "executive_id", "requesting_user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["title", "Error messages and alerts"], ["description", "Sometimes i get huge error messages and can't access that specific part of the web application"], ["state", "Closed"], ["tags", "Errors, Troubleshooting"], ["priority", "High"], ["response", "Fixed, the problem was whenever an error ocurred, it was not showed to the user in a pleasant way, instead it showed programming errors"], ["attached_documents", ""], ["created_at", "2023-05-23 19:40:06.241959"], ["updated_at", "2023-05-23 19:40:06.241959"], ["executive_id", 5], ["requesting_user_id", 5]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRequestingUser Load (0.3ms)[0m  [1m[34mSELECT "requesting_users".* FROM "requesting_users" WHERE "requesting_users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mExecutive Load (0.2ms)[0m  [1m[34mSELECT "executives".* FROM "executives" WHERE "executives"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTicket Create (0.4ms)[0m  [1m[32mINSERT INTO "tickets" ("title", "description", "state", "tags", "priority", "response", "attached_documents", "created_at", "updated_at", "executive_id", "requesting_user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["title", "Compatibility issues for browsers"], ["description", "The web application does not work properly when accessing it from different browsers such as Safari"], ["state", "Open"], ["tags", "Compatibility, Browsers"], ["priority", "Normal"], ["response", "it is currently being fixed, the web app works fine for Google Chrome for now"], ["attached_documents", ""], ["created_at", "2023-05-23 19:40:06.254536"], ["updated_at", "2023-05-23 19:40:06.254536"], ["executive_id", 2], ["requesting_user_id", 6]]
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRequestingUser Load (0.1ms)[0m  [1m[34mSELECT "requesting_users".* FROM "requesting_users" WHERE "requesting_users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mExecutive Load (0.1ms)[0m  [1m[34mSELECT "executives".* FROM "executives" WHERE "executives"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTicket Create (0.3ms)[0m  [1m[32mINSERT INTO "tickets" ("title", "description", "state", "tags", "priority", "response", "attached_documents", "created_at", "updated_at", "executive_id", "requesting_user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["title", "Data loss or corruption"], ["description", "Users experience data loss or incorrect calculations and unexpected data behavior"], ["state", "Open"], ["tags", "Data loss"], ["priority", "High"], ["response", ""], ["attached_documents", ""], ["created_at", "2023-05-23 19:40:06.266699"], ["updated_at", "2023-05-23 19:40:06.266699"], ["executive_id", 1], ["requesting_user_id", 7]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRequestingUser Load (0.2ms)[0m  [1m[34mSELECT "requesting_users".* FROM "requesting_users" WHERE "requesting_users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mExecutive Load (0.1ms)[0m  [1m[34mSELECT "executives".* FROM "executives" WHERE "executives"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mTicket Create (0.3ms)[0m  [1m[32mINSERT INTO "tickets" ("title", "description", "state", "tags", "priority", "response", "attached_documents", "created_at", "updated_at", "executive_id", "requesting_user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["title", "UX/UI problems"], ["description", "Users find inconsistencies in using the user interface or experience such as confusing navigation or inconsistent design elements"], ["state", "Open"], ["tags", "UI, UX"], ["priority", "Low"], ["response", ""], ["attached_documents", ""], ["created_at", "2023-05-23 19:40:06.277839"], ["updated_at", "2023-05-23 19:40:06.277839"], ["executive_id", 5], ["requesting_user_id", 8]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTicket Load (0.2ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets" WHERE "tickets"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mExecutive Load (0.1ms)[0m  [1m[34mSELECT "executives".* FROM "executives" WHERE "executives"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mComment Create (0.7ms)[0m  [1m[32mINSERT INTO "comments" ("description", "created_at", "updated_at", "ticket_id", "executive_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["description", "Addressing the user registration failure is crucial as it directly impacts our user acquisition and conversion. Let's investigate the root cause and prioritize fixing it to ensure a seamless onboarding experience."], ["created_at", "2023-05-23 19:40:06.304139"], ["updated_at", "2023-05-23 19:40:06.304139"], ["ticket_id", 2], ["executive_id", 1]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTicket Load (0.2ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets" WHERE "tickets"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mExecutive Load (0.1ms)[0m  [1m[34mSELECT "executives".* FROM "executives" WHERE "executives"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Create (0.4ms)[0m  [1m[32mINSERT INTO "comments" ("description", "created_at", "updated_at", "ticket_id", "executive_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["description", "Broken buttons can negatively impact user experience and hinder navigation. It's important to identify and fix these broken buttons promptly to maintain the integrity of our application and provide a smooth browsing experience."], ["created_at", "2023-05-23 19:40:06.315987"], ["updated_at", "2023-05-23 19:40:06.315987"], ["ticket_id", 3], ["executive_id", 2]]
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTicket Load (0.2ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets" WHERE "tickets"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mExecutive Load (0.1ms)[0m  [1m[34mSELECT "executives".* FROM "executives" WHERE "executives"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mComment Create (0.5ms)[0m  [1m[32mINSERT INTO "comments" ("description", "created_at", "updated_at", "ticket_id", "executive_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["description", "Slow performance can lead to user frustration and abandonment. We need to optimize the application's performance to ensure our users have a responsive and enjoyable experience. Let's allocate resources to identify performance bottlenecks and improve overall responsiveness."], ["created_at", "2023-05-23 19:40:06.330217"], ["updated_at", "2023-05-23 19:40:06.330217"], ["ticket_id", 4], ["executive_id", 3]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTicket Load (0.2ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets" WHERE "tickets"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mExecutive Load (0.2ms)[0m  [1m[34mSELECT "executives".* FROM "executives" WHERE "executives"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mComment Create (0.4ms)[0m  [1m[32mINSERT INTO "comments" ("description", "created_at", "updated_at", "ticket_id", "executive_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["description", "Clear and informative error messages are essential for helping users understand and resolve issues effectively. Let's review the error messages and alerts to ensure they provide helpful guidance and minimize user confusion."], ["created_at", "2023-05-23 19:40:06.341804"], ["updated_at", "2023-05-23 19:40:06.341804"], ["ticket_id", 5], ["executive_id", 4]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTicket Load (0.2ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets" WHERE "tickets"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mExecutive Load (0.1ms)[0m  [1m[34mSELECT "executives".* FROM "executives" WHERE "executives"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mComment Create (0.4ms)[0m  [1m[32mINSERT INTO "comments" ("description", "created_at", "updated_at", "ticket_id", "executive_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["description", "User interface and experience play a significant role in user satisfaction and engagement. Let's prioritize addressing UI/UX problems to provide an intuitive and seamless experience that keeps our users engaged and satisfied."], ["created_at", "2023-05-23 19:40:06.353484"], ["updated_at", "2023-05-23 19:40:06.353484"], ["ticket_id", 8], ["executive_id", 4]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTicket Load (0.2ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets" WHERE "tickets"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mExecutive Load (0.1ms)[0m  [1m[34mSELECT "executives".* FROM "executives" WHERE "executives"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mComment Create (0.4ms)[0m  [1m[32mINSERT INTO "comments" ("description", "created_at", "updated_at", "ticket_id", "executive_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["description", "We are currently working on this, for a 100% functional app, you can use the application with Google Chrome in PC, other browsers or devices such as cellphones are not working properly at the moment"], ["created_at", "2023-05-23 19:40:06.365565"], ["updated_at", "2023-05-23 19:40:06.365565"], ["ticket_id", 6], ["executive_id", 5]]
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTicket Load (0.2ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets" WHERE "tickets"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mExecutive Load (0.1ms)[0m  [1m[34mSELECT "executives".* FROM "executives" WHERE "executives"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mResolution Create (0.7ms)[0m  [1m[32mINSERT INTO "resolutions" ("description", "created_at", "updated_at", "ticket_id", "executive_id", "accepted") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["description", "The issue was the button was not working because it was not being redirected to the desired route, now it works and allows the user to add a new ticket"], ["created_at", "2023-05-23 19:40:06.394775"], ["updated_at", "2023-05-23 19:40:06.394775"], ["ticket_id", 3], ["executive_id", 1], ["accepted", true]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTicket Load (0.2ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets" WHERE "tickets"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mExecutive Load (0.2ms)[0m  [1m[34mSELECT "executives".* FROM "executives" WHERE "executives"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mResolution Create (0.4ms)[0m  [1m[32mINSERT INTO "resolutions" ("description", "created_at", "updated_at", "ticket_id", "executive_id", "accepted") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["description", "The problem was the errors were shown as if the user was the programmer, it showed errors with the database when it should just say something along the lines of 'Error: that data does not exist' instead of a Rails error"], ["created_at", "2023-05-23 19:40:06.407537"], ["updated_at", "2023-05-23 19:40:06.407537"], ["ticket_id", 5], ["executive_id", 5], ["accepted", true]]
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTicket Load (0.1ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets" WHERE "tickets"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mExecutive Load (0.2ms)[0m  [1m[34mSELECT "executives".* FROM "executives" WHERE "executives"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRequestingUser Load (0.1ms)[0m  [1m[34mSELECT "requesting_users".* FROM "requesting_users" WHERE "requesting_users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mFeedback Create (4.2ms)[0m  [1m[32mINSERT INTO "feedbacks" ("evaluation", "comment", "created_at", "updated_at", "ticket_id", "executive_id", "requesting_user_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["evaluation", 5], ["comment", "Now the button works fine, thanks"], ["created_at", "2023-05-23 19:40:06.444771"], ["updated_at", "2023-05-23 19:40:06.444771"], ["ticket_id", 3], ["executive_id", 1], ["requesting_user_id", 3]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTicket Load (0.1ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets" WHERE "tickets"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mExecutive Load (0.3ms)[0m  [1m[34mSELECT "executives".* FROM "executives" WHERE "executives"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mRequestingUser Load (0.1ms)[0m  [1m[34mSELECT "requesting_users".* FROM "requesting_users" WHERE "requesting_users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mFeedback Create (0.4ms)[0m  [1m[32mINSERT INTO "feedbacks" ("evaluation", "comment", "created_at", "updated_at", "ticket_id", "executive_id", "requesting_user_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["evaluation", 4], ["comment", "I can see now that the errors are shown in a much more appropiate way, thanks for that"], ["created_at", "2023-05-23 19:40:06.463081"], ["updated_at", "2023-05-23 19:40:06.463081"], ["ticket_id", 5], ["executive_id", 5], ["requesting_user_id", 5]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/" for 127.0.0.1 at 2023-05-23 15:40:11 -0400
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mRequestingUser Load (0.5ms)[0m  [1m[34mSELECT "requesting_users".* FROM "requesting_users"[0m
+  ↳ app/views/pages/home.html.erb:12
+  [1m[36mExecutive Load (0.4ms)[0m  [1m[34mSELECT "executives".* FROM "executives"[0m
+  ↳ app/views/pages/home.html.erb:28
+  [1m[36mSupervisor Load (0.5ms)[0m  [1m[34mSELECT "supervisors".* FROM "supervisors"[0m
+  ↳ app/views/pages/home.html.erb:44
+  [1m[36mAdministrator Load (0.3ms)[0m  [1m[34mSELECT "administrators".* FROM "administrators"[0m
+  ↳ app/views/pages/home.html.erb:60
+  Rendered pages/home.html.erb within layouts/application (Duration: 62.7ms | Allocations: 15606)
+  Rendered layouts/_navbar.html.erb (Duration: 2.0ms | Allocations: 446)
+  Rendered layout layouts/application.html.erb (Duration: 149.6ms | Allocations: 36611)
+Completed 200 OK in 174ms (Views: 137.3ms | ActiveRecord: 15.1ms | Allocations: 45239)
+
+
+Started GET "/" for 127.0.0.1 at 2023-05-23 15:42:09 -0400
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mRequestingUser Load (7.6ms)[0m  [1m[34mSELECT "requesting_users".* FROM "requesting_users"[0m
+  ↳ app/views/pages/home.html.erb:13
+  [1m[36mExecutive Load (0.3ms)[0m  [1m[34mSELECT "executives".* FROM "executives"[0m
+  ↳ app/views/pages/home.html.erb:31
+  [1m[36mSupervisor Load (0.2ms)[0m  [1m[34mSELECT "supervisors".* FROM "supervisors"[0m
+  ↳ app/views/pages/home.html.erb:49
+  [1m[36mAdministrator Load (0.3ms)[0m  [1m[34mSELECT "administrators".* FROM "administrators"[0m
+  ↳ app/views/pages/home.html.erb:67
+  Rendered pages/home.html.erb within layouts/application (Duration: 27.9ms | Allocations: 4472)
+  Rendered layouts/_navbar.html.erb (Duration: 0.8ms | Allocations: 430)
+  Rendered layout layouts/application.html.erb (Duration: 34.1ms | Allocations: 7617)
+Completed 200 OK in 53ms (Views: 44.0ms | ActiveRecord: 8.3ms | Allocations: 8401)
+
+
+Started GET "/" for 127.0.0.1 at 2023-05-23 15:45:00 -0400
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mRequestingUser Load (0.8ms)[0m  [1m[34mSELECT "requesting_users".* FROM "requesting_users"[0m
+  ↳ app/views/pages/home.html.erb:13
+  [1m[36mExecutive Load (0.3ms)[0m  [1m[34mSELECT "executives".* FROM "executives"[0m
+  ↳ app/views/pages/home.html.erb:34
+  [1m[36mSupervisor Load (0.2ms)[0m  [1m[34mSELECT "supervisors".* FROM "supervisors"[0m
+  ↳ app/views/pages/home.html.erb:55
+  [1m[36mAdministrator Load (0.6ms)[0m  [1m[34mSELECT "administrators".* FROM "administrators"[0m
+  ↳ app/views/pages/home.html.erb:76
+  Rendered pages/home.html.erb within layouts/application (Duration: 38.3ms | Allocations: 4549)
+  Rendered layouts/_navbar.html.erb (Duration: 3.8ms | Allocations: 430)
+  Rendered layout layouts/application.html.erb (Duration: 58.6ms | Allocations: 7710)
+Completed 200 OK in 98ms (Views: 94.0ms | ActiveRecord: 2.0ms | Allocations: 8493)
+
+
+Started GET "/requesting_users" for 127.0.0.1 at 2023-05-23 15:45:26 -0400
+Processing by RequestingUsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering requesting_users/index.html.erb within layouts/application
+  [1m[36mRequestingUser Load (0.2ms)[0m  [1m[34mSELECT "requesting_users".* FROM "requesting_users"[0m
+  ↳ app/views/requesting_users/index.html.erb:10
+  Rendered requesting_users/index.html.erb within layouts/application (Duration: 3.7ms | Allocations: 1762)
+  Rendered layouts/_navbar.html.erb (Duration: 0.4ms | Allocations: 215)
+  Rendered layout layouts/application.html.erb (Duration: 14.7ms | Allocations: 4424)
+Completed 200 OK in 17ms (Views: 16.2ms | ActiveRecord: 0.2ms | Allocations: 5143)
+
+
+Started GET "/" for 127.0.0.1 at 2023-05-23 15:45:29 -0400
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mRequestingUser Load (0.2ms)[0m  [1m[34mSELECT "requesting_users".* FROM "requesting_users"[0m
+  ↳ app/views/pages/home.html.erb:13
+  [1m[36mExecutive Load (0.2ms)[0m  [1m[34mSELECT "executives".* FROM "executives"[0m
+  ↳ app/views/pages/home.html.erb:34
+  [1m[36mSupervisor Load (7.6ms)[0m  [1m[34mSELECT "supervisors".* FROM "supervisors"[0m
+  ↳ app/views/pages/home.html.erb:55
+  [1m[36mAdministrator Load (0.5ms)[0m  [1m[34mSELECT "administrators".* FROM "administrators"[0m
+  ↳ app/views/pages/home.html.erb:76
+  Rendered pages/home.html.erb within layouts/application (Duration: 24.5ms | Allocations: 3825)
+  Rendered layouts/_navbar.html.erb (Duration: 0.3ms | Allocations: 198)
+  Rendered layout layouts/application.html.erb (Duration: 33.0ms | Allocations: 6396)
+Completed 200 OK in 34ms (Views: 25.6ms | ActiveRecord: 8.5ms | Allocations: 6691)
+
+
+Started GET "/requesting_users/1" for 127.0.0.1 at 2023-05-23 15:45:43 -0400
+Processing by RequestingUsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRequestingUser Load (0.3ms)[0m  [1m[34mSELECT "requesting_users".* FROM "requesting_users" WHERE "requesting_users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/requesting_users_controller.rb:63:in `set_requesting_user'
+  Rendering layout layouts/application.html.erb
+  Rendering requesting_users/show.html.erb within layouts/application
+  Rendered requesting_users/_requesting_user.html.erb (Duration: 1.1ms | Allocations: 215)
+  Rendered requesting_users/show.html.erb within layouts/application (Duration: 16.4ms | Allocations: 1018)
+  Rendered layouts/_navbar.html.erb (Duration: 7.8ms | Allocations: 197)
+  Rendered layout layouts/application.html.erb (Duration: 29.2ms | Allocations: 3579)
+Completed 200 OK in 51ms (Views: 32.8ms | ActiveRecord: 10.4ms | Allocations: 6244)
+
+
+Started GET "/requesting_users/1/tickets" for 127.0.0.1 at 2023-05-23 15:45:44 -0400
+Processing by TicketsController#index as HTML
+  Parameters: {"requesting_user_id"=>"1"}
+  [1m[36mRequestingUser Load (1.9ms)[0m  [1m[34mSELECT "requesting_users".* FROM "requesting_users" WHERE "requesting_users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/tickets_controller.rb:7:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering tickets/index.html.erb within layouts/application
+  [1m[36mTicket Load (0.4ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets" WHERE "tickets"."requesting_user_id" = $1[0m  [["requesting_user_id", 1]]
+  ↳ app/views/tickets/index.html.erb:7
+  Rendered tickets/index.html.erb within layouts/application (Duration: 60.6ms | Allocations: 9359)
+  Rendered layouts/_navbar.html.erb (Duration: 0.3ms | Allocations: 215)
+  Rendered layout layouts/application.html.erb (Duration: 81.1ms | Allocations: 12015)
+Completed 200 OK in 124ms (Views: 80.1ms | ActiveRecord: 7.6ms | Allocations: 17032)
+
+
+Started GET "/tickets/1" for 127.0.0.1 at 2023-05-23 15:45:46 -0400
+Processing by TicketsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTicket Load (6.3ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets" WHERE "tickets"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/tickets_controller.rb:69:in `set_ticket'
+  Rendering layout layouts/application.html.erb
+  Rendering tickets/show.html.erb within layouts/application
+  Rendered tickets/_ticket.html.erb (Duration: 2.0ms | Allocations: 330)
+  [1m[36mRequestingUser Load (0.9ms)[0m  [1m[34mSELECT "requesting_users".* FROM "requesting_users" WHERE "requesting_users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/tickets/show.html.erb:9
+  Rendered tickets/show.html.erb within layouts/application (Duration: 12.0ms | Allocations: 2586)
+  Rendered layouts/_navbar.html.erb (Duration: 0.3ms | Allocations: 197)
+  Rendered layout layouts/application.html.erb (Duration: 17.8ms | Allocations: 5148)
+Completed 200 OK in 30ms (Views: 17.5ms | ActiveRecord: 7.2ms | Allocations: 6593)
+
+
+Started GET "/tickets/1/resolutions" for 127.0.0.1 at 2023-05-23 15:45:47 -0400
+Processing by ResolutionsController#index as HTML
+  Parameters: {"ticket_id"=>"1"}
+  [1m[36mTicket Load (0.2ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets" WHERE "tickets"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/resolutions_controller.rb:6:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering resolutions/index.html.erb within layouts/application
+  [1m[36mResolution Load (0.4ms)[0m  [1m[34mSELECT "resolutions".* FROM "resolutions" WHERE "resolutions"."ticket_id" = $1[0m  [["ticket_id", 1]]
+  ↳ app/views/resolutions/index.html.erb:7
+  Rendered resolutions/index.html.erb within layouts/application (Duration: 32.6ms | Allocations: 2323)
+  Rendered layouts/_navbar.html.erb (Duration: 0.4ms | Allocations: 242)
+  Rendered layout layouts/application.html.erb (Duration: 47.2ms | Allocations: 5056)
+Completed 200 OK in 69ms (Views: 52.3ms | ActiveRecord: 3.2ms | Allocations: 7755)
+
+
+Started GET "/requesting_users/1/tickets" for 127.0.0.1 at 2023-05-23 15:45:49 -0400
+Processing by TicketsController#index as HTML
+  Parameters: {"requesting_user_id"=>"1"}
+  [1m[36mRequestingUser Load (2.1ms)[0m  [1m[34mSELECT "requesting_users".* FROM "requesting_users" WHERE "requesting_users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/tickets_controller.rb:7:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering tickets/index.html.erb within layouts/application
+  [1m[36mTicket Load (0.3ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets" WHERE "tickets"."requesting_user_id" = $1[0m  [["requesting_user_id", 1]]
+  ↳ app/views/tickets/index.html.erb:7
+  Rendered tickets/index.html.erb within layouts/application (Duration: 4.5ms | Allocations: 952)
+  Rendered layouts/_navbar.html.erb (Duration: 0.3ms | Allocations: 198)
+  Rendered layout layouts/application.html.erb (Duration: 21.9ms | Allocations: 3563)
+Completed 200 OK in 31ms (Views: 25.2ms | ActiveRecord: 2.3ms | Allocations: 4348)
+
+
+Started GET "/requesting_users/1" for 127.0.0.1 at 2023-05-23 15:45:50 -0400
+Processing by RequestingUsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRequestingUser Load (0.2ms)[0m  [1m[34mSELECT "requesting_users".* FROM "requesting_users" WHERE "requesting_users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/requesting_users_controller.rb:63:in `set_requesting_user'
+  Rendering layout layouts/application.html.erb
+  Rendering requesting_users/show.html.erb within layouts/application
+  Rendered requesting_users/_requesting_user.html.erb (Duration: 0.1ms | Allocations: 27)
+  Rendered requesting_users/show.html.erb within layouts/application (Duration: 0.8ms | Allocations: 364)
+  Rendered layouts/_navbar.html.erb (Duration: 0.4ms | Allocations: 197)
+  Rendered layout layouts/application.html.erb (Duration: 5.4ms | Allocations: 2925)
+Completed 200 OK in 12ms (Views: 6.0ms | ActiveRecord: 0.2ms | Allocations: 3684)
+
+
+Started GET "/requesting_users" for 127.0.0.1 at 2023-05-23 15:45:51 -0400
+Processing by RequestingUsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering requesting_users/index.html.erb within layouts/application
+  [1m[36mRequestingUser Load (0.8ms)[0m  [1m[34mSELECT "requesting_users".* FROM "requesting_users"[0m
+  ↳ app/views/requesting_users/index.html.erb:10
+  Rendered requesting_users/index.html.erb within layouts/application (Duration: 8.6ms | Allocations: 1482)
+  Rendered layouts/_navbar.html.erb (Duration: 0.7ms | Allocations: 198)
+  Rendered layout layouts/application.html.erb (Duration: 27.5ms | Allocations: 4052)
+Completed 200 OK in 31ms (Views: 29.0ms | ActiveRecord: 0.8ms | Allocations: 4307)
+
+
+Started GET "/" for 127.0.0.1 at 2023-05-23 15:45:56 -0400
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mRequestingUser Load (0.7ms)[0m  [1m[34mSELECT "requesting_users".* FROM "requesting_users"[0m
+  ↳ app/views/pages/home.html.erb:13
+  [1m[36mExecutive Load (0.3ms)[0m  [1m[34mSELECT "executives".* FROM "executives"[0m
+  ↳ app/views/pages/home.html.erb:34
+  [1m[36mSupervisor Load (4.9ms)[0m  [1m[34mSELECT "supervisors".* FROM "supervisors"[0m
+  ↳ app/views/pages/home.html.erb:55
+  [1m[36mAdministrator Load (0.2ms)[0m  [1m[34mSELECT "administrators".* FROM "administrators"[0m
+  ↳ app/views/pages/home.html.erb:76
+  Rendered pages/home.html.erb within layouts/application (Duration: 27.4ms | Allocations: 3814)
+  Rendered layouts/_navbar.html.erb (Duration: 0.3ms | Allocations: 198)
+  Rendered layout layouts/application.html.erb (Duration: 32.8ms | Allocations: 6384)
+Completed 200 OK in 35ms (Views: 28.1ms | ActiveRecord: 6.2ms | Allocations: 6674)
+
+
+Started GET "/requesting_users/2" for 127.0.0.1 at 2023-05-23 15:45:59 -0400
+Processing by RequestingUsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mRequestingUser Load (0.2ms)[0m  [1m[34mSELECT "requesting_users".* FROM "requesting_users" WHERE "requesting_users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/requesting_users_controller.rb:63:in `set_requesting_user'
+  Rendering layout layouts/application.html.erb
+  Rendering requesting_users/show.html.erb within layouts/application
+  Rendered requesting_users/_requesting_user.html.erb (Duration: 0.1ms | Allocations: 26)
+  Rendered requesting_users/show.html.erb within layouts/application (Duration: 2.9ms | Allocations: 363)
+  Rendered layouts/_navbar.html.erb (Duration: 0.4ms | Allocations: 197)
+  Rendered layout layouts/application.html.erb (Duration: 7.2ms | Allocations: 2924)
+Completed 200 OK in 12ms (Views: 7.9ms | ActiveRecord: 0.2ms | Allocations: 3682)
+
+
+Started GET "/requesting_users/2/tickets" for 127.0.0.1 at 2023-05-23 15:46:01 -0400
+Processing by TicketsController#index as HTML
+  Parameters: {"requesting_user_id"=>"2"}
+  [1m[36mRequestingUser Load (0.3ms)[0m  [1m[34mSELECT "requesting_users".* FROM "requesting_users" WHERE "requesting_users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/tickets_controller.rb:7:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering tickets/index.html.erb within layouts/application
+  [1m[36mTicket Load (0.3ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets" WHERE "tickets"."requesting_user_id" = $1[0m  [["requesting_user_id", 2]]
+  ↳ app/views/tickets/index.html.erb:7
+  Rendered tickets/index.html.erb within layouts/application (Duration: 5.8ms | Allocations: 959)
+  Rendered layouts/_navbar.html.erb (Duration: 0.3ms | Allocations: 198)
+  Rendered layout layouts/application.html.erb (Duration: 19.2ms | Allocations: 3521)
+Completed 200 OK in 29ms (Views: 25.1ms | ActiveRecord: 0.6ms | Allocations: 4301)
+
+
+Started GET "/tickets/2" for 127.0.0.1 at 2023-05-23 15:46:02 -0400
+Processing by TicketsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTicket Load (1.0ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets" WHERE "tickets"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/tickets_controller.rb:69:in `set_ticket'
+  Rendering layout layouts/application.html.erb
+  Rendering tickets/show.html.erb within layouts/application
+  Rendered tickets/_ticket.html.erb (Duration: 0.2ms | Allocations: 37)
+  [1m[36mRequestingUser Load (0.2ms)[0m  [1m[34mSELECT "requesting_users".* FROM "requesting_users" WHERE "requesting_users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/tickets/show.html.erb:9
+  Rendered tickets/show.html.erb within layouts/application (Duration: 3.3ms | Allocations: 1102)
+  Rendered layouts/_navbar.html.erb (Duration: 0.3ms | Allocations: 197)
+  Rendered layout layouts/application.html.erb (Duration: 23.7ms | Allocations: 3663)
+Completed 200 OK in 27ms (Views: 24.1ms | ActiveRecord: 1.1ms | Allocations: 4431)
+
+
+Started GET "/tickets/2/comments" for 127.0.0.1 at 2023-05-23 15:46:03 -0400
+Processing by CommentsController#index as HTML
+  Parameters: {"ticket_id"=>"2"}
+  [1m[36mTicket Load (0.3ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets" WHERE "tickets"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:6:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering comments/index.html.erb within layouts/application
+  [1m[36mComment Load (0.6ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."ticket_id" = $1 ORDER BY "comments"."created_at" ASC[0m  [["ticket_id", 2]]
+  ↳ app/views/comments/index.html.erb:12
+  [1m[36mExecutive Load (0.2ms)[0m  [1m[34mSELECT "executives".* FROM "executives" WHERE "executives"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/comments/index.html.erb:15
+  Rendered comments/index.html.erb within layouts/application (Duration: 33.0ms | Allocations: 6021)
+  Rendered layouts/_navbar.html.erb (Duration: 0.9ms | Allocations: 215)
+  Rendered layout layouts/application.html.erb (Duration: 43.6ms | Allocations: 8724)
+Completed 200 OK in 63ms (Views: 44.4ms | ActiveRecord: 4.3ms | Allocations: 11926)
+
+
+Started GET "/tickets/2/comments" for 127.0.0.1 at 2023-05-23 15:46:40 -0400
+Processing by CommentsController#index as HTML
+  Parameters: {"ticket_id"=>"2"}
+  [1m[36mTicket Load (0.5ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets" WHERE "tickets"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:6:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering comments/index.html.erb within layouts/application
+  [1m[36mComment Load (3.5ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."ticket_id" = $1 ORDER BY "comments"."created_at" ASC[0m  [["ticket_id", 2]]
+  ↳ app/views/comments/index.html.erb:12
+  [1m[36mExecutive Load (0.8ms)[0m  [1m[34mSELECT "executives".* FROM "executives" WHERE "executives"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/comments/index.html.erb:15
+  Rendered comments/index.html.erb within layouts/application (Duration: 14.2ms | Allocations: 1834)
+  Rendered layouts/_navbar.html.erb (Duration: 7.6ms | Allocations: 430)
+  Rendered layout layouts/application.html.erb (Duration: 40.7ms | Allocations: 5019)
+Completed 200 OK in 71ms (Views: 57.4ms | ActiveRecord: 4.8ms | Allocations: 6451)
+
+
+Started GET "/tickets/2" for 127.0.0.1 at 2023-05-23 15:46:45 -0400
+Processing by TicketsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTicket Load (0.3ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets" WHERE "tickets"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/tickets_controller.rb:69:in `set_ticket'
+  Rendering layout layouts/application.html.erb
+  Rendering tickets/show.html.erb within layouts/application
+  Rendered tickets/_ticket.html.erb (Duration: 5.9ms | Allocations: 221)
+  [1m[36mRequestingUser Load (0.9ms)[0m  [1m[34mSELECT "requesting_users".* FROM "requesting_users" WHERE "requesting_users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/tickets/show.html.erb:9
+  Rendered tickets/show.html.erb within layouts/application (Duration: 24.3ms | Allocations: 1628)
+  Rendered layouts/_navbar.html.erb (Duration: 0.4ms | Allocations: 213)
+  Rendered layout layouts/application.html.erb (Duration: 47.0ms | Allocations: 4264)
+Completed 200 OK in 65ms (Views: 58.4ms | ActiveRecord: 1.2ms | Allocations: 5366)
+
+
+Started GET "/requesting_users/2/tickets" for 127.0.0.1 at 2023-05-23 15:46:46 -0400
+Processing by TicketsController#index as HTML
+  Parameters: {"requesting_user_id"=>"2"}
+  [1m[36mRequestingUser Load (0.3ms)[0m  [1m[34mSELECT "requesting_users".* FROM "requesting_users" WHERE "requesting_users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/tickets_controller.rb:7:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering tickets/index.html.erb within layouts/application
+  [1m[36mTicket Load (0.3ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets" WHERE "tickets"."requesting_user_id" = $1[0m  [["requesting_user_id", 2]]
+  ↳ app/views/tickets/index.html.erb:7
+  Rendered tickets/index.html.erb within layouts/application (Duration: 6.3ms | Allocations: 1258)
+  Rendered layouts/_navbar.html.erb (Duration: 0.5ms | Allocations: 198)
+  Rendered layout layouts/application.html.erb (Duration: 24.0ms | Allocations: 3820)
+Completed 200 OK in 36ms (Views: 29.4ms | ActiveRecord: 0.6ms | Allocations: 4681)
+
+
+Started GET "/requesting_users/2" for 127.0.0.1 at 2023-05-23 15:46:47 -0400
+Processing by RequestingUsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mRequestingUser Load (0.2ms)[0m  [1m[34mSELECT "requesting_users".* FROM "requesting_users" WHERE "requesting_users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/requesting_users_controller.rb:63:in `set_requesting_user'
+  Rendering layout layouts/application.html.erb
+  Rendering requesting_users/show.html.erb within layouts/application
+  Rendered requesting_users/_requesting_user.html.erb (Duration: 2.8ms | Allocations: 198)
+  Rendered requesting_users/show.html.erb within layouts/application (Duration: 5.5ms | Allocations: 847)
+  Rendered layouts/_navbar.html.erb (Duration: 0.4ms | Allocations: 211)
+  Rendered layout layouts/application.html.erb (Duration: 16.1ms | Allocations: 3481)
+Completed 200 OK in 28ms (Views: 26.3ms | ActiveRecord: 0.2ms | Allocations: 4579)
+
+
+Started GET "/requesting_users" for 127.0.0.1 at 2023-05-23 15:46:49 -0400
+Processing by RequestingUsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering requesting_users/index.html.erb within layouts/application
+  [1m[36mRequestingUser Load (0.7ms)[0m  [1m[34mSELECT "requesting_users".* FROM "requesting_users"[0m
+  ↳ app/views/requesting_users/index.html.erb:10
+  Rendered requesting_users/index.html.erb within layouts/application (Duration: 15.5ms | Allocations: 1730)
+  Rendered layouts/_navbar.html.erb (Duration: 0.4ms | Allocations: 198)
+  Rendered layout layouts/application.html.erb (Duration: 21.1ms | Allocations: 4300)
+Completed 200 OK in 24ms (Views: 22.8ms | ActiveRecord: 0.7ms | Allocations: 4635)
+
+
+Started GET "/supervisors" for 127.0.0.1 at 2023-05-23 15:46:52 -0400
+Processing by SupervisorsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering supervisors/index.html.erb within layouts/application
+  [1m[36mSupervisor Load (0.2ms)[0m  [1m[34mSELECT "supervisors".* FROM "supervisors"[0m
+  ↳ app/views/supervisors/index.html.erb:10
+  Rendered supervisors/index.html.erb within layouts/application (Duration: 4.0ms | Allocations: 1251)
+  Rendered layouts/_navbar.html.erb (Duration: 0.4ms | Allocations: 215)
+  Rendered layout layouts/application.html.erb (Duration: 8.8ms | Allocations: 3913)
+Completed 200 OK in 17ms (Views: 16.8ms | ActiveRecord: 0.2ms | Allocations: 4629)
+
+

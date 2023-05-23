@@ -1,1 +1,92 @@
-HOME
+<div style="margin-left: 30px;">
+  <p style="color: green"><%= notice %></p>
+
+  <div class="container">
+    <h1>All users</h1>
+  </div>
+  <br>
+
+  <div class="container">
+    <%# Requesting Users %>
+    <h2>Requesting Users</h2>
+    <div class="row">
+      <% @requesting_users.each do |requesting_user| %>
+        <div class="col-md-4">
+          <div class="card bg-light border-secondary mb-3">      
+            <div class="card-body">
+              <h5 class="card-title"><%= requesting_user.name + " " + requesting_user.last_name %></h5>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item"><%= requesting_user.email %></li>
+                <li class="list-group-item"><%= requesting_user.telephone %></li>
+              </ul>             
+              <%= link_to "Profile", requesting_user, class: 'btn btn-info' %>
+            </div>        
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+
+  <div class="container">
+    <%# Executives %>
+    <h2>Executives</h2>
+    <div class="row">
+      <% @executives.each do |executive| %>
+        <div class="col-md-4">
+          <div class="card bg-light border-secondary mb-3">      
+            <div class="card-body">
+              <h5 class="card-title"><%= executive.name + " " + executive.last_name %></h5>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item"><%= executive.email %></li>
+                <li class="list-group-item"><%= executive.telephone %></li>
+              </ul>             
+              <%= link_to "Profile", executive, class: 'btn btn-info' %>
+            </div>        
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+
+  <div class="container">
+    <%# Supervisors %>
+    <h2>Supervisors</h2>
+    <div class="row">
+      <% @supervisors.each do |supervisor| %>
+        <div class="col-md-4">
+          <div class="card bg-light border-secondary mb-3">      
+            <div class="card-body">
+              <h5 class="card-title"><%= supervisor.name + " " + supervisor.last_name %></h5>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item"><%= supervisor.email %></li>
+                <li class="list-group-item"><%= supervisor.telephone %></li>
+              </ul>             
+              <%= link_to "Profile", supervisor, class: 'btn btn-info' %>
+            </div>        
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+
+  <div class="container">
+    <%# Administrators %>
+    <h2>Administrators</h2>
+    <div class="row">
+      <% @administrators.each do |administrator| %>
+        <div class="col-md-4">
+          <div class="card bg-light border-secondary mb-3">      
+            <div class="card-body">
+              <h5 class="card-title"><%= administrator.name + " " + administrator.last_name %></h5>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item"><%= administrator.email %></li>
+                <li class="list-group-item"><%= administrator.telephone %></li>
+              </ul>             
+              <%= link_to "Profile", administrator, class: 'btn btn-info' %>
+            </div>        
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

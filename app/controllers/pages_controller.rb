@@ -3,7 +3,6 @@ class PagesController < ApplicationController
 
   # GET /pages or /pages.json
   def index
-    @pages = Page.all
   end
 
   # GET /pages/1 or /pages/1.json
@@ -11,6 +10,10 @@ class PagesController < ApplicationController
   end
 
   def home
+    @requesting_users = RequestingUser.all
+    @executives = Executive.all
+    @supervisors = Supervisor.all
+    @administrators = Administrator.all
   end
 
   # GET /pages/new
