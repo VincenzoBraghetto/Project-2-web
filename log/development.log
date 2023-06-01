@@ -8505,3 +8505,1840 @@ Processing by SupervisorsController#index as HTML
 Completed 200 OK in 17ms (Views: 16.8ms | ActiveRecord: 0.2ms | Allocations: 4629)
 
 
+Started GET "/" for 127.0.0.1 at 2023-05-23 15:57:13 -0400
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mRequestingUser Load (0.4ms)[0m  [1m[34mSELECT "requesting_users".* FROM "requesting_users"[0m
+  ↳ app/views/pages/home.html.erb:13
+  [1m[36mExecutive Load (0.5ms)[0m  [1m[34mSELECT "executives".* FROM "executives"[0m
+  ↳ app/views/pages/home.html.erb:34
+  [1m[36mSupervisor Load (0.4ms)[0m  [1m[34mSELECT "supervisors".* FROM "supervisors"[0m
+  ↳ app/views/pages/home.html.erb:55
+  [1m[36mAdministrator Load (0.3ms)[0m  [1m[34mSELECT "administrators".* FROM "administrators"[0m
+  ↳ app/views/pages/home.html.erb:76
+  Rendered pages/home.html.erb within layouts/application (Duration: 63.3ms | Allocations: 15690)
+  Rendered layouts/_navbar.html.erb (Duration: 1.2ms | Allocations: 446)
+  Rendered layout layouts/application.html.erb (Duration: 109.4ms | Allocations: 36655)
+Completed 200 OK in 131ms (Views: 95.1ms | ActiveRecord: 17.2ms | Allocations: 45283)
+
+
+Started GET "/executives" for 127.0.0.1 at 2023-05-23 15:57:23 -0400
+Processing by ExecutivesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering executives/index.html.erb within layouts/application
+  [1m[36mExecutive Load (0.2ms)[0m  [1m[34mSELECT "executives".* FROM "executives"[0m
+  ↳ app/views/executives/index.html.erb:10
+  Rendered executives/index.html.erb within layouts/application (Duration: 3.4ms | Allocations: 1415)
+  Rendered layouts/_navbar.html.erb (Duration: 0.3ms | Allocations: 215)
+  Rendered layout layouts/application.html.erb (Duration: 12.4ms | Allocations: 4078)
+Completed 200 OK in 29ms (Views: 27.7ms | ActiveRecord: 0.2ms | Allocations: 4802)
+
+
+Started GET "/executives/1" for 127.0.0.1 at 2023-05-23 15:57:28 -0400
+Processing by ExecutivesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mExecutive Load (0.2ms)[0m  [1m[34mSELECT "executives".* FROM "executives" WHERE "executives"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/executives_controller.rb:63:in `set_executive'
+  Rendering layout layouts/application.html.erb
+  Rendering executives/show.html.erb within layouts/application
+  Rendered executives/_executive.html.erb (Duration: 0.6ms | Allocations: 214)
+  Rendered executives/show.html.erb within layouts/application (Duration: 24.7ms | Allocations: 1083)
+  Rendered layouts/_navbar.html.erb (Duration: 0.7ms | Allocations: 197)
+  Rendered layout layouts/application.html.erb (Duration: 39.9ms | Allocations: 3694)
+Completed 200 OK in 58ms (Views: 44.9ms | ActiveRecord: 1.9ms | Allocations: 6367)
+
+
+Started GET "/administrators" for 127.0.0.1 at 2023-05-23 15:57:30 -0400
+Processing by AdministratorsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering administrators/index.html.erb within layouts/application
+  [1m[36mAdministrator Load (0.2ms)[0m  [1m[34mSELECT "administrators".* FROM "administrators"[0m
+  ↳ app/views/administrators/index.html.erb:8
+  Rendered administrators/index.html.erb within layouts/application (Duration: 3.0ms | Allocations: 1092)
+  Rendered layouts/_navbar.html.erb (Duration: 0.3ms | Allocations: 215)
+  Rendered layout layouts/application.html.erb (Duration: 10.0ms | Allocations: 3803)
+Completed 200 OK in 20ms (Views: 14.3ms | ActiveRecord: 0.2ms | Allocations: 4524)
+
+
+Started GET "/administrators/1" for 127.0.0.1 at 2023-05-23 15:57:32 -0400
+Processing by AdministratorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAdministrator Load (0.6ms)[0m  [1m[34mSELECT "administrators".* FROM "administrators" WHERE "administrators"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/administrators_controller.rb:63:in `set_administrator'
+  Rendering layout layouts/application.html.erb
+  Rendering administrators/show.html.erb within layouts/application
+  Rendered administrators/_administrator.html.erb (Duration: 0.5ms | Allocations: 199)
+  Rendered administrators/show.html.erb within layouts/application (Duration: 2.1ms | Allocations: 800)
+  Rendered layouts/_navbar.html.erb (Duration: 0.4ms | Allocations: 197)
+  Rendered layout layouts/application.html.erb (Duration: 9.5ms | Allocations: 3362)
+Completed 200 OK in 24ms (Views: 10.1ms | ActiveRecord: 0.6ms | Allocations: 4798)
+
+
+Started GET "/administrators" for 127.0.0.1 at 2023-05-23 15:57:35 -0400
+Processing by AdministratorsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering administrators/index.html.erb within layouts/application
+  [1m[36mAdministrator Load (0.4ms)[0m  [1m[34mSELECT "administrators".* FROM "administrators"[0m
+  ↳ app/views/administrators/index.html.erb:8
+  Rendered administrators/index.html.erb within layouts/application (Duration: 11.6ms | Allocations: 848)
+  Rendered layouts/_navbar.html.erb (Duration: 1.9ms | Allocations: 198)
+  Rendered layout layouts/application.html.erb (Duration: 25.2ms | Allocations: 3419)
+Completed 200 OK in 26ms (Views: 25.7ms | ActiveRecord: 0.4ms | Allocations: 3669)
+
+
+Started GET "/supervisors" for 127.0.0.1 at 2023-05-23 15:57:37 -0400
+Processing by SupervisorsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering supervisors/index.html.erb within layouts/application
+  [1m[36mSupervisor Load (0.2ms)[0m  [1m[34mSELECT "supervisors".* FROM "supervisors"[0m
+  ↳ app/views/supervisors/index.html.erb:10
+  Rendered supervisors/index.html.erb within layouts/application (Duration: 3.4ms | Allocations: 1225)
+  Rendered layouts/_navbar.html.erb (Duration: 0.4ms | Allocations: 215)
+  Rendered layout layouts/application.html.erb (Duration: 8.1ms | Allocations: 3887)
+Completed 200 OK in 20ms (Views: 12.9ms | ActiveRecord: 0.2ms | Allocations: 4602)
+
+
+Started GET "/executives" for 127.0.0.1 at 2023-05-23 15:57:41 -0400
+Processing by ExecutivesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering executives/index.html.erb within layouts/application
+  [1m[36mExecutive Load (0.2ms)[0m  [1m[34mSELECT "executives".* FROM "executives"[0m
+  ↳ app/views/executives/index.html.erb:10
+  Rendered executives/index.html.erb within layouts/application (Duration: 2.8ms | Allocations: 1108)
+  Rendered layouts/_navbar.html.erb (Duration: 0.3ms | Allocations: 198)
+  Rendered layout layouts/application.html.erb (Duration: 21.5ms | Allocations: 3678)
+Completed 200 OK in 22ms (Views: 22.0ms | ActiveRecord: 0.2ms | Allocations: 3929)
+
+
+Started GET "/requesting_users" for 127.0.0.1 at 2023-05-23 15:57:52 -0400
+Processing by RequestingUsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering requesting_users/index.html.erb within layouts/application
+  [1m[36mRequestingUser Load (0.2ms)[0m  [1m[34mSELECT "requesting_users".* FROM "requesting_users"[0m
+  ↳ app/views/requesting_users/index.html.erb:10
+  Rendered requesting_users/index.html.erb within layouts/application (Duration: 8.0ms | Allocations: 1762)
+  Rendered layouts/_navbar.html.erb (Duration: 0.3ms | Allocations: 215)
+  Rendered layout layouts/application.html.erb (Duration: 12.9ms | Allocations: 4425)
+Completed 200 OK in 15ms (Views: 14.1ms | ActiveRecord: 0.2ms | Allocations: 5143)
+
+
+Started GET "/executives" for 127.0.0.1 at 2023-05-23 15:58:29 -0400
+Processing by ExecutivesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering executives/index.html.erb within layouts/application
+  [1m[36mExecutive Load (0.2ms)[0m  [1m[34mSELECT "executives".* FROM "executives"[0m
+  ↳ app/views/executives/index.html.erb:10
+  Rendered executives/index.html.erb within layouts/application (Duration: 3.0ms | Allocations: 1117)
+  Rendered layouts/_navbar.html.erb (Duration: 0.4ms | Allocations: 198)
+  Rendered layout layouts/application.html.erb (Duration: 19.8ms | Allocations: 3687)
+Completed 200 OK in 21ms (Views: 20.1ms | ActiveRecord: 0.2ms | Allocations: 3939)
+
+
+Started GET "/executives" for 127.0.0.1 at 2023-05-23 15:58:39 -0400
+Processing by ExecutivesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering executives/index.html.erb within layouts/application
+  [1m[36mExecutive Load (0.2ms)[0m  [1m[34mSELECT "executives".* FROM "executives"[0m
+  ↳ app/views/executives/index.html.erb:10
+  Rendered executives/index.html.erb within layouts/application (Duration: 5.4ms | Allocations: 1106)
+  Rendered layouts/_navbar.html.erb (Duration: 0.5ms | Allocations: 198)
+  Rendered layout layouts/application.html.erb (Duration: 11.6ms | Allocations: 3676)
+Completed 200 OK in 16ms (Views: 13.0ms | ActiveRecord: 0.2ms | Allocations: 3926)
+
+
+Started GET "/administrators" for 127.0.0.1 at 2023-05-23 15:58:55 -0400
+Processing by AdministratorsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering administrators/index.html.erb within layouts/application
+  [1m[36mAdministrator Load (0.3ms)[0m  [1m[34mSELECT "administrators".* FROM "administrators"[0m
+  ↳ app/views/administrators/index.html.erb:8
+  Rendered administrators/index.html.erb within layouts/application (Duration: 15.0ms | Allocations: 839)
+  Rendered layouts/_navbar.html.erb (Duration: 0.3ms | Allocations: 198)
+  Rendered layout layouts/application.html.erb (Duration: 26.2ms | Allocations: 3418)
+Completed 200 OK in 28ms (Views: 26.9ms | ActiveRecord: 0.3ms | Allocations: 3670)
+
+
+Started GET "/supervisors" for 127.0.0.1 at 2023-05-23 15:58:56 -0400
+Processing by SupervisorsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering supervisors/index.html.erb within layouts/application
+  [1m[36mSupervisor Load (0.2ms)[0m  [1m[34mSELECT "supervisors".* FROM "supervisors"[0m
+  ↳ app/views/supervisors/index.html.erb:10
+  Rendered supervisors/index.html.erb within layouts/application (Duration: 2.9ms | Allocations: 978)
+  Rendered layouts/_navbar.html.erb (Duration: 0.3ms | Allocations: 198)
+  Rendered layout layouts/application.html.erb (Duration: 19.4ms | Allocations: 3590)
+Completed 200 OK in 20ms (Views: 19.9ms | ActiveRecord: 0.2ms | Allocations: 3842)
+
+
+Started GET "/supervisors/1" for 127.0.0.1 at 2023-05-23 15:58:57 -0400
+Processing by SupervisorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSupervisor Load (0.3ms)[0m  [1m[34mSELECT "supervisors".* FROM "supervisors" WHERE "supervisors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/supervisors_controller.rb:63:in `set_supervisor'
+  Rendering layout layouts/application.html.erb
+  Rendering supervisors/show.html.erb within layouts/application
+  Rendered supervisors/_supervisor.html.erb (Duration: 3.0ms | Allocations: 199)
+  Rendered supervisors/show.html.erb within layouts/application (Duration: 7.7ms | Allocations: 807)
+  Rendered layouts/_navbar.html.erb (Duration: 0.3ms | Allocations: 197)
+  Rendered layout layouts/application.html.erb (Duration: 17.8ms | Allocations: 3373)
+Completed 200 OK in 23ms (Views: 18.3ms | ActiveRecord: 0.3ms | Allocations: 4794)
+
+
+Started GET "/executives" for 127.0.0.1 at 2023-05-23 15:58:59 -0400
+Processing by ExecutivesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering executives/index.html.erb within layouts/application
+  [1m[36mExecutive Load (0.2ms)[0m  [1m[34mSELECT "executives".* FROM "executives"[0m
+  ↳ app/views/executives/index.html.erb:10
+  Rendered executives/index.html.erb within layouts/application (Duration: 2.5ms | Allocations: 1117)
+  Rendered layouts/_navbar.html.erb (Duration: 0.3ms | Allocations: 198)
+  Rendered layout layouts/application.html.erb (Duration: 22.0ms | Allocations: 3687)
+Completed 200 OK in 23ms (Views: 22.3ms | ActiveRecord: 0.2ms | Allocations: 3937)
+
+
+Started GET "/executives/1" for 127.0.0.1 at 2023-05-23 15:59:01 -0400
+Processing by ExecutivesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mExecutive Load (0.2ms)[0m  [1m[34mSELECT "executives".* FROM "executives" WHERE "executives"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/executives_controller.rb:63:in `set_executive'
+  Rendering layout layouts/application.html.erb
+  Rendering executives/show.html.erb within layouts/application
+  Rendered executives/_executive.html.erb (Duration: 0.1ms | Allocations: 26)
+  Rendered executives/show.html.erb within layouts/application (Duration: 3.6ms | Allocations: 414)
+  Rendered layouts/_navbar.html.erb (Duration: 1.0ms | Allocations: 197)
+  Rendered layout layouts/application.html.erb (Duration: 14.1ms | Allocations: 2975)
+Completed 200 OK in 21ms (Views: 15.1ms | ActiveRecord: 0.2ms | Allocations: 3731)
+
+
+Started GET "/executives/1/feedbacks" for 127.0.0.1 at 2023-05-23 15:59:02 -0400
+Processing by FeedbacksController#index as HTML
+  Parameters: {"executive_id"=>"1"}
+  [1m[36mExecutive Load (0.3ms)[0m  [1m[34mSELECT "executives".* FROM "executives" WHERE "executives"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/feedbacks_controller.rb:6:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering feedbacks/index.html.erb within layouts/application
+  [1m[36mFeedback Load (0.5ms)[0m  [1m[34mSELECT "feedbacks".* FROM "feedbacks" WHERE "feedbacks"."executive_id" = $1[0m  [["executive_id", 1]]
+  ↳ app/views/feedbacks/index.html.erb:7
+  Rendered feedbacks/index.html.erb within layouts/application (Duration: 46.3ms | Allocations: 7411)
+  Rendered layouts/_navbar.html.erb (Duration: 0.5ms | Allocations: 215)
+  Rendered layout layouts/application.html.erb (Duration: 56.5ms | Allocations: 10066)
+Completed 200 OK in 90ms (Views: 61.9ms | ActiveRecord: 4.1ms | Allocations: 14143)
+
+
+Started GET "/executives/1" for 127.0.0.1 at 2023-05-23 15:59:05 -0400
+Processing by ExecutivesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mExecutive Load (0.3ms)[0m  [1m[34mSELECT "executives".* FROM "executives" WHERE "executives"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/executives_controller.rb:63:in `set_executive'
+  Rendering layout layouts/application.html.erb
+  Rendering executives/show.html.erb within layouts/application
+  Rendered executives/_executive.html.erb (Duration: 0.1ms | Allocations: 26)
+  Rendered executives/show.html.erb within layouts/application (Duration: 3.5ms | Allocations: 420)
+  Rendered layouts/_navbar.html.erb (Duration: 0.3ms | Allocations: 197)
+  Rendered layout layouts/application.html.erb (Duration: 16.7ms | Allocations: 2981)
+Completed 200 OK in 19ms (Views: 17.4ms | ActiveRecord: 0.3ms | Allocations: 3740)
+
+
+Started GET "/executives" for 127.0.0.1 at 2023-05-23 15:59:33 -0400
+Processing by ExecutivesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering executives/index.html.erb within layouts/application
+  [1m[36mExecutive Load (0.3ms)[0m  [1m[34mSELECT "executives".* FROM "executives"[0m
+  ↳ app/views/executives/index.html.erb:10
+  Rendered executives/index.html.erb within layouts/application (Duration: 5.6ms | Allocations: 1108)
+  Rendered layouts/_navbar.html.erb (Duration: 0.6ms | Allocations: 198)
+  Rendered layout layouts/application.html.erb (Duration: 19.0ms | Allocations: 3678)
+Completed 200 OK in 25ms (Views: 24.5ms | ActiveRecord: 0.3ms | Allocations: 3929)
+
+
+Started GET "/executives/1" for 127.0.0.1 at 2023-05-23 15:59:34 -0400
+Processing by ExecutivesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mExecutive Load (0.3ms)[0m  [1m[34mSELECT "executives".* FROM "executives" WHERE "executives"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/executives_controller.rb:63:in `set_executive'
+  Rendering layout layouts/application.html.erb
+  Rendering executives/show.html.erb within layouts/application
+  Rendered executives/_executive.html.erb (Duration: 0.1ms | Allocations: 26)
+  Rendered executives/show.html.erb within layouts/application (Duration: 0.8ms | Allocations: 417)
+  Rendered layouts/_navbar.html.erb (Duration: 0.3ms | Allocations: 197)
+  Rendered layout layouts/application.html.erb (Duration: 5.3ms | Allocations: 2978)
+Completed 200 OK in 22ms (Views: 10.2ms | ActiveRecord: 0.3ms | Allocations: 3733)
+
+
+Started GET "/executives/1/tickets" for 127.0.0.1 at 2023-05-23 15:59:35 -0400
+Processing by TicketsController#index as HTML
+  Parameters: {"executive_id"=>"1"}
+  [1m[36mExecutive Load (0.2ms)[0m  [1m[34mSELECT "executives".* FROM "executives" WHERE "executives"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/tickets_controller.rb:10:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering tickets/index.html.erb within layouts/application
+  [1m[36mTicket Load (0.5ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets" WHERE "tickets"."executive_id" = $1[0m  [["executive_id", 1]]
+  ↳ app/views/tickets/index.html.erb:7
+  Rendered tickets/index.html.erb within layouts/application (Duration: 66.4ms | Allocations: 8196)
+  Rendered layouts/_navbar.html.erb (Duration: 0.8ms | Allocations: 215)
+  Rendered layout layouts/application.html.erb (Duration: 80.6ms | Allocations: 10899)
+Completed 200 OK in 97ms (Views: 69.7ms | ActiveRecord: 12.8ms | Allocations: 14691)
+
+
+Started GET "/tickets/7" for 127.0.0.1 at 2023-05-23 15:59:37 -0400
+Processing by TicketsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mTicket Load (0.3ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets" WHERE "tickets"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/tickets_controller.rb:69:in `set_ticket'
+  Rendering layout layouts/application.html.erb
+  Rendering tickets/show.html.erb within layouts/application
+  Rendered tickets/_ticket.html.erb (Duration: 0.8ms | Allocations: 330)
+  [1m[36mRequestingUser Load (0.2ms)[0m  [1m[34mSELECT "requesting_users".* FROM "requesting_users" WHERE "requesting_users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/tickets/show.html.erb:9
+  Rendered tickets/show.html.erb within layouts/application (Duration: 8.8ms | Allocations: 3121)
+  Rendered layouts/_navbar.html.erb (Duration: 0.5ms | Allocations: 197)
+  Rendered layout layouts/application.html.erb (Duration: 13.8ms | Allocations: 5690)
+Completed 200 OK in 24ms (Views: 19.9ms | ActiveRecord: 0.5ms | Allocations: 7122)
+
+
+Started GET "/requesting_users/7/tickets" for 127.0.0.1 at 2023-05-23 15:59:40 -0400
+Processing by TicketsController#index as HTML
+  Parameters: {"requesting_user_id"=>"7"}
+  [1m[36mRequestingUser Load (0.2ms)[0m  [1m[34mSELECT "requesting_users".* FROM "requesting_users" WHERE "requesting_users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/tickets_controller.rb:7:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering tickets/index.html.erb within layouts/application
+  [1m[36mTicket Load (0.9ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets" WHERE "tickets"."requesting_user_id" = $1[0m  [["requesting_user_id", 7]]
+  ↳ app/views/tickets/index.html.erb:7
+  Rendered tickets/index.html.erb within layouts/application (Duration: 3.9ms | Allocations: 1672)
+  Rendered layouts/_navbar.html.erb (Duration: 3.1ms | Allocations: 198)
+  Rendered layout layouts/application.html.erb (Duration: 11.6ms | Allocations: 4235)
+Completed 200 OK in 18ms (Views: 11.3ms | ActiveRecord: 1.1ms | Allocations: 5969)
+
+
+Started GET "/requesting_users/7" for 127.0.0.1 at 2023-05-23 15:59:41 -0400
+Processing by RequestingUsersController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mRequestingUser Load (0.3ms)[0m  [1m[34mSELECT "requesting_users".* FROM "requesting_users" WHERE "requesting_users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/requesting_users_controller.rb:63:in `set_requesting_user'
+  Rendering layout layouts/application.html.erb
+  Rendering requesting_users/show.html.erb within layouts/application
+  Rendered requesting_users/_requesting_user.html.erb (Duration: 1.3ms | Allocations: 200)
+  Rendered requesting_users/show.html.erb within layouts/application (Duration: 12.9ms | Allocations: 899)
+  Rendered layouts/_navbar.html.erb (Duration: 0.3ms | Allocations: 197)
+  Rendered layout layouts/application.html.erb (Duration: 26.6ms | Allocations: 3460)
+Completed 200 OK in 29ms (Views: 27.2ms | ActiveRecord: 0.3ms | Allocations: 4304)
+
+
+Started GET "/executives" for 127.0.0.1 at 2023-05-23 16:08:06 -0400
+Processing by ExecutivesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering executives/index.html.erb within layouts/application
+  [1m[36mExecutive Load (1.0ms)[0m  [1m[34mSELECT "executives".* FROM "executives"[0m
+  ↳ app/views/executives/index.html.erb:10
+  Rendered executives/index.html.erb within layouts/application (Duration: 28.8ms | Allocations: 4130)
+  Rendered layouts/_navbar.html.erb (Duration: 0.3ms | Allocations: 198)
+  Rendered layout layouts/application.html.erb (Duration: 32.8ms | Allocations: 6700)
+Completed 200 OK in 35ms (Views: 34.2ms | ActiveRecord: 12.6ms | Allocations: 6952)
+
+
+Started GET "/executives/1" for 127.0.0.1 at 2023-05-23 16:08:07 -0400
+Processing by ExecutivesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mExecutive Load (0.6ms)[0m  [1m[34mSELECT "executives".* FROM "executives" WHERE "executives"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/executives_controller.rb:63:in `set_executive'
+  Rendering layout layouts/application.html.erb
+  Rendering executives/show.html.erb within layouts/application
+  Rendered executives/_executive.html.erb (Duration: 0.2ms | Allocations: 26)
+  Rendered executives/show.html.erb within layouts/application (Duration: 1.8ms | Allocations: 423)
+  Rendered layouts/_navbar.html.erb (Duration: 0.3ms | Allocations: 197)
+  Rendered layout layouts/application.html.erb (Duration: 6.9ms | Allocations: 2985)
+Completed 200 OK in 19ms (Views: 8.3ms | ActiveRecord: 0.8ms | Allocations: 3768)
+
+
+Started GET "/executives/1/feedbacks" for 127.0.0.1 at 2023-05-23 16:08:09 -0400
+Processing by FeedbacksController#index as HTML
+  Parameters: {"executive_id"=>"1"}
+  [1m[36mExecutive Load (0.2ms)[0m  [1m[34mSELECT "executives".* FROM "executives" WHERE "executives"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/feedbacks_controller.rb:6:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering feedbacks/index.html.erb within layouts/application
+  [1m[36mFeedback Load (0.4ms)[0m  [1m[34mSELECT "feedbacks".* FROM "feedbacks" WHERE "feedbacks"."executive_id" = $1[0m  [["executive_id", 1]]
+  ↳ app/views/feedbacks/index.html.erb:7
+  Rendered feedbacks/index.html.erb within layouts/application (Duration: 3.2ms | Allocations: 988)
+  Rendered layouts/_navbar.html.erb (Duration: 0.4ms | Allocations: 198)
+  Rendered layout layouts/application.html.erb (Duration: 8.6ms | Allocations: 3550)
+Completed 200 OK in 16ms (Views: 8.9ms | ActiveRecord: 0.6ms | Allocations: 4332)
+
+
+Started GET "/executives/1" for 127.0.0.1 at 2023-05-23 16:08:16 -0400
+Processing by ExecutivesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mExecutive Load (11.3ms)[0m  [1m[34mSELECT "executives".* FROM "executives" WHERE "executives"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/executives_controller.rb:63:in `set_executive'
+  Rendering layout layouts/application.html.erb
+  Rendering executives/show.html.erb within layouts/application
+  Rendered executives/_executive.html.erb (Duration: 0.1ms | Allocations: 26)
+  Rendered executives/show.html.erb within layouts/application (Duration: 4.6ms | Allocations: 405)
+  Rendered layouts/_navbar.html.erb (Duration: 0.3ms | Allocations: 197)
+  Rendered layout layouts/application.html.erb (Duration: 11.8ms | Allocations: 2966)
+Completed 200 OK in 27ms (Views: 13.3ms | ActiveRecord: 11.3ms | Allocations: 3721)
+
+
+Started GET "/executives/1/feedbacks" for 127.0.0.1 at 2023-05-23 16:08:51 -0400
+Processing by FeedbacksController#index as HTML
+  Parameters: {"executive_id"=>"1"}
+  [1m[36mExecutive Load (0.2ms)[0m  [1m[34mSELECT "executives".* FROM "executives" WHERE "executives"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/feedbacks_controller.rb:6:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering feedbacks/index.html.erb within layouts/application
+  [1m[36mFeedback Load (4.5ms)[0m  [1m[34mSELECT "feedbacks".* FROM "feedbacks" WHERE "feedbacks"."executive_id" = $1[0m  [["executive_id", 1]]
+  ↳ app/views/feedbacks/index.html.erb:7
+  Rendered feedbacks/index.html.erb within layouts/application (Duration: 11.7ms | Allocations: 949)
+  Rendered layouts/_navbar.html.erb (Duration: 0.3ms | Allocations: 198)
+  Rendered layout layouts/application.html.erb (Duration: 17.6ms | Allocations: 3511)
+Completed 200 OK in 34ms (Views: 14.8ms | ActiveRecord: 4.7ms | Allocations: 4290)
+
+
+Started GET "/feedbacks/1" for 127.0.0.1 at 2023-05-23 16:08:52 -0400
+Processing by FeedbacksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mFeedback Load (0.2ms)[0m  [1m[34mSELECT "feedbacks".* FROM "feedbacks" WHERE "feedbacks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/feedbacks_controller.rb:64:in `set_feedback'
+  Rendering layout layouts/application.html.erb
+  Rendering feedbacks/show.html.erb within layouts/application
+  Rendered feedbacks/_feedback.html.erb (Duration: 1.8ms | Allocations: 204)
+  [1m[36mExecutive Load (0.2ms)[0m  [1m[34mSELECT "executives".* FROM "executives" WHERE "executives"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/feedbacks/show.html.erb:7
+  Rendered feedbacks/show.html.erb within layouts/application (Duration: 11.5ms | Allocations: 2288)
+  Rendered layouts/_navbar.html.erb (Duration: 0.3ms | Allocations: 197)
+  Rendered layout layouts/application.html.erb (Duration: 18.2ms | Allocations: 4900)
+Completed 200 OK in 22ms (Views: 18.5ms | ActiveRecord: 0.5ms | Allocations: 6319)
+
+
+Started GET "/executives/1/feedbacks" for 127.0.0.1 at 2023-05-23 16:08:55 -0400
+Processing by FeedbacksController#index as HTML
+  Parameters: {"executive_id"=>"1"}
+  [1m[36mExecutive Load (0.2ms)[0m  [1m[34mSELECT "executives".* FROM "executives" WHERE "executives"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/feedbacks_controller.rb:6:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering feedbacks/index.html.erb within layouts/application
+  [1m[36mFeedback Load (0.3ms)[0m  [1m[34mSELECT "feedbacks".* FROM "feedbacks" WHERE "feedbacks"."executive_id" = $1[0m  [["executive_id", 1]]
+  ↳ app/views/feedbacks/index.html.erb:7
+  Rendered feedbacks/index.html.erb within layouts/application (Duration: 3.1ms | Allocations: 958)
+  Rendered layouts/_navbar.html.erb (Duration: 0.3ms | Allocations: 198)
+  Rendered layout layouts/application.html.erb (Duration: 14.2ms | Allocations: 3549)
+Completed 200 OK in 17ms (Views: 14.5ms | ActiveRecord: 0.5ms | Allocations: 4329)
+
+
+Started GET "/executives/1" for 127.0.0.1 at 2023-05-23 16:08:56 -0400
+Processing by ExecutivesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mExecutive Load (0.2ms)[0m  [1m[34mSELECT "executives".* FROM "executives" WHERE "executives"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/executives_controller.rb:63:in `set_executive'
+  Rendering layout layouts/application.html.erb
+  Rendering executives/show.html.erb within layouts/application
+  Rendered executives/_executive.html.erb (Duration: 0.1ms | Allocations: 26)
+  Rendered executives/show.html.erb within layouts/application (Duration: 3.1ms | Allocations: 417)
+  Rendered layouts/_navbar.html.erb (Duration: 0.3ms | Allocations: 197)
+  Rendered layout layouts/application.html.erb (Duration: 14.2ms | Allocations: 2978)
+Completed 200 OK in 17ms (Views: 14.9ms | ActiveRecord: 0.2ms | Allocations: 3733)
+
+
+Started GET "/executives" for 127.0.0.1 at 2023-05-23 16:08:57 -0400
+Processing by ExecutivesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering executives/index.html.erb within layouts/application
+  [1m[36mExecutive Load (0.3ms)[0m  [1m[34mSELECT "executives".* FROM "executives"[0m
+  ↳ app/views/executives/index.html.erb:10
+  Rendered executives/index.html.erb within layouts/application (Duration: 5.1ms | Allocations: 1093)
+  Rendered layouts/_navbar.html.erb (Duration: 0.4ms | Allocations: 198)
+  Rendered layout layouts/application.html.erb (Duration: 49.1ms | Allocations: 3663)
+Completed 200 OK in 56ms (Views: 54.5ms | ActiveRecord: 0.3ms | Allocations: 3913)
+
+
+Started GET "/administrators" for 127.0.0.1 at 2023-05-23 16:17:26 -0400
+Processing by AdministratorsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering administrators/index.html.erb within layouts/application
+  [1m[36mAdministrator Load (0.4ms)[0m  [1m[34mSELECT "administrators".* FROM "administrators"[0m
+  ↳ app/views/administrators/index.html.erb:8
+  Rendered administrators/index.html.erb within layouts/application (Duration: 15.4ms | Allocations: 3827)
+  Rendered layouts/_navbar.html.erb (Duration: 0.3ms | Allocations: 198)
+  Rendered layout layouts/application.html.erb (Duration: 23.8ms | Allocations: 6397)
+Completed 200 OK in 25ms (Views: 24.4ms | ActiveRecord: 7.4ms | Allocations: 6649)
+
+
+Started GET "/administrators/1" for 127.0.0.1 at 2023-05-23 16:17:28 -0400
+Processing by AdministratorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAdministrator Load (1.8ms)[0m  [1m[34mSELECT "administrators".* FROM "administrators" WHERE "administrators"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/administrators_controller.rb:63:in `set_administrator'
+  Rendering layout layouts/application.html.erb
+  Rendering administrators/show.html.erb within layouts/application
+  Rendered administrators/_administrator.html.erb (Duration: 0.1ms | Allocations: 26)
+  Rendered administrators/show.html.erb within layouts/application (Duration: 0.8ms | Allocations: 332)
+  Rendered layouts/_navbar.html.erb (Duration: 0.4ms | Allocations: 197)
+  Rendered layout layouts/application.html.erb (Duration: 6.0ms | Allocations: 2893)
+Completed 200 OK in 23ms (Views: 8.1ms | ActiveRecord: 5.5ms | Allocations: 3677)
+
+
+Started GET "/administrators" for 127.0.0.1 at 2023-05-23 16:17:30 -0400
+Processing by AdministratorsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering administrators/index.html.erb within layouts/application
+  [1m[36mAdministrator Load (0.2ms)[0m  [1m[34mSELECT "administrators".* FROM "administrators"[0m
+  ↳ app/views/administrators/index.html.erb:8
+  Rendered administrators/index.html.erb within layouts/application (Duration: 4.2ms | Allocations: 845)
+  Rendered layouts/_navbar.html.erb (Duration: 0.6ms | Allocations: 198)
+  Rendered layout layouts/application.html.erb (Duration: 14.0ms | Allocations: 3416)
+Completed 200 OK in 26ms (Views: 25.0ms | ActiveRecord: 0.2ms | Allocations: 3666)
+
+
+Started GET "/administrators" for 127.0.0.1 at 2023-05-23 16:18:33 -0400
+Processing by AdministratorsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering administrators/index.html.erb within layouts/application
+  [1m[36mAdministrator Load (0.4ms)[0m  [1m[34mSELECT "administrators".* FROM "administrators"[0m
+  ↳ app/views/administrators/index.html.erb:10
+  Rendered administrators/index.html.erb within layouts/application (Duration: 4.2ms | Allocations: 1105)
+  Rendered layouts/_navbar.html.erb (Duration: 2.9ms | Allocations: 430)
+  Rendered layout layouts/application.html.erb (Duration: 21.6ms | Allocations: 4249)
+Completed 200 OK in 30ms (Views: 28.6ms | ActiveRecord: 0.4ms | Allocations: 5019)
+
+
+Started GET "/administrators/1" for 127.0.0.1 at 2023-05-23 16:18:38 -0400
+Processing by AdministratorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAdministrator Load (1.6ms)[0m  [1m[34mSELECT "administrators".* FROM "administrators" WHERE "administrators"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/administrators_controller.rb:63:in `set_administrator'
+  Rendering layout layouts/application.html.erb
+  Rendering administrators/show.html.erb within layouts/application
+  Rendered administrators/_administrator.html.erb (Duration: 0.6ms | Allocations: 197)
+  Rendered administrators/show.html.erb within layouts/application (Duration: 4.6ms | Allocations: 740)
+  Rendered layouts/_navbar.html.erb (Duration: 0.3ms | Allocations: 197)
+  Rendered layout layouts/application.html.erb (Duration: 13.7ms | Allocations: 3301)
+Completed 200 OK in 29ms (Views: 15.8ms | ActiveRecord: 1.6ms | Allocations: 4139)
+
+
+Started GET "/administrators" for 127.0.0.1 at 2023-05-23 16:18:40 -0400
+Processing by AdministratorsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering administrators/index.html.erb within layouts/application
+  [1m[36mAdministrator Load (0.2ms)[0m  [1m[34mSELECT "administrators".* FROM "administrators"[0m
+  ↳ app/views/administrators/index.html.erb:10
+  Rendered administrators/index.html.erb within layouts/application (Duration: 2.2ms | Allocations: 827)
+  Rendered layouts/_navbar.html.erb (Duration: 0.4ms | Allocations: 198)
+  Rendered layout layouts/application.html.erb (Duration: 19.2ms | Allocations: 3448)
+Completed 200 OK in 20ms (Views: 19.6ms | ActiveRecord: 0.2ms | Allocations: 3699)
+
+
+Started GET "/" for 127.0.0.1 at 2023-05-29 13:52:02 -0400
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mRequestingUser Load (3.1ms)[0m  [1m[34mSELECT "requesting_users".* FROM "requesting_users"[0m
+  ↳ app/views/pages/home.html.erb:13
+  [1m[36mExecutive Load (1.3ms)[0m  [1m[34mSELECT "executives".* FROM "executives"[0m
+  ↳ app/views/pages/home.html.erb:34
+  [1m[36mSupervisor Load (1.2ms)[0m  [1m[34mSELECT "supervisors".* FROM "supervisors"[0m
+  ↳ app/views/pages/home.html.erb:55
+  [1m[36mAdministrator Load (2.7ms)[0m  [1m[34mSELECT "administrators".* FROM "administrators"[0m
+  ↳ app/views/pages/home.html.erb:76
+  Rendered pages/home.html.erb within layouts/application (Duration: 70.1ms | Allocations: 15614)
+  Rendered layouts/_navbar.html.erb (Duration: 1.2ms | Allocations: 446)
+  Rendered layout layouts/application.html.erb (Duration: 119.4ms | Allocations: 36454)
+Completed 200 OK in 150ms (Views: 99.8ms | ActiveRecord: 24.8ms | Allocations: 45082)
+
+
+Started GET "/executives" for 127.0.0.1 at 2023-05-29 13:52:05 -0400
+Processing by ExecutivesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering executives/index.html.erb within layouts/application
+  [1m[36mExecutive Load (0.3ms)[0m  [1m[34mSELECT "executives".* FROM "executives"[0m
+  ↳ app/views/executives/index.html.erb:10
+  Rendered executives/index.html.erb within layouts/application (Duration: 16.5ms | Allocations: 1481)
+  Rendered layouts/_navbar.html.erb (Duration: 0.3ms | Allocations: 215)
+  Rendered layout layouts/application.html.erb (Duration: 39.6ms | Allocations: 4144)
+Completed 200 OK in 42ms (Views: 40.9ms | ActiveRecord: 0.3ms | Allocations: 4868)
+
+
+Started GET "/executives/1" for 127.0.0.1 at 2023-05-29 13:52:06 -0400
+Processing by ExecutivesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mExecutive Load (1.3ms)[0m  [1m[34mSELECT "executives".* FROM "executives" WHERE "executives"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/executives_controller.rb:63:in `set_executive'
+  Rendering layout layouts/application.html.erb
+  Rendering executives/show.html.erb within layouts/application
+  Rendered executives/_executive.html.erb (Duration: 1.1ms | Allocations: 214)
+  Rendered executives/show.html.erb within layouts/application (Duration: 12.1ms | Allocations: 1136)
+  Rendered layouts/_navbar.html.erb (Duration: 0.4ms | Allocations: 197)
+  Rendered layout layouts/application.html.erb (Duration: 36.0ms | Allocations: 3747)
+Completed 200 OK in 57ms (Views: 38.3ms | ActiveRecord: 1.9ms | Allocations: 6420)
+
+
+Started GET "/executives/1/tickets" for 127.0.0.1 at 2023-05-29 13:52:08 -0400
+Processing by TicketsController#index as HTML
+  Parameters: {"executive_id"=>"1"}
+  [1m[36mExecutive Load (0.3ms)[0m  [1m[34mSELECT "executives".* FROM "executives" WHERE "executives"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/tickets_controller.rb:10:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering tickets/index.html.erb within layouts/application
+  [1m[36mTicket Load (4.2ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets" WHERE "tickets"."executive_id" = $1[0m  [["executive_id", 1]]
+  ↳ app/views/tickets/index.html.erb:7
+  Rendered tickets/index.html.erb within layouts/application (Duration: 49.5ms | Allocations: 9436)
+  Rendered layouts/_navbar.html.erb (Duration: 0.3ms | Allocations: 215)
+  Rendered layout layouts/application.html.erb (Duration: 65.3ms | Allocations: 12139)
+Completed 200 OK in 107ms (Views: 58.7ms | ActiveRecord: 9.3ms | Allocations: 17138)
+
+
+Started GET "/tickets/3" for 127.0.0.1 at 2023-05-29 13:52:28 -0400
+Processing by TicketsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mTicket Load (0.3ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets" WHERE "tickets"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/tickets_controller.rb:69:in `set_ticket'
+  Rendering layout layouts/application.html.erb
+  Rendering tickets/show.html.erb within layouts/application
+  Rendered tickets/_ticket.html.erb (Duration: 2.1ms | Allocations: 330)
+  [1m[36mRequestingUser Load (0.2ms)[0m  [1m[34mSELECT "requesting_users".* FROM "requesting_users" WHERE "requesting_users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/tickets/show.html.erb:9
+  Rendered tickets/show.html.erb within layouts/application (Duration: 9.8ms | Allocations: 3151)
+  Rendered layouts/_navbar.html.erb (Duration: 0.5ms | Allocations: 197)
+  Rendered layout layouts/application.html.erb (Duration: 24.0ms | Allocations: 5713)
+Completed 200 OK in 27ms (Views: 24.4ms | ActiveRecord: 0.5ms | Allocations: 7158)
+
+
+Started GET "/tickets/3/resolutions" for 127.0.0.1 at 2023-05-29 13:52:30 -0400
+Processing by ResolutionsController#index as HTML
+  Parameters: {"ticket_id"=>"3"}
+  [1m[36mTicket Load (0.2ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets" WHERE "tickets"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/resolutions_controller.rb:6:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering resolutions/index.html.erb within layouts/application
+  [1m[36mResolution Load (5.4ms)[0m  [1m[34mSELECT "resolutions".* FROM "resolutions" WHERE "resolutions"."ticket_id" = $1[0m  [["ticket_id", 3]]
+  ↳ app/views/resolutions/index.html.erb:7
+  Rendered resolutions/index.html.erb within layouts/application (Duration: 42.7ms | Allocations: 5687)
+  Rendered layouts/_navbar.html.erb (Duration: 0.3ms | Allocations: 215)
+  Rendered layout layouts/application.html.erb (Duration: 55.3ms | Allocations: 8342)
+Completed 200 OK in 73ms (Views: 48.0ms | ActiveRecord: 11.0ms | Allocations: 10987)
+
+
+Started GET "/tickets/3" for 127.0.0.1 at 2023-05-29 13:54:37 -0400
+Processing by TicketsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mTicket Load (0.2ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets" WHERE "tickets"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/tickets_controller.rb:69:in `set_ticket'
+  Rendering layout layouts/application.html.erb
+  Rendering tickets/show.html.erb within layouts/application
+  Rendered tickets/_ticket.html.erb (Duration: 0.2ms | Allocations: 37)
+  [1m[36mRequestingUser Load (0.3ms)[0m  [1m[34mSELECT "requesting_users".* FROM "requesting_users" WHERE "requesting_users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/tickets/show.html.erb:9
+  Rendered tickets/show.html.erb within layouts/application (Duration: 13.0ms | Allocations: 1160)
+  Rendered layouts/_navbar.html.erb (Duration: 0.3ms | Allocations: 197)
+  Rendered layout layouts/application.html.erb (Duration: 26.3ms | Allocations: 3721)
+Completed 200 OK in 31ms (Views: 26.5ms | ActiveRecord: 0.5ms | Allocations: 4492)
+
+
+Started GET "/requesting_users/3/tickets" for 127.0.0.1 at 2023-05-29 13:54:38 -0400
+Processing by TicketsController#index as HTML
+  Parameters: {"requesting_user_id"=>"3"}
+  [1m[36mRequestingUser Load (0.3ms)[0m  [1m[34mSELECT "requesting_users".* FROM "requesting_users" WHERE "requesting_users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/tickets_controller.rb:7:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering tickets/index.html.erb within layouts/application
+  [1m[36mTicket Load (0.4ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets" WHERE "tickets"."requesting_user_id" = $1[0m  [["requesting_user_id", 3]]
+  ↳ app/views/tickets/index.html.erb:7
+  Rendered tickets/index.html.erb within layouts/application (Duration: 11.9ms | Allocations: 1758)
+  Rendered layouts/_navbar.html.erb (Duration: 0.4ms | Allocations: 198)
+  Rendered layout layouts/application.html.erb (Duration: 35.2ms | Allocations: 4320)
+Completed 200 OK in 48ms (Views: 38.6ms | ActiveRecord: 0.7ms | Allocations: 6055)
+
+
+Started GET "/requesting_users/3" for 127.0.0.1 at 2023-05-29 13:54:40 -0400
+Processing by RequestingUsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mRequestingUser Load (0.2ms)[0m  [1m[34mSELECT "requesting_users".* FROM "requesting_users" WHERE "requesting_users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/requesting_users_controller.rb:63:in `set_requesting_user'
+  Rendering layout layouts/application.html.erb
+  Rendering requesting_users/show.html.erb within layouts/application
+  Rendered requesting_users/_requesting_user.html.erb (Duration: 1.9ms | Allocations: 200)
+  Rendered requesting_users/show.html.erb within layouts/application (Duration: 4.8ms | Allocations: 964)
+  Rendered layouts/_navbar.html.erb (Duration: 9.7ms | Allocations: 211)
+  Rendered layout layouts/application.html.erb (Duration: 21.3ms | Allocations: 3611)
+Completed 200 OK in 29ms (Views: 22.9ms | ActiveRecord: 0.2ms | Allocations: 4835)
+
+
+Started GET "/requesting_users" for 127.0.0.1 at 2023-05-29 13:54:41 -0400
+Processing by RequestingUsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering requesting_users/index.html.erb within layouts/application
+  [1m[36mRequestingUser Load (0.3ms)[0m  [1m[34mSELECT "requesting_users".* FROM "requesting_users"[0m
+  ↳ app/views/requesting_users/index.html.erb:10
+  Rendered requesting_users/index.html.erb within layouts/application (Duration: 9.7ms | Allocations: 1768)
+  Rendered layouts/_navbar.html.erb (Duration: 0.3ms | Allocations: 198)
+  Rendered layout layouts/application.html.erb (Duration: 24.7ms | Allocations: 4338)
+Completed 200 OK in 32ms (Views: 31.0ms | ActiveRecord: 0.3ms | Allocations: 4675)
+
+
+Started GET "/executives" for 127.0.0.1 at 2023-05-29 13:54:43 -0400
+Processing by ExecutivesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering executives/index.html.erb within layouts/application
+  [1m[36mExecutive Load (0.2ms)[0m  [1m[34mSELECT "executives".* FROM "executives"[0m
+  ↳ app/views/executives/index.html.erb:10
+  Rendered executives/index.html.erb within layouts/application (Duration: 2.8ms | Allocations: 1162)
+  Rendered layouts/_navbar.html.erb (Duration: 0.5ms | Allocations: 198)
+  Rendered layout layouts/application.html.erb (Duration: 9.0ms | Allocations: 3781)
+Completed 200 OK in 10ms (Views: 9.6ms | ActiveRecord: 0.2ms | Allocations: 4035)
+
+
+Started GET "/executives/1" for 127.0.0.1 at 2023-05-29 13:54:44 -0400
+Processing by ExecutivesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mExecutive Load (0.2ms)[0m  [1m[34mSELECT "executives".* FROM "executives" WHERE "executives"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/executives_controller.rb:63:in `set_executive'
+  Rendering layout layouts/application.html.erb
+  Rendering executives/show.html.erb within layouts/application
+  Rendered executives/_executive.html.erb (Duration: 0.1ms | Allocations: 26)
+  Rendered executives/show.html.erb within layouts/application (Duration: 1.0ms | Allocations: 485)
+  Rendered layouts/_navbar.html.erb (Duration: 0.5ms | Allocations: 197)
+  Rendered layout layouts/application.html.erb (Duration: 14.5ms | Allocations: 3094)
+Completed 200 OK in 19ms (Views: 17.2ms | ActiveRecord: 0.2ms | Allocations: 3850)
+
+
+Started GET "/executives/1/tickets" for 127.0.0.1 at 2023-05-29 13:54:45 -0400
+Processing by TicketsController#index as HTML
+  Parameters: {"executive_id"=>"1"}
+  [1m[36mExecutive Load (0.3ms)[0m  [1m[34mSELECT "executives".* FROM "executives" WHERE "executives"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/tickets_controller.rb:10:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering tickets/index.html.erb within layouts/application
+  [1m[36mTicket Load (2.2ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets" WHERE "tickets"."executive_id" = $1[0m  [["executive_id", 1]]
+  ↳ app/views/tickets/index.html.erb:7
+  Rendered tickets/index.html.erb within layouts/application (Duration: 8.4ms | Allocations: 1071)
+  Rendered layouts/_navbar.html.erb (Duration: 0.3ms | Allocations: 198)
+  Rendered layout layouts/application.html.erb (Duration: 16.9ms | Allocations: 3633)
+Completed 200 OK in 30ms (Views: 15.4ms | ActiveRecord: 2.5ms | Allocations: 4415)
+
+
+Started GET "/" for 127.0.0.1 at 2023-06-01 16:02:17 -0400
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mRequestingUser Load (3.3ms)[0m  [1m[34mSELECT "requesting_users".* FROM "requesting_users"[0m
+  ↳ app/views/pages/home.html.erb:13
+  [1m[36mExecutive Load (1.3ms)[0m  [1m[34mSELECT "executives".* FROM "executives"[0m
+  ↳ app/views/pages/home.html.erb:34
+  [1m[36mSupervisor Load (1.2ms)[0m  [1m[34mSELECT "supervisors".* FROM "supervisors"[0m
+  ↳ app/views/pages/home.html.erb:55
+  [1m[36mAdministrator Load (1.3ms)[0m  [1m[34mSELECT "administrators".* FROM "administrators"[0m
+  ↳ app/views/pages/home.html.erb:76
+  Rendered pages/home.html.erb within layouts/application (Duration: 84.6ms | Allocations: 15549)
+  Rendered layouts/_navbar.html.erb (Duration: 1.3ms | Allocations: 446)
+  Rendered layout layouts/application.html.erb (Duration: 145.9ms | Allocations: 36224)
+Completed 200 OK in 186ms (Views: 123.9ms | ActiveRecord: 29.2ms | Allocations: 44853)
+
+
+Started GET "/requesting_users/1" for 127.0.0.1 at 2023-06-01 16:02:33 -0400
+Processing by RequestingUsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRequestingUser Load (0.5ms)[0m  [1m[34mSELECT "requesting_users".* FROM "requesting_users" WHERE "requesting_users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/requesting_users_controller.rb:63:in `set_requesting_user'
+  Rendering layout layouts/application.html.erb
+  Rendering requesting_users/show.html.erb within layouts/application
+  Rendered requesting_users/_requesting_user.html.erb (Duration: 5.1ms | Allocations: 216)
+  Rendered requesting_users/show.html.erb within layouts/application (Duration: 16.1ms | Allocations: 1088)
+  Rendered layouts/_navbar.html.erb (Duration: 0.5ms | Allocations: 211)
+  Rendered layout layouts/application.html.erb (Duration: 32.0ms | Allocations: 3736)
+Completed 200 OK in 53ms (Views: 33.9ms | ActiveRecord: 1.6ms | Allocations: 6797)
+
+
+Started GET "/requesting_users/1/tickets" for 127.0.0.1 at 2023-06-01 16:02:40 -0400
+Processing by TicketsController#index as HTML
+  Parameters: {"requesting_user_id"=>"1"}
+  [1m[36mRequestingUser Load (0.2ms)[0m  [1m[34mSELECT "requesting_users".* FROM "requesting_users" WHERE "requesting_users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/tickets_controller.rb:7:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering tickets/index.html.erb within layouts/application
+  [1m[36mTicket Load (3.0ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets" WHERE "tickets"."requesting_user_id" = $1[0m  [["requesting_user_id", 1]]
+  ↳ app/views/tickets/index.html.erb:7
+  Rendered tickets/index.html.erb within layouts/application (Duration: 57.7ms | Allocations: 9317)
+  Rendered layouts/_navbar.html.erb (Duration: 0.3ms | Allocations: 215)
+  Rendered layout layouts/application.html.erb (Duration: 68.1ms | Allocations: 11972)
+Completed 200 OK in 108ms (Views: 64.0ms | ActiveRecord: 8.7ms | Allocations: 16974)
+
+
+Started GET "/tickets/1" for 127.0.0.1 at 2023-06-01 16:02:43 -0400
+Processing by TicketsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTicket Load (0.3ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets" WHERE "tickets"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/tickets_controller.rb:69:in `set_ticket'
+  Rendering layout layouts/application.html.erb
+  Rendering tickets/show.html.erb within layouts/application
+  Rendered tickets/_ticket.html.erb (Duration: 1.5ms | Allocations: 329)
+  [1m[36mRequestingUser Load (0.3ms)[0m  [1m[34mSELECT "requesting_users".* FROM "requesting_users" WHERE "requesting_users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/tickets/show.html.erb:9
+  Rendered tickets/show.html.erb within layouts/application (Duration: 16.5ms | Allocations: 2576)
+  Rendered layouts/_navbar.html.erb (Duration: 0.4ms | Allocations: 197)
+  Rendered layout layouts/application.html.erb (Duration: 26.3ms | Allocations: 5138)
+Completed 200 OK in 30ms (Views: 26.8ms | ActiveRecord: 0.6ms | Allocations: 6583)
+
+
+Started GET "/requesting_users/1" for 127.0.0.1 at 2023-06-01 16:04:52 -0400
+Processing by RequestingUsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRequestingUser Load (0.3ms)[0m  [1m[34mSELECT "requesting_users".* FROM "requesting_users" WHERE "requesting_users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/requesting_users_controller.rb:63:in `set_requesting_user'
+  Rendering layout layouts/application.html.erb
+  Rendering requesting_users/show.html.erb within layouts/application
+  Rendered requesting_users/_requesting_user.html.erb (Duration: 0.1ms | Allocations: 27)
+  Rendered requesting_users/show.html.erb within layouts/application (Duration: 9.6ms | Allocations: 358)
+  Rendered layouts/_navbar.html.erb (Duration: 0.4ms | Allocations: 197)
+  Rendered layout layouts/application.html.erb (Duration: 17.5ms | Allocations: 2969)
+Completed 200 OK in 21ms (Views: 18.6ms | ActiveRecord: 0.3ms | Allocations: 3743)
+
+
+Started GET "/requesting_users/1/tickets" for 127.0.0.1 at 2023-06-01 16:04:54 -0400
+Processing by TicketsController#index as HTML
+  Parameters: {"requesting_user_id"=>"1"}
+  [1m[36mRequestingUser Load (4.6ms)[0m  [1m[34mSELECT "requesting_users".* FROM "requesting_users" WHERE "requesting_users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/tickets_controller.rb:7:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering tickets/index.html.erb within layouts/application
+  [1m[36mTicket Load (2.6ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets" WHERE "tickets"."requesting_user_id" = $1[0m  [["requesting_user_id", 1]]
+  ↳ app/views/tickets/index.html.erb:7
+  Rendered tickets/index.html.erb within layouts/application (Duration: 9.5ms | Allocations: 957)
+  Rendered layouts/_navbar.html.erb (Duration: 0.3ms | Allocations: 198)
+  Rendered layout layouts/application.html.erb (Duration: 50.2ms | Allocations: 3542)
+Completed 200 OK in 61ms (Views: 49.0ms | ActiveRecord: 7.2ms | Allocations: 4322)
+
+
+Started GET "/tickets/1" for 127.0.0.1 at 2023-06-01 16:04:55 -0400
+Processing by TicketsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTicket Load (0.3ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets" WHERE "tickets"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/tickets_controller.rb:69:in `set_ticket'
+  Rendering layout layouts/application.html.erb
+  Rendering tickets/show.html.erb within layouts/application
+  Rendered tickets/_ticket.html.erb (Duration: 0.2ms | Allocations: 37)
+  [1m[36mRequestingUser Load (0.3ms)[0m  [1m[34mSELECT "requesting_users".* FROM "requesting_users" WHERE "requesting_users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/tickets/show.html.erb:9
+  Rendered tickets/show.html.erb within layouts/application (Duration: 4.6ms | Allocations: 1093)
+  Rendered layouts/_navbar.html.erb (Duration: 0.4ms | Allocations: 197)
+  Rendered layout layouts/application.html.erb (Duration: 9.8ms | Allocations: 3655)
+Completed 200 OK in 34ms (Views: 10.8ms | ActiveRecord: 0.6ms | Allocations: 4423)
+
+
+Started GET "/tickets/1/resolutions" for 127.0.0.1 at 2023-06-01 16:04:57 -0400
+Processing by ResolutionsController#index as HTML
+  Parameters: {"ticket_id"=>"1"}
+  [1m[36mTicket Load (0.3ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets" WHERE "tickets"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/resolutions_controller.rb:6:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering resolutions/index.html.erb within layouts/application
+  [1m[36mResolution Load (1.9ms)[0m  [1m[34mSELECT "resolutions".* FROM "resolutions" WHERE "resolutions"."ticket_id" = $1[0m  [["ticket_id", 1]]
+  ↳ app/views/resolutions/index.html.erb:7
+  Rendered resolutions/index.html.erb within layouts/application (Duration: 16.5ms | Allocations: 2338)
+  Rendered layouts/_navbar.html.erb (Duration: 0.4ms | Allocations: 242)
+  Rendered layout layouts/application.html.erb (Duration: 23.3ms | Allocations: 5022)
+Completed 200 OK in 39ms (Views: 28.2ms | ActiveRecord: 3.5ms | Allocations: 7668)
+
+
+Started GET "/tickets/1/comments" for 127.0.0.1 at 2023-06-01 16:05:01 -0400
+Processing by CommentsController#index as HTML
+  Parameters: {"ticket_id"=>"1"}
+  [1m[36mTicket Load (0.2ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets" WHERE "tickets"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:6:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering comments/index.html.erb within layouts/application
+  [1m[36mComment Load (2.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."ticket_id" = $1 ORDER BY "comments"."created_at" ASC[0m  [["ticket_id", 1]]
+  ↳ app/views/comments/index.html.erb:12
+  Rendered comments/index.html.erb within layouts/application (Duration: 10.8ms | Allocations: 1170)
+  Rendered layouts/_navbar.html.erb (Duration: 0.3ms | Allocations: 215)
+  Rendered layout layouts/application.html.erb (Duration: 25.8ms | Allocations: 3824)
+Completed 200 OK in 57ms (Views: 34.3ms | ActiveRecord: 3.7ms | Allocations: 7077)
+
+
+Started GET "/tickets/1" for 127.0.0.1 at 2023-06-01 16:05:06 -0400
+Processing by TicketsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTicket Load (0.2ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets" WHERE "tickets"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/tickets_controller.rb:69:in `set_ticket'
+  Rendering layout layouts/application.html.erb
+  Rendering tickets/show.html.erb within layouts/application
+  Rendered tickets/_ticket.html.erb (Duration: 0.1ms | Allocations: 37)
+  [1m[36mRequestingUser Load (0.2ms)[0m  [1m[34mSELECT "requesting_users".* FROM "requesting_users" WHERE "requesting_users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/tickets/show.html.erb:9
+  Rendered tickets/show.html.erb within layouts/application (Duration: 4.0ms | Allocations: 1098)
+  Rendered layouts/_navbar.html.erb (Duration: 0.3ms | Allocations: 197)
+  Rendered layout layouts/application.html.erb (Duration: 8.0ms | Allocations: 3659)
+Completed 200 OK in 17ms (Views: 8.6ms | ActiveRecord: 0.4ms | Allocations: 4430)
+
+
+Started GET "/tickets/1/resolutions" for 127.0.0.1 at 2023-06-01 16:05:08 -0400
+Processing by ResolutionsController#index as HTML
+  Parameters: {"ticket_id"=>"1"}
+  [1m[36mTicket Load (0.4ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets" WHERE "tickets"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/resolutions_controller.rb:6:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering resolutions/index.html.erb within layouts/application
+  [1m[36mResolution Load (4.6ms)[0m  [1m[34mSELECT "resolutions".* FROM "resolutions" WHERE "resolutions"."ticket_id" = $1[0m  [["ticket_id", 1]]
+  ↳ app/views/resolutions/index.html.erb:7
+  Rendered resolutions/index.html.erb within layouts/application (Duration: 12.7ms | Allocations: 826)
+  Rendered layouts/_navbar.html.erb (Duration: 0.4ms | Allocations: 207)
+  Rendered layout layouts/application.html.erb (Duration: 24.3ms | Allocations: 3398)
+Completed 200 OK in 35ms (Views: 22.1ms | ActiveRecord: 5.0ms | Allocations: 4192)
+
+
+Started GET "/requesting_users/1/tickets" for 127.0.0.1 at 2023-06-01 16:05:10 -0400
+Processing by TicketsController#index as HTML
+  Parameters: {"requesting_user_id"=>"1"}
+  [1m[36mRequestingUser Load (0.3ms)[0m  [1m[34mSELECT "requesting_users".* FROM "requesting_users" WHERE "requesting_users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/tickets_controller.rb:7:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering tickets/index.html.erb within layouts/application
+  [1m[36mTicket Load (0.2ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets" WHERE "tickets"."requesting_user_id" = $1[0m  [["requesting_user_id", 1]]
+  ↳ app/views/tickets/index.html.erb:7
+  Rendered tickets/index.html.erb within layouts/application (Duration: 2.4ms | Allocations: 947)
+  Rendered layouts/_navbar.html.erb (Duration: 0.3ms | Allocations: 198)
+  Rendered layout layouts/application.html.erb (Duration: 19.5ms | Allocations: 3509)
+Completed 200 OK in 23ms (Views: 20.0ms | ActiveRecord: 0.5ms | Allocations: 4289)
+
+
+Started GET "/requesting_users/1/tickets" for 127.0.0.1 at 2023-06-01 16:12:11 -0400
+Processing by TicketsController#index as HTML
+  Parameters: {"requesting_user_id"=>"1"}
+  [1m[36mRequestingUser Load (0.3ms)[0m  [1m[34mSELECT "requesting_users".* FROM "requesting_users" WHERE "requesting_users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/tickets_controller.rb:7:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering tickets/index.html.erb within layouts/application
+  [1m[36mTicket Load (2.7ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets" WHERE "tickets"."requesting_user_id" = $1[0m  [["requesting_user_id", 1]]
+  ↳ app/views/tickets/index.html.erb:7
+  Rendered tickets/index.html.erb within layouts/application (Duration: 8.0ms | Allocations: 1284)
+  Rendered layouts/_navbar.html.erb (Duration: 33.7ms | Allocations: 9508)
+  Rendered layout layouts/application.html.erb (Duration: 55.3ms | Allocations: 13546)
+Completed 500 Internal Server Error in 137ms (ActiveRecord: 32.0ms | Allocations: 17844)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `tickets_path' for #<ActionView::Base:0x000000000116e8>):
+    18:             <%= link_to 'Administrators', administrators_path, class: 'nav-link active' %>
+    19:         </li>
+    20:         <li class="nav-item">
+    21:             <%= link_to 'Tickets', tickets_path, class: 'nav-link active' %>
+    22:         </li>
+    23:     </ul>
+    24:   </div>
+  
+app/views/layouts/_navbar.html.erb:21
+app/views/layouts/application.html.erb:20
+Started GET "/requesting_users/1/tickets" for 127.0.0.1 at 2023-06-01 16:14:03 -0400
+Processing by TicketsController#index as HTML
+  Parameters: {"requesting_user_id"=>"1"}
+  [1m[36mRequestingUser Load (0.7ms)[0m  [1m[34mSELECT "requesting_users".* FROM "requesting_users" WHERE "requesting_users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/tickets_controller.rb:7:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering tickets/index.html.erb within layouts/application
+  [1m[36mTicket Load (0.2ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets" WHERE "tickets"."requesting_user_id" = $1[0m  [["requesting_user_id", 1]]
+  ↳ app/views/tickets/index.html.erb:7
+  Rendered tickets/index.html.erb within layouts/application (Duration: 63.3ms | Allocations: 5414)
+  Rendered layouts/_navbar.html.erb (Duration: 0.5ms | Allocations: 256)
+  Rendered layout layouts/application.html.erb (Duration: 69.4ms | Allocations: 8148)
+Completed 200 OK in 139ms (Views: 66.6ms | ActiveRecord: 30.4ms | Allocations: 15731)
+
+
+Started GET "/tickets" for 127.0.0.1 at 2023-06-01 16:14:06 -0400
+Processing by TicketsController#index as HTML
+Completed 404 Not Found in 10ms (ActiveRecord: 2.3ms | Allocations: 2461)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Executive without an ID):
+  
+app/controllers/tickets_controller.rb:10:in `index'
+Started GET "/executives" for 127.0.0.1 at 2023-06-01 16:15:14 -0400
+Processing by ExecutivesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering executives/index.html.erb within layouts/application
+  [1m[36mExecutive Load (0.4ms)[0m  [1m[34mSELECT "executives".* FROM "executives"[0m
+  ↳ app/views/executives/index.html.erb:10
+  Rendered executives/index.html.erb within layouts/application (Duration: 9.7ms | Allocations: 3300)
+  Rendered layouts/_navbar.html.erb (Duration: 0.3ms | Allocations: 256)
+  Rendered layout layouts/application.html.erb (Duration: 22.8ms | Allocations: 6042)
+Completed 200 OK in 30ms (Views: 22.9ms | ActiveRecord: 1.6ms | Allocations: 6757)
+
+
+Started GET "/executives/1" for 127.0.0.1 at 2023-06-01 16:15:15 -0400
+Processing by ExecutivesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mExecutive Load (0.4ms)[0m  [1m[34mSELECT "executives".* FROM "executives" WHERE "executives"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/executives_controller.rb:63:in `set_executive'
+  Rendering layout layouts/application.html.erb
+  Rendering executives/show.html.erb within layouts/application
+  Rendered executives/_executive.html.erb (Duration: 4.5ms | Allocations: 199)
+  Rendered executives/show.html.erb within layouts/application (Duration: 13.2ms | Allocations: 930)
+  Rendered layouts/_navbar.html.erb (Duration: 0.4ms | Allocations: 235)
+  Rendered layout layouts/application.html.erb (Duration: 38.2ms | Allocations: 3529)
+Completed 200 OK in 59ms (Views: 38.9ms | ActiveRecord: 0.4ms | Allocations: 4943)
+
+
+Started GET "/executives/1/tickets" for 127.0.0.1 at 2023-06-01 16:15:16 -0400
+Processing by TicketsController#index as HTML
+  Parameters: {"executive_id"=>"1"}
+  [1m[36mExecutive Load (0.2ms)[0m  [1m[34mSELECT "executives".* FROM "executives" WHERE "executives"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/tickets_controller.rb:10:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering tickets/index.html.erb within layouts/application
+  [1m[36mTicket Load (0.4ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets" WHERE "tickets"."executive_id" = $1[0m  [["executive_id", 1]]
+  ↳ app/views/tickets/index.html.erb:7
+  Rendered tickets/index.html.erb within layouts/application (Duration: 9.1ms | Allocations: 2298)
+  Rendered layouts/_navbar.html.erb (Duration: 0.3ms | Allocations: 236)
+  Rendered layout layouts/application.html.erb (Duration: 19.7ms | Allocations: 4898)
+Completed 200 OK in 34ms (Views: 28.1ms | ActiveRecord: 0.6ms | Allocations: 6151)
+
+
+Started GET "/tickets" for 127.0.0.1 at 2023-06-01 16:28:06 -0400
+Processing by TicketsController#index as HTML
+Completed 404 Not Found in 30ms (ActiveRecord: 9.3ms | Allocations: 5580)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Executive without an ID):
+  
+app/controllers/tickets_controller.rb:10:in `index'
+Started GET "/tickets" for 127.0.0.1 at 2023-06-01 16:29:07 -0400
+Processing by TicketsController#index as HTML
+Completed 404 Not Found in 1ms (ActiveRecord: 0.0ms | Allocations: 479)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Executive without an ID):
+  
+app/controllers/tickets_controller.rb:10:in `index'
+Started GET "/tickets" for 127.0.0.1 at 2023-06-01 16:30:08 -0400
+Processing by TicketsController#ticketHome as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tickets/ticketHome.html.erb within layouts/application
+  Rendered tickets/ticketHome.html.erb within layouts/application (Duration: 2.0ms | Allocations: 1277)
+  Rendered layout layouts/application.html.erb (Duration: 2.4ms | Allocations: 1365)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.0ms | Allocations: 4414)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    4: <h2>Tickets</h2>
+    5: 
+    6: <div id="tickets">
+    7:   <% @tickets.each do |ticket| %>    
+    8:     <h5>
+    9:       <%= link_to ticket.title, ticket %> | <%=ticket.state%>
+   10:     </h5>
+  
+app/views/tickets/ticketHome.html.erb:7
+Started GET "/tickets" for 127.0.0.1 at 2023-06-01 16:30:27 -0400
+Processing by TicketsController#ticketHome as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tickets/ticketHome.html.erb within layouts/application
+  [1m[36mTicket Load (0.8ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets"[0m
+  ↳ app/views/tickets/ticketHome.html.erb:7
+  Rendered tickets/ticketHome.html.erb within layouts/application (Duration: 20.8ms | Allocations: 4574)
+  Rendered layouts/_navbar.html.erb (Duration: 1.0ms | Allocations: 494)
+  Rendered layout layouts/application.html.erb (Duration: 33.3ms | Allocations: 7839)
+Completed 200 OK in 41ms (Views: 27.3ms | ActiveRecord: 7.4ms | Allocations: 10609)
+
+
+Started GET "/tickets/8" for 127.0.0.1 at 2023-06-01 16:30:52 -0400
+Processing by TicketsController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mTicket Load (0.2ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets" WHERE "tickets"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/tickets_controller.rb:73:in `set_ticket'
+  Rendering layout layouts/application.html.erb
+  Rendering tickets/show.html.erb within layouts/application
+  Rendered tickets/_ticket.html.erb (Duration: 0.6ms | Allocations: 224)
+  [1m[36mRequestingUser Load (0.3ms)[0m  [1m[34mSELECT "requesting_users".* FROM "requesting_users" WHERE "requesting_users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/tickets/show.html.erb:9
+  Rendered tickets/show.html.erb within layouts/application (Duration: 44.1ms | Allocations: 14309)
+  Rendered layouts/_navbar.html.erb (Duration: 0.4ms | Allocations: 235)
+  Rendered layout layouts/application.html.erb (Duration: 49.3ms | Allocations: 16908)
+Completed 200 OK in 63ms (Views: 40.5ms | ActiveRecord: 11.4ms | Allocations: 18365)
+
+
+Started GET "/requesting_users/8/tickets" for 127.0.0.1 at 2023-06-01 16:30:54 -0400
+Processing by TicketsController#index as HTML
+  Parameters: {"requesting_user_id"=>"8"}
+  [1m[36mRequestingUser Load (0.2ms)[0m  [1m[34mSELECT "requesting_users".* FROM "requesting_users" WHERE "requesting_users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/tickets_controller.rb:7:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering tickets/index.html.erb within layouts/application
+  [1m[36mTicket Load (0.2ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets" WHERE "tickets"."requesting_user_id" = $1[0m  [["requesting_user_id", 8]]
+  ↳ app/views/tickets/index.html.erb:7
+  Rendered tickets/index.html.erb within layouts/application (Duration: 13.5ms | Allocations: 2047)
+  Rendered layouts/_navbar.html.erb (Duration: 0.4ms | Allocations: 236)
+  Rendered layout layouts/application.html.erb (Duration: 24.0ms | Allocations: 4647)
+Completed 200 OK in 35ms (Views: 27.7ms | ActiveRecord: 0.4ms | Allocations: 6491)
+
+
+Started GET "/tickets/8" for 127.0.0.1 at 2023-06-01 16:30:55 -0400
+Processing by TicketsController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mTicket Load (0.2ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets" WHERE "tickets"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/tickets_controller.rb:73:in `set_ticket'
+  Rendering layout layouts/application.html.erb
+  Rendering tickets/show.html.erb within layouts/application
+  Rendered tickets/_ticket.html.erb (Duration: 0.2ms | Allocations: 36)
+  [1m[36mRequestingUser Load (0.2ms)[0m  [1m[34mSELECT "requesting_users".* FROM "requesting_users" WHERE "requesting_users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/tickets/show.html.erb:9
+  Rendered tickets/show.html.erb within layouts/application (Duration: 3.0ms | Allocations: 1107)
+  Rendered layouts/_navbar.html.erb (Duration: 0.6ms | Allocations: 235)
+  Rendered layout layouts/application.html.erb (Duration: 17.7ms | Allocations: 3706)
+Completed 200 OK in 23ms (Views: 18.0ms | ActiveRecord: 0.5ms | Allocations: 4474)
+
+
+Started GET "/requesting_users/8/tickets" for 127.0.0.1 at 2023-06-01 16:30:56 -0400
+Processing by TicketsController#index as HTML
+  Parameters: {"requesting_user_id"=>"8"}
+  [1m[36mRequestingUser Load (4.0ms)[0m  [1m[34mSELECT "requesting_users".* FROM "requesting_users" WHERE "requesting_users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/tickets_controller.rb:7:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering tickets/index.html.erb within layouts/application
+  [1m[36mTicket Load (0.3ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets" WHERE "tickets"."requesting_user_id" = $1[0m  [["requesting_user_id", 8]]
+  ↳ app/views/tickets/index.html.erb:7
+  Rendered tickets/index.html.erb within layouts/application (Duration: 3.0ms | Allocations: 961)
+  Rendered layouts/_navbar.html.erb (Duration: 0.3ms | Allocations: 236)
+  Rendered layout layouts/application.html.erb (Duration: 22.8ms | Allocations: 3561)
+Completed 200 OK in 37ms (Views: 28.0ms | ActiveRecord: 4.3ms | Allocations: 4341)
+
+
+Started GET "/requesting_users/8" for 127.0.0.1 at 2023-06-01 16:31:00 -0400
+Processing by RequestingUsersController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mRequestingUser Load (0.3ms)[0m  [1m[34mSELECT "requesting_users".* FROM "requesting_users" WHERE "requesting_users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/requesting_users_controller.rb:63:in `set_requesting_user'
+  Rendering layout layouts/application.html.erb
+  Rendering requesting_users/show.html.erb within layouts/application
+  Rendered requesting_users/_requesting_user.html.erb (Duration: 17.1ms | Allocations: 209)
+  Rendered requesting_users/show.html.erb within layouts/application (Duration: 21.7ms | Allocations: 924)
+  Rendered layouts/_navbar.html.erb (Duration: 0.5ms | Allocations: 252)
+  Rendered layout layouts/application.html.erb (Duration: 69.6ms | Allocations: 3612)
+Completed 200 OK in 92ms (Views: 82.8ms | ActiveRecord: 0.3ms | Allocations: 4834)
+
+
+Started GET "/requesting_users" for 127.0.0.1 at 2023-06-01 16:31:03 -0400
+Processing by RequestingUsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering requesting_users/index.html.erb within layouts/application
+  [1m[36mRequestingUser Load (0.3ms)[0m  [1m[34mSELECT "requesting_users".* FROM "requesting_users"[0m
+  ↳ app/views/requesting_users/index.html.erb:10
+  Rendered requesting_users/index.html.erb within layouts/application (Duration: 15.6ms | Allocations: 1742)
+  Rendered layouts/_navbar.html.erb (Duration: 0.7ms | Allocations: 236)
+  Rendered layout layouts/application.html.erb (Duration: 29.7ms | Allocations: 4366)
+Completed 200 OK in 32ms (Views: 30.1ms | ActiveRecord: 0.3ms | Allocations: 4705)
+
+
+Started GET "/tickets" for 127.0.0.1 at 2023-06-01 16:31:06 -0400
+Processing by TicketsController#ticketHome as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tickets/ticketHome.html.erb within layouts/application
+  [1m[36mTicket Load (0.3ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets"[0m
+  ↳ app/views/tickets/ticketHome.html.erb:7
+  Rendered tickets/ticketHome.html.erb within layouts/application (Duration: 4.2ms | Allocations: 1217)
+  Rendered layouts/_navbar.html.erb (Duration: 11.1ms | Allocations: 236)
+  Rendered layout layouts/application.html.erb (Duration: 21.0ms | Allocations: 3825)
+Completed 200 OK in 29ms (Views: 28.5ms | ActiveRecord: 0.3ms | Allocations: 4076)
+
+
+Started GET "/tickets/1" for 127.0.0.1 at 2023-06-01 16:31:26 -0400
+Processing by TicketsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTicket Load (0.3ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets" WHERE "tickets"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/tickets_controller.rb:73:in `set_ticket'
+  Rendering layout layouts/application.html.erb
+  Rendering tickets/show.html.erb within layouts/application
+  Rendered tickets/_ticket.html.erb (Duration: 0.2ms | Allocations: 37)
+  [1m[36mRequestingUser Load (0.2ms)[0m  [1m[34mSELECT "requesting_users".* FROM "requesting_users" WHERE "requesting_users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/tickets/show.html.erb:9
+  Rendered tickets/show.html.erb within layouts/application (Duration: 4.9ms | Allocations: 1105)
+  Rendered layouts/_navbar.html.erb (Duration: 0.4ms | Allocations: 235)
+  Rendered layout layouts/application.html.erb (Duration: 10.6ms | Allocations: 3714)
+Completed 200 OK in 19ms (Views: 17.0ms | ActiveRecord: 0.5ms | Allocations: 4482)
+
+
+Started GET "/requesting_users/1/tickets" for 127.0.0.1 at 2023-06-01 16:31:28 -0400
+Processing by TicketsController#index as HTML
+  Parameters: {"requesting_user_id"=>"1"}
+  [1m[36mRequestingUser Load (0.1ms)[0m  [1m[34mSELECT "requesting_users".* FROM "requesting_users" WHERE "requesting_users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/tickets_controller.rb:7:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering tickets/index.html.erb within layouts/application
+  [1m[36mTicket Load (4.8ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets" WHERE "tickets"."requesting_user_id" = $1[0m  [["requesting_user_id", 1]]
+  ↳ app/views/tickets/index.html.erb:7
+  Rendered tickets/index.html.erb within layouts/application (Duration: 7.3ms | Allocations: 959)
+  Rendered layouts/_navbar.html.erb (Duration: 0.3ms | Allocations: 236)
+  Rendered layout layouts/application.html.erb (Duration: 25.8ms | Allocations: 3564)
+Completed 200 OK in 34ms (Views: 26.3ms | ActiveRecord: 4.9ms | Allocations: 4344)
+
+
+Started GET "/requesting_users/1" for 127.0.0.1 at 2023-06-01 16:31:30 -0400
+Processing by RequestingUsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRequestingUser Load (2.7ms)[0m  [1m[34mSELECT "requesting_users".* FROM "requesting_users" WHERE "requesting_users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/requesting_users_controller.rb:63:in `set_requesting_user'
+  Rendering layout layouts/application.html.erb
+  Rendering requesting_users/show.html.erb within layouts/application
+  Rendered requesting_users/_requesting_user.html.erb (Duration: 0.1ms | Allocations: 27)
+  Rendered requesting_users/show.html.erb within layouts/application (Duration: 9.2ms | Allocations: 409)
+  Rendered layouts/_navbar.html.erb (Duration: 0.5ms | Allocations: 235)
+  Rendered layout layouts/application.html.erb (Duration: 47.6ms | Allocations: 3009)
+Completed 200 OK in 61ms (Views: 48.9ms | ActiveRecord: 2.7ms | Allocations: 3768)
+
+
+Started GET "/tickets" for 127.0.0.1 at 2023-06-01 16:31:32 -0400
+Processing by TicketsController#ticketHome as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tickets/ticketHome.html.erb within layouts/application
+  [1m[36mTicket Load (2.1ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets"[0m
+  ↳ app/views/tickets/ticketHome.html.erb:7
+  Rendered tickets/ticketHome.html.erb within layouts/application (Duration: 6.5ms | Allocations: 1205)
+  Rendered layouts/_navbar.html.erb (Duration: 0.4ms | Allocations: 236)
+  Rendered layout layouts/application.html.erb (Duration: 21.4ms | Allocations: 3813)
+Completed 200 OK in 24ms (Views: 21.6ms | ActiveRecord: 2.1ms | Allocations: 4063)
+
+
+Started GET "/tickets/1" for 127.0.0.1 at 2023-06-01 16:31:45 -0400
+Processing by TicketsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTicket Load (0.2ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets" WHERE "tickets"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/tickets_controller.rb:73:in `set_ticket'
+  Rendering layout layouts/application.html.erb
+  Rendering tickets/show.html.erb within layouts/application
+  Rendered tickets/_ticket.html.erb (Duration: 0.2ms | Allocations: 37)
+  [1m[36mRequestingUser Load (0.3ms)[0m  [1m[34mSELECT "requesting_users".* FROM "requesting_users" WHERE "requesting_users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/tickets/show.html.erb:9
+  Rendered tickets/show.html.erb within layouts/application (Duration: 3.7ms | Allocations: 1108)
+  Rendered layouts/_navbar.html.erb (Duration: 0.4ms | Allocations: 235)
+  Rendered layout layouts/application.html.erb (Duration: 8.4ms | Allocations: 3707)
+Completed 200 OK in 13ms (Views: 10.0ms | ActiveRecord: 0.5ms | Allocations: 4475)
+
+
+Started GET "/requesting_users/1/tickets" for 127.0.0.1 at 2023-06-01 16:32:01 -0400
+Processing by TicketsController#index as HTML
+  Parameters: {"requesting_user_id"=>"1"}
+  [1m[36mRequestingUser Load (0.2ms)[0m  [1m[34mSELECT "requesting_users".* FROM "requesting_users" WHERE "requesting_users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/tickets_controller.rb:7:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering tickets/index.html.erb within layouts/application
+  [1m[36mTicket Load (0.3ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets" WHERE "tickets"."requesting_user_id" = $1[0m  [["requesting_user_id", 1]]
+  ↳ app/views/tickets/index.html.erb:7
+  Rendered tickets/index.html.erb within layouts/application (Duration: 2.5ms | Allocations: 953)
+  Rendered layouts/_navbar.html.erb (Duration: 0.3ms | Allocations: 236)
+  Rendered layout layouts/application.html.erb (Duration: 7.2ms | Allocations: 3553)
+Completed 200 OK in 10ms (Views: 7.5ms | ActiveRecord: 0.4ms | Allocations: 4333)
+
+
+Started GET "/requesting_users/1" for 127.0.0.1 at 2023-06-01 16:32:10 -0400
+Processing by RequestingUsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRequestingUser Load (0.2ms)[0m  [1m[34mSELECT "requesting_users".* FROM "requesting_users" WHERE "requesting_users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/requesting_users_controller.rb:63:in `set_requesting_user'
+  Rendering layout layouts/application.html.erb
+  Rendering requesting_users/show.html.erb within layouts/application
+  Rendered requesting_users/_requesting_user.html.erb (Duration: 0.2ms | Allocations: 27)
+  Rendered requesting_users/show.html.erb within layouts/application (Duration: 1.1ms | Allocations: 367)
+  Rendered layouts/_navbar.html.erb (Duration: 0.6ms | Allocations: 235)
+  Rendered layout layouts/application.html.erb (Duration: 9.0ms | Allocations: 2966)
+Completed 200 OK in 13ms (Views: 9.8ms | ActiveRecord: 0.2ms | Allocations: 3724)
+
+
+Started GET "/requesting_users" for 127.0.0.1 at 2023-06-01 16:32:13 -0400
+Processing by RequestingUsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering requesting_users/index.html.erb within layouts/application
+  [1m[36mRequestingUser Load (0.2ms)[0m  [1m[34mSELECT "requesting_users".* FROM "requesting_users"[0m
+  ↳ app/views/requesting_users/index.html.erb:10
+  Rendered requesting_users/index.html.erb within layouts/application (Duration: 6.0ms | Allocations: 1473)
+  Rendered layouts/_navbar.html.erb (Duration: 8.6ms | Allocations: 236)
+  Rendered layout layouts/application.html.erb (Duration: 19.4ms | Allocations: 4081)
+Completed 200 OK in 21ms (Views: 20.3ms | ActiveRecord: 0.2ms | Allocations: 4334)
+
+
+Started GET "/tickets" for 127.0.0.1 at 2023-06-01 16:32:15 -0400
+Processing by TicketsController#ticketHome as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tickets/ticketHome.html.erb within layouts/application
+  [1m[36mTicket Load (6.3ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets"[0m
+  ↳ app/views/tickets/ticketHome.html.erb:7
+  Rendered tickets/ticketHome.html.erb within layouts/application (Duration: 10.3ms | Allocations: 1229)
+  Rendered layouts/_navbar.html.erb (Duration: 0.3ms | Allocations: 236)
+  Rendered layout layouts/application.html.erb (Duration: 15.0ms | Allocations: 3837)
+Completed 200 OK in 16ms (Views: 9.3ms | ActiveRecord: 6.3ms | Allocations: 4087)
+
+
+Started GET "/tickets/1" for 127.0.0.1 at 2023-06-01 16:32:16 -0400
+Processing by TicketsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTicket Load (0.2ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets" WHERE "tickets"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/tickets_controller.rb:73:in `set_ticket'
+  Rendering layout layouts/application.html.erb
+  Rendering tickets/show.html.erb within layouts/application
+  Rendered tickets/_ticket.html.erb (Duration: 0.2ms | Allocations: 37)
+  [1m[36mRequestingUser Load (0.2ms)[0m  [1m[34mSELECT "requesting_users".* FROM "requesting_users" WHERE "requesting_users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/tickets/show.html.erb:9
+  Rendered tickets/show.html.erb within layouts/application (Duration: 4.8ms | Allocations: 1117)
+  Rendered layouts/_navbar.html.erb (Duration: 0.4ms | Allocations: 235)
+  Rendered layout layouts/application.html.erb (Duration: 9.0ms | Allocations: 3716)
+Completed 200 OK in 17ms (Views: 12.9ms | ActiveRecord: 0.4ms | Allocations: 4484)
+
+
+Started GET "/requesting_users/1/tickets" for 127.0.0.1 at 2023-06-01 16:34:02 -0400
+Processing by TicketsController#index as HTML
+  Parameters: {"requesting_user_id"=>"1"}
+  [1m[36mRequestingUser Load (2.2ms)[0m  [1m[34mSELECT "requesting_users".* FROM "requesting_users" WHERE "requesting_users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/tickets_controller.rb:7:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering tickets/index.html.erb within layouts/application
+  [1m[36mTicket Load (0.5ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets" WHERE "tickets"."requesting_user_id" = $1[0m  [["requesting_user_id", 1]]
+  ↳ app/views/tickets/index.html.erb:7
+  Rendered tickets/index.html.erb within layouts/application (Duration: 26.2ms | Allocations: 971)
+  Rendered layouts/_navbar.html.erb (Duration: 0.3ms | Allocations: 236)
+  Rendered layout layouts/application.html.erb (Duration: 39.2ms | Allocations: 3610)
+Completed 200 OK in 55ms (Views: 39.4ms | ActiveRecord: 2.7ms | Allocations: 4391)
+
+
+Started GET "/requesting_users/1" for 127.0.0.1 at 2023-06-01 16:34:03 -0400
+Processing by RequestingUsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRequestingUser Load (0.2ms)[0m  [1m[34mSELECT "requesting_users".* FROM "requesting_users" WHERE "requesting_users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/requesting_users_controller.rb:63:in `set_requesting_user'
+  Rendering layout layouts/application.html.erb
+  Rendering requesting_users/show.html.erb within layouts/application
+  Rendered requesting_users/_requesting_user.html.erb (Duration: 0.1ms | Allocations: 27)
+  Rendered requesting_users/show.html.erb within layouts/application (Duration: 8.5ms | Allocations: 376)
+  Rendered layouts/_navbar.html.erb (Duration: 0.4ms | Allocations: 235)
+  Rendered layout layouts/application.html.erb (Duration: 41.1ms | Allocations: 2975)
+Completed 200 OK in 49ms (Views: 45.5ms | ActiveRecord: 0.2ms | Allocations: 3733)
+
+
+Started GET "/tickets" for 127.0.0.1 at 2023-06-01 16:34:05 -0400
+Processing by TicketsController#ticketHome as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tickets/ticketHome.html.erb within layouts/application
+  [1m[36mTicket Load (2.5ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets"[0m
+  ↳ app/views/tickets/ticketHome.html.erb:7
+  Rendered tickets/ticketHome.html.erb within layouts/application (Duration: 14.7ms | Allocations: 1202)
+  Rendered layouts/_navbar.html.erb (Duration: 0.9ms | Allocations: 236)
+  Rendered layout layouts/application.html.erb (Duration: 32.5ms | Allocations: 3848)
+Completed 200 OK in 33ms (Views: 30.5ms | ActiveRecord: 2.5ms | Allocations: 4098)
+
+
+Started GET "/tickets/1" for 127.0.0.1 at 2023-06-01 16:34:25 -0400
+Processing by TicketsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTicket Load (0.3ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets" WHERE "tickets"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/tickets_controller.rb:73:in `set_ticket'
+  Rendering layout layouts/application.html.erb
+  Rendering tickets/show.html.erb within layouts/application
+  Rendered tickets/_ticket.html.erb (Duration: 0.1ms | Allocations: 37)
+  [1m[36mRequestingUser Load (0.2ms)[0m  [1m[34mSELECT "requesting_users".* FROM "requesting_users" WHERE "requesting_users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/tickets/show.html.erb:9
+  Rendered tickets/show.html.erb within layouts/application (Duration: 2.9ms | Allocations: 1117)
+  Rendered layouts/_navbar.html.erb (Duration: 5.5ms | Allocations: 235)
+  Rendered layout layouts/application.html.erb (Duration: 13.8ms | Allocations: 3716)
+Completed 200 OK in 20ms (Views: 14.3ms | ActiveRecord: 0.5ms | Allocations: 4484)
+
+
+Started GET "/tickets" for 127.0.0.1 at 2023-06-01 16:34:28 -0400
+Processing by TicketsController#ticketHome as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tickets/ticketHome.html.erb within layouts/application
+  [1m[36mTicket Load (0.3ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets"[0m
+  ↳ app/views/tickets/ticketHome.html.erb:7
+  Rendered tickets/ticketHome.html.erb within layouts/application (Duration: 27.9ms | Allocations: 1205)
+  Rendered layouts/_navbar.html.erb (Duration: 0.4ms | Allocations: 236)
+  Rendered layout layouts/application.html.erb (Duration: 38.5ms | Allocations: 3814)
+Completed 200 OK in 39ms (Views: 38.9ms | ActiveRecord: 0.3ms | Allocations: 4065)
+
+
+Started GET "/tickets" for 127.0.0.1 at 2023-06-01 16:36:32 -0400
+Processing by TicketsController#ticketHome as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tickets/ticketHome.html.erb within layouts/application
+  [1m[36mTicket Load (1.0ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets"[0m
+  ↳ app/views/tickets/ticketHome.html.erb:8
+  Rendered tickets/ticketHome.html.erb within layouts/application (Duration: 13.1ms | Allocations: 2430)
+  Rendered layout layouts/application.html.erb (Duration: 17.1ms | Allocations: 2518)
+Completed 500 Internal Server Error in 30ms (ActiveRecord: 1.0ms | Allocations: 3241)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `new_ticket_path' for #<ActionView::Base:0x0000000003ab10>):
+    11:         </h5>
+    12:       <% end %>
+    13:     </div>
+    14:     <%= link_to 'New Ticket', new_ticket_path, class: 'btn btn-primary' %>
+    15:   </div>
+    16: </div>
+  
+app/views/tickets/ticketHome.html.erb:14
+Started GET "/tickets" for 127.0.0.1 at 2023-06-01 16:39:08 -0400
+Processing by TicketsController#ticketHome as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tickets/ticketHome.html.erb within layouts/application
+  [1m[36mTicket Load (0.2ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets"[0m
+  ↳ app/views/tickets/ticketHome.html.erb:8
+  Rendered tickets/ticketHome.html.erb within layouts/application (Duration: 28.4ms | Allocations: 4482)
+  Rendered layouts/_navbar.html.erb (Duration: 1.1ms | Allocations: 494)
+  Rendered layout layouts/application.html.erb (Duration: 34.4ms | Allocations: 7749)
+Completed 200 OK in 44ms (Views: 21.5ms | ActiveRecord: 14.3ms | Allocations: 10519)
+
+
+Started GET "/tickets" for 127.0.0.1 at 2023-06-01 16:39:33 -0400
+Processing by TicketsController#ticketHome as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tickets/ticketHome.html.erb within layouts/application
+  [1m[36mTicket Load (1.3ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets"[0m
+  ↳ app/views/tickets/ticketHome.html.erb:7
+  Rendered tickets/ticketHome.html.erb within layouts/application (Duration: 10.2ms | Allocations: 1515)
+  Rendered layouts/_navbar.html.erb (Duration: 1.0ms | Allocations: 494)
+  Rendered layout layouts/application.html.erb (Duration: 29.3ms | Allocations: 4724)
+Completed 200 OK in 41ms (Views: 38.5ms | ActiveRecord: 1.3ms | Allocations: 5464)
+
+
+Started GET "/tickets" for 127.0.0.1 at 2023-06-01 16:40:46 -0400
+Processing by TicketsController#ticketHome as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tickets/ticketHome.html.erb within layouts/application
+  [1m[36mTicket Load (0.3ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets"[0m
+  ↳ app/views/tickets/ticketHome.html.erb:7
+  Rendered tickets/ticketHome.html.erb within layouts/application (Duration: 4.1ms | Allocations: 1487)
+  Rendered layouts/_navbar.html.erb (Duration: 3.2ms | Allocations: 494)
+  Rendered layout layouts/application.html.erb (Duration: 50.0ms | Allocations: 4695)
+Completed 200 OK in 56ms (Views: 54.8ms | ActiveRecord: 0.3ms | Allocations: 5436)
+
+
+Started GET "/tickets" for 127.0.0.1 at 2023-06-01 16:43:16 -0400
+Processing by TicketsController#ticketHome as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tickets/ticketHome.html.erb within layouts/application
+  [1m[36mTicket Load (3.1ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets"[0m
+  ↳ app/views/tickets/ticketHome.html.erb:7
+  Rendered tickets/ticketHome.html.erb within layouts/application (Duration: 22.8ms | Allocations: 1499)
+  Rendered layouts/_navbar.html.erb (Duration: 8.2ms | Allocations: 517)
+  Rendered layout layouts/application.html.erb (Duration: 79.6ms | Allocations: 4730)
+Completed 200 OK in 99ms (Views: 88.6ms | ActiveRecord: 3.1ms | Allocations: 5471)
+
+
+Started GET "/tickets" for 127.0.0.1 at 2023-06-01 16:44:25 -0400
+Processing by TicketsController#ticketHome as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tickets/ticketHome.html.erb within layouts/application
+  Rendered tickets/ticketHome.html.erb within layouts/application (Duration: 1.5ms | Allocations: 1204)
+  Rendered layout layouts/application.html.erb (Duration: 15.7ms | Allocations: 1293)
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 0.0ms | Allocations: 2022)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <div style= "margin-left: 30px;">
+<p style="color: green"><%= notice %></p>
+
+<h2 style= "display: inline-block">Tickets</h2> 
+<%= link_to 'New Ticket', new_ticket_path, style: "margin-left: 20px; margin-bottom: 15px;" class: 'btn btn-success' %>
+
+<div id="tickets">
+  <% @tickets.each do |ticket| %>    
+    <h5>
+      <%= link_to ticket.title, ticket %> | <%=ticket.state%>
+    </h5>
+  <% end %>
+</div>
+</div>
+
+
+
+):
+1:    <div style= "margin-left: 30px;">
+2:    <p style="color: green"><%= notice %></p>
+3:    
+4:    <h2 style= "display: inline-block">Tickets</h2> 
+5:    <%= link_to 'New Ticket', new_ticket_path, style: "margin-left: 20px; margin-bottom: 15px;" class: 'btn btn-success' %>
+6:    
+7:    <div id="tickets">
+8:      <% @tickets.each do |ticket| %>    
+9:        <h5>
+10:          <%= link_to ticket.title, ticket %> | <%=ticket.state%>
+11:        </h5>
+12:      <% end %>
+13:    </div>
+14:    </div>
+  
+app/views/tickets/ticketHome.html.erb:5: syntax error, unexpected `class', expecting ')'
+app/views/tickets/ticketHome.html.erb:5: syntax error, unexpected `class', expecting ')'
+app/views/tickets/ticketHome.html.erb:5: syntax error, unexpected `class', expecting ')'
+app/views/tickets/ticketHome.html.erb:5: syntax error, unexpected `class', expecting ')'
+app/views/tickets/ticketHome.html.erb:5: syntax error, unexpected `class', expecting ')'
+app/views/tickets/ticketHome.html.erb:5: syntax error, unexpected `class', expecting ')'
+Started GET "/tickets" for 127.0.0.1 at 2023-06-01 16:44:43 -0400
+Processing by TicketsController#ticketHome as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tickets/ticketHome.html.erb within layouts/application
+  [1m[36mTicket Load (1.3ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets"[0m
+  ↳ app/views/tickets/ticketHome.html.erb:8
+  Rendered tickets/ticketHome.html.erb within layouts/application (Duration: 12.6ms | Allocations: 1517)
+  Rendered layouts/_navbar.html.erb (Duration: 1.0ms | Allocations: 494)
+  Rendered layout layouts/application.html.erb (Duration: 27.2ms | Allocations: 4764)
+Completed 200 OK in 42ms (Views: 40.1ms | ActiveRecord: 1.3ms | Allocations: 5504)
+
+
+Started GET "/tickets/new" for 127.0.0.1 at 2023-06-01 16:44:46 -0400
+Processing by TicketsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tickets/new.html.erb within layouts/application
+  Rendered tickets/_form.html.erb (Duration: 15.3ms | Allocations: 1823)
+  Rendered tickets/new.html.erb within layouts/application (Duration: 16.3ms | Allocations: 2117)
+  Rendered layouts/_navbar.html.erb (Duration: 0.3ms | Allocations: 235)
+  Rendered layout layouts/application.html.erb (Duration: 31.3ms | Allocations: 4724)
+Completed 200 OK in 32ms (Views: 31.9ms | ActiveRecord: 0.0ms | Allocations: 5070)
+
+
+Started GET "/tickets" for 127.0.0.1 at 2023-06-01 16:44:50 -0400
+Processing by TicketsController#ticketHome as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tickets/ticketHome.html.erb within layouts/application
+  [1m[36mTicket Load (0.2ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets"[0m
+  ↳ app/views/tickets/ticketHome.html.erb:8
+  Rendered tickets/ticketHome.html.erb within layouts/application (Duration: 15.2ms | Allocations: 1266)
+  Rendered layouts/_navbar.html.erb (Duration: 0.4ms | Allocations: 236)
+  Rendered layout layouts/application.html.erb (Duration: 25.3ms | Allocations: 3874)
+Completed 200 OK in 26ms (Views: 25.7ms | ActiveRecord: 0.2ms | Allocations: 4125)
+
+
+Started GET "/tickets" for 127.0.0.1 at 2023-06-01 16:47:33 -0400
+Processing by TicketsController#ticketHome as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tickets/ticketHome.html.erb within layouts/application
+  [1m[36mTicket Load (0.3ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets"[0m
+  ↳ app/views/tickets/ticketHome.html.erb:8
+  Rendered tickets/ticketHome.html.erb within layouts/application (Duration: 10.0ms | Allocations: 1517)
+  Rendered layouts/_navbar.html.erb (Duration: 4.1ms | Allocations: 494)
+  Rendered layout layouts/application.html.erb (Duration: 37.2ms | Allocations: 4741)
+Completed 200 OK in 47ms (Views: 46.1ms | ActiveRecord: 0.3ms | Allocations: 5481)
+
+
+Started GET "/tickets/new" for 127.0.0.1 at 2023-06-01 16:47:34 -0400
+Processing by TicketsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tickets/new.html.erb within layouts/application
+  Rendered tickets/new.html.erb within layouts/application (Duration: 60.2ms | Allocations: 9618)
+  Rendered layouts/_navbar.html.erb (Duration: 0.4ms | Allocations: 236)
+  Rendered layout layouts/application.html.erb (Duration: 75.8ms | Allocations: 12242)
+Completed 200 OK in 84ms (Views: 82.9ms | ActiveRecord: 0.0ms | Allocations: 12558)
+
+
+Started GET "/tickets" for 127.0.0.1 at 2023-06-01 16:47:38 -0400
+Processing by TicketsController#ticketHome as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tickets/ticketHome.html.erb within layouts/application
+  [1m[36mTicket Load (0.4ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets"[0m
+  ↳ app/views/tickets/ticketHome.html.erb:8
+  Rendered tickets/ticketHome.html.erb within layouts/application (Duration: 7.1ms | Allocations: 1259)
+  Rendered layouts/_navbar.html.erb (Duration: 8.3ms | Allocations: 236)
+  Rendered layout layouts/application.html.erb (Duration: 22.4ms | Allocations: 3867)
+Completed 200 OK in 25ms (Views: 24.1ms | ActiveRecord: 0.4ms | Allocations: 4117)
+
+
+Started GET "/tickets/new" for 127.0.0.1 at 2023-06-01 16:47:46 -0400
+Processing by TicketsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tickets/new.html.erb within layouts/application
+  Rendered tickets/new.html.erb within layouts/application (Duration: 1.3ms | Allocations: 682)
+  Rendered layouts/_navbar.html.erb (Duration: 0.3ms | Allocations: 236)
+  Rendered layout layouts/application.html.erb (Duration: 16.5ms | Allocations: 3290)
+Completed 200 OK in 20ms (Views: 19.2ms | ActiveRecord: 0.0ms | Allocations: 3549)
+
+
+Started POST "/tickets" for 127.0.0.1 at 2023-06-01 16:48:03 -0400
+Processing by TicketsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "ticket"=>{"name"=>"fake ticket"}, "commit"=>"Create Dish"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 737)
+
+
+  
+ActiveModel::ForbiddenAttributesError (ActiveModel::ForbiddenAttributesError):
+  
+app/controllers/tickets_controller.rb:34:in `create'
+Started GET "/tickets/new" for 127.0.0.1 at 2023-06-01 16:49:40 -0400
+Processing by TicketsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tickets/new.html.erb within layouts/application
+  Rendered tickets/new.html.erb within layouts/application (Duration: 6.2ms | Allocations: 2546)
+  Rendered layouts/_navbar.html.erb (Duration: 13.4ms | Allocations: 492)
+  Rendered layout layouts/application.html.erb (Duration: 55.7ms | Allocations: 5809)
+Completed 200 OK in 73ms (Views: 71.0ms | ActiveRecord: 0.0ms | Allocations: 6558)
+
+
+Started GET "/tickets/new" for 127.0.0.1 at 2023-06-01 16:50:54 -0400
+Processing by TicketsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tickets/new.html.erb within layouts/application
+  Rendered tickets/new.html.erb within layouts/application (Duration: 15.3ms | Allocations: 2773)
+  Rendered layouts/_navbar.html.erb (Duration: 0.9ms | Allocations: 492)
+  Rendered layout layouts/application.html.erb (Duration: 31.8ms | Allocations: 5974)
+Completed 200 OK in 39ms (Views: 38.1ms | ActiveRecord: 0.0ms | Allocations: 6722)
+
+
+Started GET "/tickets/new" for 127.0.0.1 at 2023-06-01 16:51:32 -0400
+Processing by TicketsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tickets/new.html.erb within layouts/application
+  Rendered tickets/new.html.erb within layouts/application (Duration: 22.5ms | Allocations: 2547)
+  Rendered layouts/_navbar.html.erb (Duration: 7.8ms | Allocations: 492)
+  Rendered layout layouts/application.html.erb (Duration: 60.8ms | Allocations: 5748)
+Completed 200 OK in 63ms (Views: 62.5ms | ActiveRecord: 0.0ms | Allocations: 6496)
+
+
+Started GET "/tickets/new" for 127.0.0.1 at 2023-06-01 16:51:48 -0400
+Processing by TicketsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tickets/new.html.erb within layouts/application
+  Rendered tickets/new.html.erb within layouts/application (Duration: 16.6ms | Allocations: 2559)
+  Rendered layouts/_navbar.html.erb (Duration: 5.9ms | Allocations: 492)
+  Rendered layout layouts/application.html.erb (Duration: 53.2ms | Allocations: 5760)
+Completed 200 OK in 62ms (Views: 61.3ms | ActiveRecord: 0.0ms | Allocations: 6508)
+
+
+Started GET "/tickets/new" for 127.0.0.1 at 2023-06-01 16:51:55 -0400
+Processing by TicketsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tickets/new.html.erb within layouts/application
+  Rendered tickets/new.html.erb within layouts/application (Duration: 8.4ms | Allocations: 2555)
+  Rendered layouts/_navbar.html.erb (Duration: 5.1ms | Allocations: 492)
+  Rendered layout layouts/application.html.erb (Duration: 38.5ms | Allocations: 5756)
+Completed 200 OK in 49ms (Views: 47.9ms | ActiveRecord: 0.0ms | Allocations: 6504)
+
+
+Started POST "/tickets" for 127.0.0.1 at 2023-06-01 16:52:06 -0400
+Processing by TicketsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "ticket"=>{"name"=>"asd", "description"=>"asd", "state"=>"asd", "tags"=>"asd", "priority"=>"asd", "response"=>"asd", "attached_documents"=>"asd"}, "commit"=>"Create Ticket"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 693)
+
+
+  
+ActiveModel::ForbiddenAttributesError (ActiveModel::ForbiddenAttributesError):
+  
+app/controllers/tickets_controller.rb:34:in `create'
+Started GET "/tickets" for 127.0.0.1 at 2023-06-01 16:53:53 -0400
+Processing by TicketsController#ticketHome as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tickets/ticketHome.html.erb within layouts/application
+  [1m[36mTicket Load (0.6ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets"[0m
+  ↳ app/views/tickets/ticketHome.html.erb:8
+  Rendered tickets/ticketHome.html.erb within layouts/application (Duration: 53.5ms | Allocations: 7263)
+  Rendered layouts/_navbar.html.erb (Duration: 0.4ms | Allocations: 256)
+  Rendered layout layouts/application.html.erb (Duration: 64.1ms | Allocations: 10006)
+Completed 200 OK in 79ms (Views: 65.6ms | ActiveRecord: 18.3ms | Allocations: 12830)
+
+
+Started GET "/tickets/new" for 127.0.0.1 at 2023-06-01 16:53:55 -0400
+Processing by TicketsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tickets/new.html.erb within layouts/application
+  Rendered tickets/new.html.erb within layouts/application (Duration: 3.5ms | Allocations: 2182)
+  Rendered layouts/_navbar.html.erb (Duration: 0.4ms | Allocations: 236)
+  Rendered layout layouts/application.html.erb (Duration: 20.8ms | Allocations: 4790)
+Completed 200 OK in 31ms (Views: 30.5ms | ActiveRecord: 0.0ms | Allocations: 5063)
+
+
+Started POST "/tickets" for 127.0.0.1 at 2023-06-01 16:54:03 -0400
+Processing by TicketsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "ticket"=>{"name"=>"asd", "description"=>"asd", "state"=>"asd", "tags"=>"asd", "priority"=>"asd", "response"=>"asd", "attached_documents"=>"asd"}, "commit"=>"Create Ticket"}
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms | Allocations: 920)
+
+
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'name' for Ticket.):
+  
+app/controllers/tickets_controller.rb:34:in `create'
+Started GET "/tickets" for 127.0.0.1 at 2023-06-01 16:54:29 -0400
+Processing by TicketsController#ticketHome as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tickets/ticketHome.html.erb within layouts/application
+  [1m[36mTicket Load (0.2ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets"[0m
+  ↳ app/views/tickets/ticketHome.html.erb:8
+  Rendered tickets/ticketHome.html.erb within layouts/application (Duration: 33.3ms | Allocations: 4769)
+  Rendered layouts/_navbar.html.erb (Duration: 1.0ms | Allocations: 495)
+  Rendered layout layouts/application.html.erb (Duration: 46.7ms | Allocations: 8035)
+Completed 200 OK in 54ms (Views: 42.8ms | ActiveRecord: 5.5ms | Allocations: 11109)
+
+
+Started GET "/tickets/new" for 127.0.0.1 at 2023-06-01 16:54:31 -0400
+Processing by TicketsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tickets/new.html.erb within layouts/application
+  Rendered tickets/new.html.erb within layouts/application (Duration: 7.6ms | Allocations: 2610)
+  Rendered layouts/_navbar.html.erb (Duration: 0.3ms | Allocations: 236)
+  Rendered layout layouts/application.html.erb (Duration: 26.3ms | Allocations: 5218)
+Completed 200 OK in 32ms (Views: 27.0ms | ActiveRecord: 0.0ms | Allocations: 5545)
+
+
+Started POST "/tickets" for 127.0.0.1 at 2023-06-01 16:54:37 -0400
+Processing by TicketsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "ticket"=>{"title"=>"asd", "description"=>"asd", "state"=>"asd", "tags"=>"asd", "priority"=>"asd", "response"=>"asd", "attached_documents"=>"asd"}, "commit"=>"Create Ticket"}
+  Rendering layout layouts/application.html.erb
+  Rendering tickets/new.html.erb within layouts/application
+  Rendered tickets/new.html.erb within layouts/application (Duration: 3.0ms | Allocations: 1964)
+  Rendered layouts/_navbar.html.erb (Duration: 0.5ms | Allocations: 236)
+  Rendered layout layouts/application.html.erb (Duration: 16.7ms | Allocations: 4564)
+Completed 422 Unprocessable Entity in 55ms (Views: 17.4ms | ActiveRecord: 0.0ms | Allocations: 9909)
+
+
+Started POST "/tickets" for 127.0.0.1 at 2023-06-01 16:54:39 -0400
+Processing by TicketsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "ticket"=>{"title"=>"asd", "description"=>"asd", "state"=>"asd", "tags"=>"asd", "priority"=>"asd", "response"=>"asd", "attached_documents"=>"asd"}, "commit"=>"Create Ticket"}
+  Rendering layout layouts/application.html.erb
+  Rendering tickets/new.html.erb within layouts/application
+  Rendered tickets/new.html.erb within layouts/application (Duration: 2.9ms | Allocations: 1944)
+  Rendered layouts/_navbar.html.erb (Duration: 0.5ms | Allocations: 236)
+  Rendered layout layouts/application.html.erb (Duration: 26.2ms | Allocations: 4544)
+Completed 422 Unprocessable Entity in 47ms (Views: 45.1ms | ActiveRecord: 0.0ms | Allocations: 5675)
+
+
+Started GET "/tickets" for 127.0.0.1 at 2023-06-01 16:54:41 -0400
+Processing by TicketsController#ticketHome as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tickets/ticketHome.html.erb within layouts/application
+  [1m[36mTicket Load (0.8ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets"[0m
+  ↳ app/views/tickets/ticketHome.html.erb:8
+  Rendered tickets/ticketHome.html.erb within layouts/application (Duration: 7.9ms | Allocations: 1262)
+  Rendered layouts/_navbar.html.erb (Duration: 0.4ms | Allocations: 236)
+  Rendered layout layouts/application.html.erb (Duration: 14.4ms | Allocations: 3870)
+Completed 200 OK in 17ms (Views: 16.0ms | ActiveRecord: 0.8ms | Allocations: 4120)
+
+
+Started GET "/tickets" for 127.0.0.1 at 2023-06-01 16:55:14 -0400
+Processing by TicketsController#ticketHome as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tickets/ticketHome.html.erb within layouts/application
+  [1m[36mTicket Load (0.3ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets"[0m
+  ↳ app/views/tickets/ticketHome.html.erb:8
+  Rendered tickets/ticketHome.html.erb within layouts/application (Duration: 20.2ms | Allocations: 4474)
+  Rendered layouts/_navbar.html.erb (Duration: 0.4ms | Allocations: 256)
+  Rendered layout layouts/application.html.erb (Duration: 36.2ms | Allocations: 7217)
+Completed 200 OK in 45ms (Views: 33.6ms | ActiveRecord: 4.0ms | Allocations: 9987)
+
+
+Started GET "/tickets/new" for 127.0.0.1 at 2023-06-01 16:55:16 -0400
+Processing by TicketsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tickets/new.html.erb within layouts/application
+  Rendered tickets/new.html.erb within layouts/application (Duration: 20.0ms | Allocations: 2092)
+  Rendered layouts/_navbar.html.erb (Duration: 0.4ms | Allocations: 236)
+  Rendered layout layouts/application.html.erb (Duration: 25.3ms | Allocations: 4700)
+Completed 200 OK in 28ms (Views: 27.7ms | ActiveRecord: 0.0ms | Allocations: 4971)
+
+
+Started POST "/tickets" for 127.0.0.1 at 2023-06-01 16:55:21 -0400
+Processing by TicketsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "ticket"=>{"title"=>"asd", "description"=>"asd", "state"=>"asd", "tags"=>"asd", "priority"=>"asd", "response"=>"asd", "attached_documents"=>"asd"}, "commit"=>"Create Ticket"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 713)
+
+
+  
+ActiveModel::ForbiddenAttributesError (ActiveModel::ForbiddenAttributesError):
+  
+app/controllers/tickets_controller.rb:34:in `create'
+Started GET "/tickets" for 127.0.0.1 at 2023-06-01 16:58:23 -0400
+Processing by TicketsController#ticketHome as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tickets/ticketHome.html.erb within layouts/application
+  [1m[36mTicket Load (0.2ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets"[0m
+  ↳ app/views/tickets/ticketHome.html.erb:8
+  Rendered tickets/ticketHome.html.erb within layouts/application (Duration: 17.3ms | Allocations: 4477)
+  Rendered layouts/_navbar.html.erb (Duration: 0.4ms | Allocations: 256)
+  Rendered layout layouts/application.html.erb (Duration: 27.1ms | Allocations: 7220)
+Completed 200 OK in 34ms (Views: 24.3ms | ActiveRecord: 4.2ms | Allocations: 9990)
+
+
+Started GET "/tickets/new" for 127.0.0.1 at 2023-06-01 16:58:25 -0400
+Processing by TicketsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tickets/new.html.erb within layouts/application
+  Rendered tickets/new.html.erb within layouts/application (Duration: 8.0ms | Allocations: 2095)
+  Rendered layouts/_navbar.html.erb (Duration: 1.7ms | Allocations: 236)
+  Rendered layout layouts/application.html.erb (Duration: 40.5ms | Allocations: 4703)
+Completed 200 OK in 43ms (Views: 42.2ms | ActiveRecord: 0.0ms | Allocations: 4975)
+
+
+Started POST "/tickets" for 127.0.0.1 at 2023-06-01 16:58:28 -0400
+Processing by TicketsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "ticket"=>{"title"=>"jj", "description"=>"", "state"=>"", "tags"=>"", "priority"=>"", "response"=>"", "attached_documents"=>""}, "commit"=>"Create Ticket"}
+  Rendering layout layouts/application.html.erb
+  Rendering tickets/new.html.erb within layouts/application
+  Rendered tickets/new.html.erb within layouts/application (Duration: 4.1ms | Allocations: 2501)
+  Rendered layouts/_navbar.html.erb (Duration: 0.3ms | Allocations: 236)
+  Rendered layout layouts/application.html.erb (Duration: 26.3ms | Allocations: 5115)
+Completed 422 Unprocessable Entity in 56ms (Views: 29.5ms | ActiveRecord: 0.0ms | Allocations: 10299)
+
+
+Started GET "/tickets" for 127.0.0.1 at 2023-06-01 16:58:30 -0400
+Processing by TicketsController#ticketHome as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tickets/ticketHome.html.erb within layouts/application
+  [1m[36mTicket Load (0.4ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets"[0m
+  ↳ app/views/tickets/ticketHome.html.erb:8
+  Rendered tickets/ticketHome.html.erb within layouts/application (Duration: 15.4ms | Allocations: 1263)
+  Rendered layouts/_navbar.html.erb (Duration: 0.4ms | Allocations: 236)
+  Rendered layout layouts/application.html.erb (Duration: 28.2ms | Allocations: 3875)
+Completed 200 OK in 30ms (Views: 28.4ms | ActiveRecord: 0.4ms | Allocations: 4126)
+
+
+Started GET "/tickets/new" for 127.0.0.1 at 2023-06-01 16:58:35 -0400
+Processing by TicketsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tickets/new.html.erb within layouts/application
+  Rendered tickets/new.html.erb within layouts/application (Duration: 4.9ms | Allocations: 2021)
+  Rendered layouts/_navbar.html.erb (Duration: 0.4ms | Allocations: 236)
+  Rendered layout layouts/application.html.erb (Duration: 28.9ms | Allocations: 4629)
+Completed 200 OK in 30ms (Views: 29.7ms | ActiveRecord: 0.0ms | Allocations: 4888)
+
+
+Started GET "/tickets/new" for 127.0.0.1 at 2023-06-01 17:06:24 -0400
+Processing by TicketsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tickets/new.html.erb within layouts/application
+  Rendered tickets/new.html.erb within layouts/application (Duration: 16.3ms | Allocations: 2598)
+  Rendered layouts/_navbar.html.erb (Duration: 2.6ms | Allocations: 492)
+  Rendered layout layouts/application.html.erb (Duration: 41.3ms | Allocations: 5803)
+Completed 200 OK in 49ms (Views: 47.8ms | Allocations: 6552)
+
+
+Started POST "/tickets" for 127.0.0.1 at 2023-06-01 17:06:29 -0400
+Processing by TicketsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "ticket"=>{"title"=>"asd", "description"=>"asd", "state"=>"asd", "tags"=>"asd", "priority"=>"asd", "response"=>"asd", "attached_documents"=>"asd"}, "commit"=>"Create Ticket"}
+  Rendering layout layouts/application.html.erb
+  Rendering tickets/new.html.erb within layouts/application
+  Rendered tickets/new.html.erb within layouts/application (Duration: 10.4ms | Allocations: 1969)
+  Rendered layouts/_navbar.html.erb (Duration: 0.3ms | Allocations: 236)
+  Rendered layout layouts/application.html.erb (Duration: 25.3ms | Allocations: 4569)
+Completed 422 Unprocessable Entity in 62ms (Views: 26.2ms | ActiveRecord: 14.4ms | Allocations: 8579)
+
+
+Started GET "/tickets" for 127.0.0.1 at 2023-06-01 17:06:31 -0400
+Processing by TicketsController#ticketHome as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tickets/ticketHome.html.erb within layouts/application
+  [1m[36mTicket Load (1.6ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets"[0m
+  ↳ app/views/tickets/ticketHome.html.erb:8
+  Rendered tickets/ticketHome.html.erb within layouts/application (Duration: 18.3ms | Allocations: 1544)
+  Rendered layouts/_navbar.html.erb (Duration: 0.3ms | Allocations: 236)
+  Rendered layout layouts/application.html.erb (Duration: 31.1ms | Allocations: 4152)
+Completed 200 OK in 32ms (Views: 30.3ms | ActiveRecord: 1.6ms | Allocations: 4458)
+
+
+Started GET "/tickets/new" for 127.0.0.1 at 2023-06-01 17:06:33 -0400
+Processing by TicketsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tickets/new.html.erb within layouts/application
+  Rendered tickets/new.html.erb within layouts/application (Duration: 34.0ms | Allocations: 2064)
+  Rendered layouts/_navbar.html.erb (Duration: 0.3ms | Allocations: 236)
+  Rendered layout layouts/application.html.erb (Duration: 79.6ms | Allocations: 4672)
+Completed 200 OK in 86ms (Views: 85.5ms | ActiveRecord: 0.0ms | Allocations: 4931)
+
+

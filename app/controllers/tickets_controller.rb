@@ -12,6 +12,10 @@ class TicketsController < ApplicationController
     end
   end
 
+  def ticketHome
+    @tickets = Ticket.all
+  end
+
   # GET /tickets/1 or /tickets/1.json
   def show
   end
@@ -71,6 +75,6 @@ class TicketsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def ticket_params
-      params.fetch(:ticket, {})
+      params.require(:ticket).permit(:title, :description, :state, :tags, :priority, :response, :attached_documents)
     end
 end

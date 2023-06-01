@@ -1,0 +1,16 @@
+<div style= "margin-left: 30px;">
+<p style="color: green"><%= notice %></p>
+
+<h2 style= "display: inline-block">Tickets</h2> 
+<%= link_to 'New Ticket', new_ticket_path, style: "margin-left: 20px; margin-bottom: 15px;", class: 'btn btn-success' %>
+
+<div id="tickets">
+  <% @tickets.each do |ticket| %>    
+    <h5>
+      <%= link_to ticket.title, ticket %> | <%=ticket.state%>
+    </h5>
+  <% end %>
+</div>
+</div>
+
+

@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
   resources :administrators
   resources :supervisors
-
+  resources :tickets, only: [:new, :show, :edit, :create, :destroy, :update]
+  get "/tickets", to: "tickets#ticketHome"
   resources :pages 
 
   resources :requesting_users, shallow: true do
