@@ -1,0 +1,8 @@
+<div style= "margin-left: 30px;">
+<h2> Search results: </h2>
+<% @tickets.each do |ticket| %>
+  <div>
+    <h3><%= link_to ticket.title, ticket_path(ticket) %></h3>
+  </div>
+<% end %>
+</div>

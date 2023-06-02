@@ -1,5 +1,7 @@
 <div id="<%= dom_id ticket %>"> 
-    <h2><%=ticket.title%></h2>
+    <h2 style= "display: inline-block;"><%=ticket.title%></h2>
+    <%= link_to 'Edit Ticket', edit_ticket_path, style: "margin-left: 20px; margin-bottom: 15px;", class: 'btn btn-primary' %>
+    <%= link_to "Delete this ticket", @ticket, class: "btn btn-danger", style: "margin-left: 10px; margin-bottom: 15px;", method: :delete %>
 </div>
 <div>
     <p><%=ticket.created_at%></p>

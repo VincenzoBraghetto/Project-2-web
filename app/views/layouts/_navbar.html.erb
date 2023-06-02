@@ -20,6 +20,14 @@ background: linear-gradient(90deg, rgba(212,233,255,1) 0%, rgba(43,76,144,1) 0%)
         <li class="nav-item">
             <%= link_to 'Tickets', tickets_path, class: 'nav-link active' %>
         </li>
+        <form class="form-inline my-2 my-lg-0" style="padding-left: 30px" action="<%= search_tickets_path %>" method="GET">
+        <div class="input-group">
+            <input style= "width: 400px;"class="form-control rounded-pill mr-sm-2" type="search" placeholder="Search Tickets" aria-label="Search" name="search">
+            <div class="input-group-append">
+            <button style= "margin-left: 15px;" class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </div>
+        </div>
+        </form>
     </ul>
   </div>
 </nav>

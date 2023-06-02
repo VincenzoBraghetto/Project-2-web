@@ -30,6 +30,14 @@
     <%= form.label :attached_documents %>
     <%= form.text_field :attached_documents, style: "width: 20%;", class: 'form-control' %>
   </div>
+  <div class="field">
+    <%= form.label :executive_id %>
+    <%= form.text_field :executive_id, style: "width: 20%;", class: 'form-control' %>
+  </div>
+  <div class="field">
+    <%= form.label :requesting_user_id %>
+    <%= form.text_field :requesting_user_id , style: "width: 20%;", class: 'form-control' %>
+  </div>
 
   <div class="actions">
     <%= form.submit 'Create Ticket', style: "margin-top: 10px;",class: 'btn btn-success' %>

@@ -29,6 +29,10 @@ class TicketsController < ApplicationController
   def edit
   end
 
+  def search
+    @tickets = Ticket.where('title LIKE ?', "%#{params[:search]}%")
+  end
+
   # POST /tickets or /tickets.json
   def create
     @ticket = Ticket.new(ticket_params)
@@ -75,6 +79,6 @@ class TicketsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def ticket_params
-      params.require(:ticket).permit(:title, :description, :state, :tags, :priority, :response, :attached_documents)
+      params.require(:ticket).permit(:title, :description, :state, :tags, :priority, :response, :attached_documents, :executive_id, :requesting_user_id)
     end
 end

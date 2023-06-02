@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   get "/tickets", to: "tickets#ticketHome"
   resources :pages 
 
+  get 'search/tickets', to: 'tickets#search', as: 'search_tickets'
+
   resources :requesting_users, shallow: true do
     resources :tickets do
       resources :comments
